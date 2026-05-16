@@ -1,45 +1,363 @@
-# Bamidele Aly — Static Website
+<!-- SPDX-License-Identifier: MIT -->
 
-Static HTML5 website for Bamidele Aly, built for GitHub Pages in the `bamidelealy.github.io` repository format.
+<p align="center">
+  <img src="./assets/bamidele-aly-hsbc.webp" alt="Bamidele Aly" width="128" />
+</p>
 
-## Pages
+<h1 align="center">bamidelealy.github.io</h1>
 
-- `index.html` — Home page covering AI governance, Product Control, applied AI and economic history.
-- `projects.html` — Ile Owo and geospatial risk analysis project pages.
-- `historian.html` — Economic history research, publications, education and recognition.
-- `studio.html` — Watercolour, printmaking and creative practice.
-- `contact.html` — Speaking, advisory and academic collaboration contact routes.
-- `about.html` — Compatibility redirect to `historian.html`.
+<p align="center">
+  A static personal site for Bamidele Aly, covering AI model risk
+  governance, applied AI in finance, West African economic history,
+  and creative practice.
+</p>
 
-## Discovery and machine-readable files
+<p align="center">
+  <a href="https://github.com/sebastienrousseau/bamidelealy.github.io/actions"><img src="https://img.shields.io/github/actions/workflow/status/sebastienrousseau/bamidelealy.github.io/pages%2Fpages-build-deployment?style=for-the-badge&label=deploy&logo=github" alt="GitHub Pages deploy" /></a>
+  <a href="https://github.com/sebastienrousseau/bamidelealy.github.io/blob/main/README.md"><img src="https://img.shields.io/badge/license-MIT-66c2a5?style=for-the-badge" alt="License: MIT" /></a>
+  <a href="https://www.w3.org/WAI/WCAG22/quickref/"><img src="https://img.shields.io/badge/WCAG_2.2-AA%2FAAA-fc8d62?style=for-the-badge" alt="WCAG 2.2 AA / AAA" /></a>
+  <a href="#engineering"><img src="https://img.shields.io/badge/no_build_step-zero_deps-1d1d1f?style=for-the-badge&logo=html5&logoColor=white" alt="No build step, zero deps" /></a>
+  <a href="https://bamidelealy.com/"><img src="https://img.shields.io/badge/live-bamidelealy.com-0071e3?style=for-the-badge" alt="Live site" /></a>
+</p>
 
-- `sitemap.xml` — Search engine sitemap for all public pages.
-- `rss.xml` — RSS feed containing the core content entries.
-- `robots.txt` — Search and AI crawler guidance with sitemap reference.
-- `llms.txt` — AI summarisation and citation guidance.
-- `ai.txt` — Additional AI crawler guidance.
+---
 
-## Assets
+## Contents
 
-- `assets/bamidele-aly-hsbc.jpg` — Primary portrait.
-- `assets/bamidele-studio.png` — Studio/creative practice image.
+**Getting started**
 
-## Technology
+- [Install](#install) — clone, serve, deploy
+- [Quick Start](#quick-start) — edit a page, add an entry to search
 
-- Static HTML5, CSS and vanilla JavaScript.
-- Skeletonic Stylus CSS 2.0 via jsDelivr CDN.
-- Atkinson Hyperlegible via Google Fonts for readability.
-- No build step, no framework, no cookies, no tracking and no client-side storage.
+**The site**
 
-## Run locally
+- [Pages](#pages) — five canonical HTML pages + a `/thanks/` confirmation
+- [Architecture](#architecture) — file layout, no-build philosophy
+- [Design system](#design-system) — Apple-inspired tokens, typography, layers
+
+**Features**
+
+- [Search](#search) — Cmd/Ctrl+K palette with fuzzy match across all pages
+- [Theme](#theme) — OS-aware light/dark with persistence, no flash
+- [Architecture diagram](#architecture-diagram) — lazy-loaded Mermaid flowchart
+- [Contact form](#contact-form) — Formspree intake with mailto fallback
+- [Internationalisation](#internationalisation) — `lang` spans for Yoruba and French
+
+**Engineering**
+
+- [Performance](#performance) — Core Web Vitals on a static budget
+- [Accessibility](#accessibility) — WCAG 2.2 AA target size, AAA contrast
+- [Security](#security) — strict CSP, no plain-text email, no trackers
+- [SEO and AI discovery](#seo-and-ai-discovery) — JSON-LD `@graph`, sitemap, `llms.txt`
+- [Deployment](#deployment) — GitHub Pages, custom domain via `CNAME`
+- [Development](#development) — local server, audit recipes
+
+**Operational**
+
+- [License](#license)
+
+---
+
+## Install
+
+### Clone
 
 ```bash
+git clone https://github.com/sebastienrousseau/bamidelealy.github.io.git
 cd bamidelealy.github.io
+```
+
+### Serve locally
+
+```bash
 python3 -m http.server 8000
 ```
 
-Then open `http://localhost:8000/`.
+Then open `http://localhost:8000/`. No build step, no Node toolchain, no
+dependencies to install. The site is hand-authored HTML, CSS and vanilla
+JavaScript, gzip-served via GitHub Pages.
 
-## Accessibility and SEO
+### Deploy
 
-The site uses semantic landmarks, skip links, descriptive alt text, visible focus states, high-contrast colour tokens, responsive layouts, Open Graph metadata, Twitter Card metadata, JSON-LD structured data, canonical URLs, RSS, sitemap, robots and LLM guidance.
+Push to `main` on a repository named `bamidelealy.github.io`. GitHub
+Pages rebuilds in ~30 s. For a custom apex domain see
+[Deployment](#deployment).
+
+---
+
+## Quick Start
+
+To change a page heading or body copy, open the relevant `*.html` and
+edit between `<h1>` and `</h1>` (or the surrounding `<section>`). Save.
+Push. GitHub Pages rebuilds.
+
+To add a new searchable page:
+
+1. Copy `studio.html` (smallest page) to `mypage.html` and rewrite the
+   content. Keep the `<head>` block intact so CSP, JSON-LD, theme
+   bootstrap and the search overlay travel with it.
+2. Add a single entry to `search-data.json`:
+
+   ```json
+   { "t": "My page", "d": "Short description", "u": "mypage.html" }
+   ```
+
+3. Add the URL to `sitemap.xml` with a sensible `<priority>`.
+
+No build, no SSR, no rehydration — refresh the browser.
+
+---
+
+## Pages
+
+| Page | What it covers |
+|---|---|
+| `index.html` | Home — engineering trustworthy AI for global finance. |
+| `projects.html` | Ile Owo eight-agent IFRS advisory system + geospatial risk. |
+| `historian.html` | West African monetary systems, publications, education. |
+| `studio.html` | Watercolour, Chinese painting, gouache, printmaking. |
+| `contact.html` | Curated intake form (Formspree) for speaking and advisory. |
+| `thanks/index.html` | Post-submission confirmation, `noindex, follow`. |
+| `about.html` | Legacy compatibility redirect to `historian.html`. |
+
+---
+
+## Architecture
+
+```
+bamidelealy.github.io/
+├── index.html            ← root pages
+├── projects.html
+├── historian.html
+├── studio.html
+├── contact.html
+├── thanks/
+│   └── index.html        ← noindex thank-you confirmation
+├── styles.css            ← design system (≈24 KB raw, 5 KB gzip)
+├── script.js             ← interactions (≈9 KB raw, 2.4 KB gzip)
+├── search-data.json      ← search index, 24 entries
+├── assets/
+│   ├── bamidele-aly-hsbc.{jpg,webp,avif}
+│   └── bamidele-studio.{png,webp,avif}
+├── sitemap.xml
+├── rss.xml
+├── robots.txt
+├── llms.txt
+├── ai.txt
+└── README.md
+```
+
+Zero build step. The browser parses HTML and renders. The CSS uses
+native `@layer`, container-free `clamp()` typography, View Transitions
+where supported, and a `<picture>` element on every raster so AVIF /
+WebP win where the browser supports them.
+
+---
+
+## Design system
+
+Apple-inspired token set, defined once in `:root` and
+`:root[data-theme="dark"]`. Every colour, radius, motion value and
+shadow flows from these tokens — change them once and the whole site
+follows.
+
+| Token group | Tokens |
+|---|---|
+| Surfaces | `--bg`, `--bg-soft`, `--surface`, `--surface-soft`, `--surface-elev` |
+| Text | `--ink`, `--ink-soft`, `--ink-muted` |
+| Accent | `--accent`, `--accent-hover`, `--accent-press`, `--accent-soft`, `--accent-ink` |
+| Lines | `--line`, `--line-soft` |
+| Motion | `--ease-out`, `--ease-in-out` |
+| Layout | `--radius`, `--radius-pill`, `--container`, `--pad` |
+| Typography | `--font-text` (Atkinson Hyperlegible), `--font-display` (SF Pro / system) |
+
+Cascade order is pinned with
+`@layer skeletonic.base, skeletonic.layout, skeletonic.elements, skeletonic.components, site;`
+so the `site` layer always wins over the Skeletonic CDN baseline.
+
+---
+
+## Features
+
+### Search
+
+`Cmd+K` (macOS), `Ctrl+K` or `/` opens a centred dialog. Substring +
+fuzzy-subsequence match across 24 entries in `search-data.json`. Arrow
+keys navigate, Enter follows, Esc closes. Under 560 px the dialog
+becomes full-bleed and the footer hints hide. The index is lazy-fetched
+on first open and cached for the session.
+
+### Theme
+
+OS-aware default via `prefers-color-scheme`, manual override stored in
+`localStorage`. A four-line inline bootstrap script runs in `<head>`
+before paint, so there is no flash of incorrect theme. Toggling the
+theme dispatches a `themechange` custom event — the Mermaid diagram
+listens and re-renders with the matching palette.
+
+### Architecture diagram
+
+`projects.html` ships a MermaidJS flowchart of the Ile Owo eight-agent
+system (Orchestrator, Filter, Summaryan, Historian, Insider, Outsider,
+Auditor, Scribe). The 893 KB Mermaid bundle is **lazy-loaded** via
+`IntersectionObserver` with a 400 px root-margin — pages that never
+scroll to the diagram never pay for the library.
+
+### Contact form
+
+Posted to Formspree (`https://formspree.io/f/mvojvaej`) via `fetch()`.
+On success the browser redirects to `/thanks/`. A hidden `_next` field
+also handles the no-JS server-redirect path. If JS is enabled but
+Formspree is unreachable, error states point at LinkedIn — never at a
+plain-text email.
+
+### Internationalisation
+
+Foreign-language inline phrases are tagged with `lang="yo"` (Yoruba)
+and `lang="fr"` (French) so screen readers pronounce them correctly.
+JSON-LD `Person.knowsLanguage` enumerates English, French, German,
+Yoruba, Japanese and Dutch.
+
+---
+
+## Engineering
+
+### Performance
+
+Live wire sizes (gzip) from the production response:
+
+| Asset | Wire size |
+|---|---|
+| `styles.css` | 5.0 KB |
+| `script.js` | 2.4 KB |
+| `search-data.json` | 1.6 KB |
+| Portrait WebP / AVIF | 8.8 KB / 15.6 KB |
+| Studio AVIF | 40.7 KB |
+| Mermaid bundle (lazy, only when visible) | 893 KB |
+
+Headers:
+
+- Hero image preloaded as WebP (`<link rel="preload" as="image">`).
+- AVIF + WebP served via `<picture>` with JPG fallback.
+- Google Fonts CSS preloaded with `as="style"`.
+- `font-display: swap` so system fallback paints immediately.
+- All `<script>` tags carry `defer`; Mermaid lazy-loaded on viewport
+  intersection.
+- `Cache-Control: max-age=2678400` on static assets (31 days).
+- gzip + brotli at the edge.
+
+### Accessibility
+
+WCAG 2.2 conformance checklist:
+
+- One `<h1>` per page, no heading-level skips.
+- Every `<img>` has descriptive `alt`; every icon-only button has
+  `aria-label`.
+- Every form input has `<label for>`, `required`, and `aria-required`.
+- Skip-link first in tab order; `<main>`, `<nav aria-label>`,
+  `<footer>` landmarks on every page.
+- Colour contrast: 7.29:1 (muted text) and 11:1 (body text) light; 8.88:1
+  and 9.5:1 dark — AAA for body, AA for accent links.
+- 36 px+ touch targets (WCAG 2.2 AA minimum is 24 px).
+- `prefers-reduced-motion` disables animations, including the thanks
+  page check-mark pop.
+- Foreign-language spans tagged with `lang`.
+
+### Security
+
+Strict Content Security Policy via `<meta http-equiv>` on every page:
+
+```
+default-src 'self';
+script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
+style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
+font-src 'self' https://fonts.gstatic.com data:;
+img-src 'self' data: https:;
+connect-src 'self' https://formspree.io;
+base-uri 'self';
+form-action 'self' https://formspree.io;
+frame-ancestors 'none';
+```
+
+Plus at the HTTP layer (from the deploying CDN):
+`Strict-Transport-Security: max-age=31536000; includeSubDomains; preload`,
+`X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`,
+`Referrer-Policy: strict-origin-when-cross-origin`.
+
+Email obfuscation: no `mailto:` or plain-text address anywhere in
+source. The contact form stores the address as base64 in
+`data-mailto`, decoded only after a user-initiated reveal action.
+JSON-LD uses a `ContactPoint` URL instead of an `email` field.
+
+No analytics, no cookies, no trackers, no client-side storage beyond
+`theme=` (only written if the user clicks the toggle).
+
+### SEO and AI discovery
+
+| File | Purpose |
+|---|---|
+| `sitemap.xml` | Five canonical URLs, `lastmod`, `changefreq`, `priority`. |
+| `rss.xml` | Atom-style feed for the four core content entries. |
+| `robots.txt` | Explicit allow for `GPTBot`, `ChatGPT-User`, `PerplexityBot`, `ClaudeBot`, `Google-Extended`, `CCBot`. |
+| `llms.txt` | Canonical summary, key facts, citation guidance for LLMs. |
+| `ai.txt` | Supplementary AI-crawler directives. |
+| `<script type="application/ld+json">` | `@graph` of `Person`, `ProfilePage`, `WebSite`, `Event`, `Book`, `Chapter`, `SoftwareSourceCode`, `ContactPoint`. |
+
+### Deployment
+
+GitHub Pages from `main`. The repo must be named
+`bamidelealy.github.io` (or the Pages source set to "Deploy from a
+branch — main"). For a custom apex domain (`bamidelealy.com`):
+
+1. Add a `CNAME` file at the repo root containing `bamidelealy.com`.
+2. Configure DNS A records at the apex (or `ALIAS`/`ANAME` if your
+   provider supports them):
+
+   ```
+   185.199.108.153
+   185.199.109.153
+   185.199.110.153
+   185.199.111.153
+   ```
+
+3. Enable **HTTPS** in repo Settings → Pages.
+
+Canonicals, `og:url`, JSON-LD `@id` and `sitemap.xml` already point at
+`https://bamidelealy.com/` so the SEO posture is correct from the
+moment DNS resolves.
+
+### Development
+
+```bash
+python3 -m http.server 8000   # default local dev path
+```
+
+No formatting tooling. HTML / CSS / JS are hand-authored to be
+diff-friendly. Local audit recipes:
+
+```bash
+# Validate every JSON-LD block on every page
+python3 -c "
+import re, json, pathlib
+for p in ['index.html','projects.html','historian.html','studio.html','contact.html','thanks/index.html']:
+  for m in re.finditer(r'<script type=\"application/ld\+json\">(.*?)</script>', pathlib.Path(p).read_text(), re.S):
+    json.loads(m.group(1))
+print('OK')
+"
+
+# Re-grade and re-encode the hero portrait (requires ImageMagick + libwebp + libavif)
+magick assets/bamidele-aly-hsbc.jpg \
+  -modulate 102,116,100 -level 3%,97%,1.05 -unsharp 0x0.6+0.45+0 \
+  -quality 92 assets/bamidele-aly-hsbc.jpg
+cwebp  -q 84 assets/bamidele-aly-hsbc.jpg -o assets/bamidele-aly-hsbc.webp
+avifenc --min 26 --max 34 --speed 4 assets/bamidele-aly-hsbc.jpg assets/bamidele-aly-hsbc.avif
+```
+
+---
+
+## License
+
+MIT. The SPDX header at the top of this file is the canonical
+declaration; this repository may also ship a `LICENSE` file alongside.
+
+<p align="right"><a href="#contents">Back to Top</a></p>
