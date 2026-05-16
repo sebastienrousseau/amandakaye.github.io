@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT -->
 
 <p align="center">
-  <img src="./assets/bamidele-aly-hsbc.webp" alt="Bamidele Aly" width="128" />
+  <img src="./assets/bamidele-aly-studio.webp" alt="Bamidele Aly" width="128" />
 </p>
 
 <h1 align="center">bamidelealy.github.io</h1>
@@ -137,8 +137,8 @@ bamidelealy.github.io/
 ├── script.js             ← interactions (≈9 KB raw, 2.4 KB gzip)
 ├── search-data.json      ← search index, 24 entries
 ├── assets/
-│   ├── bamidele-aly-hsbc.{jpg,webp,avif}
-│   └── bamidele-studio.{png,webp,avif}
+│   ├── bamidele-aly-studio.{jpeg,webp,avif}
+│   └── bamidele-studio.{jpeg,webp,avif}
 ├── sitemap.xml
 ├── rss.xml
 ├── robots.txt
@@ -346,11 +346,11 @@ print('OK')
 "
 
 # Re-grade and re-encode the hero portrait (requires ImageMagick + libwebp + libavif)
-magick assets/bamidele-aly-hsbc.jpg \
+magick assets/bamidele-aly-studio.jpeg \
   -modulate 102,116,100 -level 3%,97%,1.05 -unsharp 0x0.6+0.45+0 \
-  -quality 92 assets/bamidele-aly-hsbc.jpg
-cwebp  -q 84 assets/bamidele-aly-hsbc.jpg -o assets/bamidele-aly-hsbc.webp
-avifenc --min 26 --max 34 --speed 4 assets/bamidele-aly-hsbc.jpg assets/bamidele-aly-hsbc.avif
+  -quality 92 assets/bamidele-aly-studio.jpeg
+cwebp  -q 84 assets/bamidele-aly-studio.jpeg -o assets/bamidele-aly-studio.webp
+avifenc --min 26 --max 34 --speed 4 assets/bamidele-aly-studio.jpeg assets/bamidele-aly-studio.avif
 ```
 
 ---
