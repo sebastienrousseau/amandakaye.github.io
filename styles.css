@@ -373,16 +373,22 @@
   }
   .search-input::placeholder { color: var(--ink-muted); }
   .search-cancel {
+    flex: none;
+    white-space: nowrap;
     appearance: none;
-    border: 0;
-    background: transparent;
-    color: var(--ink-muted);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--ink-soft);
     cursor: pointer;
-    padding: .35rem .5rem;
+    padding: .25rem .55rem;
     border-radius: 6px;
-    font-size: .85rem;
+    font-family: ui-monospace, SF Mono, Menlo, monospace;
+    font-size: .72rem;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: .02em;
   }
-  .search-cancel:hover { color: var(--ink); background: var(--surface-soft); }
+  .search-cancel:hover { color: var(--ink); border-color: var(--ink); background: var(--surface-soft); }
 
   .search-results {
     overflow-y: auto;

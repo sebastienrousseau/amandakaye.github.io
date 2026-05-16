@@ -252,8 +252,8 @@
       lastQuery = '';
       renderEmpty('Loading…');
       loadIndex().then(function () { renderResults(''); });
-      // Defer focus until paint to avoid mobile keyboard glitches
-      requestAnimationFrame(function () { searchInput.focus(); });
+      // Focus synchronously inside the click handler so iOS opens the keyboard
+      searchInput.focus({ preventScroll: true });
       document.body.style.overflow = 'hidden';
     };
     var closeSearch = function () {
