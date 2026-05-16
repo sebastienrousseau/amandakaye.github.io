@@ -159,8 +159,9 @@
 
       var subject = '[' + purpose + '] ' + name + (org ? ' — ' + org : '');
       var endpoint = form.getAttribute('data-endpoint');
+      var redirect = form.getAttribute('data-redirect');
       var submit = form.querySelector('button[type="submit"]');
-      var useEndpoint = endpoint && endpoint.indexOf('YOUR_FORMSPREE_ID') === -1;
+      var useEndpoint = endpoint && /^https?:\/\//.test(endpoint) && endpoint.indexOf('YOUR_FORMSPREE_ID') === -1;
 
       if (useEndpoint) {
         var payload = new FormData();
@@ -180,8 +181,11 @@
           headers: { 'Accept': 'application/json' }
         }).then(function (response) {
           if (response.ok) {
-            setStatus('Message sent. I will be in touch.', 'success');
+            setStatus('Message sent. Redirecting…', 'success');
             form.reset();
+            if (redirect) {
+              window.location.assign(redirect);
+            }
           } else {
             return response.json().then(function (body) {
               var err = (body && body.errors && body.errors.map(function (x) { return x.message; }).join(', ')) || 'Send failed.';
