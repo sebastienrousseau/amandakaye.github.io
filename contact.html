@@ -7,6 +7,9 @@
   <meta name="description" content="Contact Bamidele Aly for speaking, advisory conversations and academic collaboration on AI governance, Product Control and West African economic history.">
   <meta name="author" content="Bamidele Aly">
   <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#f1f1f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+  <meta name="view-transition" content="same-origin">
   <link rel="canonical" href="https://bamidelealy.github.io/contact.html">
   <link rel="alternate" type="application/rss+xml" title="Bamidele Aly RSS" href="https://bamidelealy.github.io/rss.xml">
   <meta property="og:type" content="website">
@@ -22,6 +25,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sebastienrousseau/skeletonic-stylus@2.0.0/css/core/skeletonic.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+    })();
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -32,6 +44,7 @@
     "mainEntity": {
       "@type": "Person",
       "name": "Bamidele Aly",
+      "gender": "Female",
       "email": "mailto:dele_aly@yahoo.fr",
       "sameAs": "https://www.linkedin.com/in/bamidelealy/"
     }
@@ -52,6 +65,10 @@
           <li><a class="nav-link" href="studio.html">Studio</a></li>
           <li><a class="nav-link active" href="contact.html" aria-current="page">Contact</a></li>
         </ul>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
       </nav>
     </div>
   </header>
@@ -85,18 +102,61 @@
       </div>
     </section>
 
-    <section class="contact-card-section" aria-labelledby="direct-heading">
-      <div class="container">
-        <div class="contact-card">
-          <div>
-            <p class="section-eyebrow">Direct Contact</p>
-            <h2 id="direct-heading">Email or LinkedIn.</h2>
+    <section class="contact-card-section" aria-labelledby="intake-heading">
+      <div class="container narrow">
+        <p class="section-eyebrow">Curated Intake</p>
+        <h2 id="intake-heading">A short brief lets me triage faster.</h2>
+        <p>Submitting the form composes a structured email in your client — nothing leaves your browser until you press send.</p>
+
+        <form class="intake-form" id="intakeForm" data-mailto="dele_aly@yahoo.fr" novalidate>
+          <div class="intake-row two-col">
+            <div class="intake-row">
+              <label for="intake-name">Name <span aria-hidden="true">*</span></label>
+              <input id="intake-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="intake-row">
+              <label for="intake-org">Organisation</label>
+              <input id="intake-org" name="organisation" type="text" autocomplete="organization">
+            </div>
           </div>
-          <div class="contact-links">
-            <a class="btn-primary" href="mailto:dele_aly@yahoo.fr">Email Bamidele</a>
+
+          <div class="intake-row two-col">
+            <div class="intake-row">
+              <label for="intake-purpose">Purpose <span aria-hidden="true">*</span></label>
+              <select id="intake-purpose" name="purpose" required>
+                <option value="" disabled selected>Choose a fit…</option>
+                <option value="Speaking">Speaking or panel</option>
+                <option value="Advisory">Advisory conversation</option>
+                <option value="Academic">Academic collaboration</option>
+                <option value="Press">Press or media</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="intake-row">
+              <label for="intake-timeline">Timeline</label>
+              <select id="intake-timeline" name="timeline">
+                <option value="" disabled selected>When?</option>
+                <option value="This quarter">This quarter</option>
+                <option value="Next quarter">Next quarter</option>
+                <option value="Within 6 months">Within 6 months</option>
+                <option value="Exploratory — no fixed date">Exploratory — no fixed date</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="intake-row">
+            <label for="intake-message">What would you like to discuss? <span aria-hidden="true">*</span></label>
+            <p class="hint">A few sentences is plenty. The clearer the framing, the faster I can respond.</p>
+            <textarea id="intake-message" name="message" required></textarea>
+          </div>
+
+          <div class="intake-actions">
+            <button class="btn-primary" type="submit">Compose email</button>
             <a class="btn-secondary" href="https://www.linkedin.com/in/bamidelealy/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
           </div>
-        </div>
+          <p class="intake-status" id="intakeStatus" role="status" aria-live="polite"></p>
+          <p class="intake-fallback">Prefer no form? Email <a href="mailto:dele_aly@yahoo.fr">dele_aly@yahoo.fr</a> directly.</p>
+        </form>
       </div>
     </section>
   </main>

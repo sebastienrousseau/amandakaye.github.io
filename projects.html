@@ -7,6 +7,9 @@
   <meta name="description" content="Projects by Bamidele Aly, including Ile Owo, an eight-agent IFRS advisory system, and geospatial risk analysis for collateral value and balance sheet resilience.">
   <meta name="author" content="Bamidele Aly">
   <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#f1f1f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+  <meta name="view-transition" content="same-origin">
   <link rel="canonical" href="https://bamidelealy.github.io/projects.html">
   <link rel="alternate" type="application/rss+xml" title="Bamidele Aly RSS" href="https://bamidelealy.github.io/rss.xml">
   <meta property="og:type" content="website">
@@ -22,6 +25,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sebastienrousseau/skeletonic-stylus@2.0.0/css/core/skeletonic.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+    })();
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -29,9 +41,23 @@
     "name": "Projects | Bamidele Aly",
     "url": "https://bamidelealy.github.io/projects.html",
     "inLanguage": "en-GB",
+    "about": {"@type": "Person", "name": "Bamidele Aly", "gender": "Female"},
     "mainEntity": [
-      {"@type": "SoftwareSourceCode", "name": "Ile Owo", "programmingLanguage": "Python", "description": "An eight-agent IFRS and IAS advisory system built on the Anthropic Claude API."},
-      {"@type": "CreativeWork", "name": "Geospatial Risk Analysis", "description": "A hackathon project applying geospatial analysis to credit risk, collateral value and balance sheet resilience."}
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ile Owo",
+        "programmingLanguage": "Python",
+        "description": "An eight-agent IFRS and IAS advisory system built on the Anthropic Claude API.",
+        "creator": {"@type": "Person", "name": "Bamidele Aly", "gender": "Female"},
+        "applicationCategory": "AccountingApplication",
+        "operatingSystem": "Linux"
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Geospatial Risk Analysis",
+        "description": "A hackathon project applying geospatial analysis to credit risk, collateral value and balance sheet resilience.",
+        "creator": {"@type": "Person", "name": "Bamidele Aly", "gender": "Female"}
+      }
     ]
   }
   </script>
@@ -50,6 +76,10 @@
           <li><a class="nav-link" href="studio.html">Studio</a></li>
           <li><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
       </nav>
     </div>
   </header>
@@ -63,7 +93,7 @@
       </div>
     </section>
 
-    <section class="project-detail" aria-labelledby="ile-owo-heading">
+    <section class="project-detail" aria-labelledby="ile-owo-heading" id="ile-owo">
       <div class="container grid grid-cols-12 split-grid">
         <div class="col-span-5">
           <p class="section-eyebrow">Featured Project</p>
@@ -83,6 +113,92 @@
             <li>Multi-agent systems</li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    <section class="agents-section" aria-labelledby="architecture-heading" id="ile-owo-architecture">
+      <div class="container">
+        <p class="section-eyebrow">Architecture</p>
+        <h2 id="architecture-heading">The eight agents of Ile Owo.</h2>
+        <p>Hover, tap or focus any node to see what it does. The Orchestrator routes work through three review stages — sourcing, adversarial review and synthesis — to produce a defensible policy answer.</p>
+
+        <figure class="agent-diagram-wrap">
+          <figcaption class="sr-only">Architecture diagram of the Ile Owo eight-agent system, showing an Orchestrator coordinating Filter and Summaryan agents in the sourcing stage, Historian, Insider and Outsider in the review stage, and Auditor and Scribe in the synthesis stage.</figcaption>
+          <svg class="agent-diagram" data-agent-diagram viewBox="0 0 920 460" role="img" aria-labelledby="architecture-heading" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M0,0 L10,5 L0,10 Z" fill="currentColor" />
+              </marker>
+            </defs>
+
+            <!-- Stage labels -->
+            <text x="125" y="30" class="stage-label" fill="currentColor" opacity="0.55" font-size="12" font-weight="700" letter-spacing="2" text-anchor="middle">SOURCING</text>
+            <text x="460" y="30" class="stage-label" fill="currentColor" opacity="0.55" font-size="12" font-weight="700" letter-spacing="2" text-anchor="middle">ADVERSARIAL REVIEW</text>
+            <text x="795" y="30" class="stage-label" fill="currentColor" opacity="0.55" font-size="12" font-weight="700" letter-spacing="2" text-anchor="middle">SYNTHESIS</text>
+
+            <!-- Links (drawn before nodes so nodes sit on top) -->
+            <path class="agent-link" d="M460,200 C320,200 230,110 200,110" marker-end="url(#arrow)" style="color: var(--ink-muted);"/>
+            <path class="agent-link" d="M460,260 C320,260 230,330 200,330" marker-end="url(#arrow)" style="color: var(--ink-muted);"/>
+            <path class="agent-link" d="M540,200 C620,200 660,150 720,150" marker-end="url(#arrow)" style="color: var(--ink-muted);"/>
+            <path class="agent-link" d="M540,230 C620,230 660,230 720,230" marker-end="url(#arrow)" style="color: var(--ink-muted);"/>
+            <path class="agent-link" d="M540,260 C620,260 660,310 720,310" marker-end="url(#arrow)" style="color: var(--ink-muted);"/>
+            <path class="agent-link" d="M460,290 C460,340 540,380 600,400" marker-end="url(#arrow)" style="color: var(--ink-muted);"/>
+            <path class="agent-link" d="M540,290 C660,290 760,360 820,400" marker-end="url(#arrow)" style="color: var(--ink-muted);"/>
+            <path class="agent-link" d="M260,110 C320,110 370,170 420,210" marker-end="url(#arrow)" style="color: var(--ink-muted);"/>
+            <path class="agent-link" d="M260,330 C320,330 370,290 420,250" marker-end="url(#arrow)" style="color: var(--ink-muted);"/>
+
+            <!-- Orchestrator -->
+            <g class="agent-node orchestrator" role="button" aria-label="Orchestrator" data-tip="Routes the user query through sourcing, review and synthesis. Holds the working context and decides which agent runs next.">
+              <rect x="420" y="200" width="120" height="60" rx="14"/>
+              <text x="480" y="234" text-anchor="middle">Orchestrator</text>
+            </g>
+
+            <!-- Sourcing -->
+            <g class="agent-node" role="button" aria-label="Filter" data-tip="Filter — narrows the question against the corpus (UK Endorsement Board, BIS, Big 4 libraries, internal repos) and discards out-of-scope material.">
+              <rect x="80" y="80" width="120" height="60" rx="14"/>
+              <text x="140" y="114" text-anchor="middle">Filter</text>
+            </g>
+            <g class="agent-node" role="button" aria-label="Summaryan" data-tip="Summaryan — extracts the load-bearing claims from each source and produces a structured summary the review agents can argue over.">
+              <rect x="80" y="300" width="120" height="60" rx="14"/>
+              <text x="140" y="334" text-anchor="middle">Summaryan</text>
+            </g>
+
+            <!-- Adversarial review -->
+            <g class="agent-node" role="button" aria-label="Historian" data-tip="Historian — situates the issue against prior standard-setting decisions and earlier interpretations to surface analogues and inflection points.">
+              <rect x="720" y="120" width="120" height="60" rx="14"/>
+              <text x="780" y="154" text-anchor="middle">Historian</text>
+            </g>
+            <g class="agent-node" role="button" aria-label="Insider" data-tip="Insider — argues the position a preparer would take. Knows where the standard gives discretion and where it gives a hard rule.">
+              <rect x="720" y="200" width="120" height="60" rx="14"/>
+              <text x="780" y="234" text-anchor="middle">Insider</text>
+            </g>
+            <g class="agent-node" role="button" aria-label="Outsider" data-tip="Outsider — argues the position an external auditor or regulator would take, and surfaces challenges the Insider would prefer to avoid.">
+              <rect x="720" y="280" width="120" height="60" rx="14"/>
+              <text x="780" y="314" text-anchor="middle">Outsider</text>
+            </g>
+
+            <!-- Synthesis -->
+            <g class="agent-node" role="button" aria-label="Auditor" data-tip="Auditor — adjudicates the Insider/Outsider exchange against the standard text and the Historian's analogues, and writes the resolved position.">
+              <rect x="540" y="380" width="120" height="60" rx="14"/>
+              <text x="600" y="414" text-anchor="middle">Auditor</text>
+            </g>
+            <g class="agent-node" role="button" aria-label="Scribe" data-tip="Scribe — drafts the final advisory note: citations, working, and a clean summary in the house style of a professional policy team.">
+              <rect x="760" y="380" width="120" height="60" rx="14"/>
+              <text x="820" y="414" text-anchor="middle">Scribe</text>
+            </g>
+          </svg>
+        </figure>
+
+        <ul class="agent-legend" aria-label="Agent roles">
+          <li><strong>Orchestrator</strong> — routes work between stages.</li>
+          <li><strong>Filter</strong> — scopes the question to relevant sources.</li>
+          <li><strong>Summaryan</strong> — extracts the load-bearing claims.</li>
+          <li><strong>Historian</strong> — situates the issue in standard-setting history.</li>
+          <li><strong>Insider</strong> — argues the preparer's position.</li>
+          <li><strong>Outsider</strong> — argues the auditor/regulator's position.</li>
+          <li><strong>Auditor</strong> — resolves the exchange against the standard.</li>
+          <li><strong>Scribe</strong> — produces the final advisory note.</li>
+        </ul>
       </div>
     </section>
 

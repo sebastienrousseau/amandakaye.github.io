@@ -7,6 +7,9 @@
   <meta name="description" content="Bamidele Aly researches West African economic history, monetary systems, colonial financial infrastructure, central banking and Nigerian diaspora networks in Europe.">
   <meta name="author" content="Bamidele Aly">
   <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#f1f1f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+  <meta name="view-transition" content="same-origin">
   <link rel="canonical" href="https://bamidelealy.github.io/historian.html">
   <link rel="alternate" type="application/rss+xml" title="Bamidele Aly RSS" href="https://bamidelealy.github.io/rss.xml">
   <meta property="og:type" content="article">
@@ -22,15 +25,68 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sebastienrousseau/skeletonic-stylus@2.0.0/css/core/skeletonic.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+    })();
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    "name": "Economic Historian | Bamidele Aly",
-    "url": "https://bamidelealy.github.io/historian.html",
-    "inLanguage": "en-GB",
-    "about": {"@type": "Person", "name": "Bamidele Aly"},
-    "mainEntity": {"@type": "Person", "name": "Bamidele Aly", "knowsAbout": ["West African economic history", "monetary systems", "colonial financial infrastructure", "central banking", "Nigerian diaspora"]}
+    "@graph": [
+      {
+        "@type": "ProfilePage",
+        "name": "Economic Historian | Bamidele Aly",
+        "url": "https://bamidelealy.github.io/historian.html",
+        "inLanguage": "en-GB",
+        "about": {"@id": "https://bamidelealy.github.io/#person"},
+        "mainEntity": {"@id": "https://bamidelealy.github.io/#person"}
+      },
+      {
+        "@type": "Person",
+        "@id": "https://bamidelealy.github.io/#person",
+        "name": "Bamidele Aly",
+        "gender": "Female",
+        "url": "https://bamidelealy.github.io/",
+        "knowsAbout": ["West African economic history", "monetary systems", "colonial financial infrastructure", "central banking", "Nigerian diaspora"],
+        "alumniOf": [
+          {"@type": "CollegeOrUniversity", "name": "Université Paris I Panthéon-Sorbonne"},
+          {"@type": "CollegeOrUniversity", "name": "Birkbeck, University of London"},
+          {"@type": "CollegeOrUniversity", "name": "INALCO"},
+          {"@type": "CollegeOrUniversity", "name": "ESCP Business School"}
+        ]
+      },
+      {
+        "@type": "Book",
+        "name": "Identity Transformation and Politicization in Africa: Shifting Mobilization",
+        "editor": [
+          {"@type": "Person", "name": "Toyin Falola"},
+          {"@type": "Person", "name": "Céline A. Jacquemin"}
+        ],
+        "publisher": {"@type": "Organization", "name": "Rowman & Littlefield"},
+        "datePublished": "2022-07-15",
+        "hasPart": {
+          "@type": "Chapter",
+          "name": "Monetary Sovereignty, Sovereign Identities, Monetary Identities in Ghana and Nigeria in the Late 1950s to Early 1960s",
+          "author": {"@id": "https://bamidelealy.github.io/#person"}
+        }
+      },
+      {
+        "@type": "Book",
+        "name": "There Came a Time: Essays on the Great War in Africa",
+        "publisher": {"@type": "Organization", "name": "TSL Books"},
+        "datePublished": "2018-11-05",
+        "hasPart": {
+          "@type": "Chapter",
+          "name": "The Status of the West African Sterling in Southern Nigeria in 1916",
+          "author": {"@id": "https://bamidelealy.github.io/#person"}
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -48,6 +104,10 @@
           <li><a class="nav-link" href="studio.html">Studio</a></li>
           <li><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
       </nav>
     </div>
   </header>
