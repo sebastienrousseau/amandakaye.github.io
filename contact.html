@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#f1f1f1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
   <meta name="view-transition" content="same-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self' https://formspree.io; frame-ancestors 'none';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self' https://formspree.io; frame-ancestors 'none';">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="canonical" href="https://bamidelealy.com/contact.html">
   <link rel="alternate" type="application/rss+xml" title="Bamidele Aly RSS" href="https://bamidelealy.com/rss.xml">
@@ -69,8 +69,8 @@
           <li><a class="nav-link active" href="contact.html" aria-current="page">Contact</a></li>
         </ul>
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
         </button>
       </nav>
     </div>
@@ -112,20 +112,20 @@
         <p>Send your brief without leaving the page. Routed securely; I read every message.</p>
 
         <form class="intake-form" id="intakeForm" data-endpoint="https://formspree.io/f/YOUR_FORMSPREE_ID" data-mailto="dele_aly@yahoo.fr" novalidate>
-          <div class="intake-row two-col">
-            <div class="intake-row">
-              <label for="intake-name">Name <span aria-hidden="true">*</span></label>
-              <input id="intake-name" name="name" type="text" autocomplete="name" required>
+          <div class="field-row">
+            <div class="field">
+              <label for="intake-name">Name <span class="required-mark" aria-hidden="true">required</span></label>
+              <input id="intake-name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
             </div>
-            <div class="intake-row">
+            <div class="field">
               <label for="intake-org">Organisation</label>
-              <input id="intake-org" name="organisation" type="text" autocomplete="organization">
+              <input id="intake-org" name="organisation" type="text" autocomplete="organization" placeholder="Optional">
             </div>
           </div>
 
-          <div class="intake-row two-col">
-            <div class="intake-row">
-              <label for="intake-purpose">Purpose <span aria-hidden="true">*</span></label>
+          <div class="field-row">
+            <div class="field">
+              <label for="intake-purpose">Purpose <span class="required-mark" aria-hidden="true">required</span></label>
               <select id="intake-purpose" name="purpose" required>
                 <option value="" disabled selected>Choose a fit…</option>
                 <option value="Speaking">Speaking or panel</option>
@@ -135,7 +135,7 @@
                 <option value="Other">Other</option>
               </select>
             </div>
-            <div class="intake-row">
+            <div class="field">
               <label for="intake-timeline">Timeline</label>
               <select id="intake-timeline" name="timeline">
                 <option value="" disabled selected>When?</option>
@@ -147,10 +147,10 @@
             </div>
           </div>
 
-          <div class="intake-row">
-            <label for="intake-message">What would you like to discuss? <span aria-hidden="true">*</span></label>
-            <p class="hint">A few sentences is plenty. The clearer the framing, the faster I can respond.</p>
-            <textarea id="intake-message" name="message" required></textarea>
+          <div class="field">
+            <label for="intake-message">What would you like to discuss? <span class="required-mark" aria-hidden="true">required</span></label>
+            <p class="hint">A few sentences is plenty — the clearer the framing, the faster I can respond.</p>
+            <textarea id="intake-message" name="message" placeholder="Tell me a little about the context, the audience and what success looks like." required></textarea>
           </div>
 
           <div class="intake-actions">

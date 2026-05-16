@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#f1f1f1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
   <meta name="view-transition" content="same-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self' https://formspree.io; frame-ancestors 'none';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self' https://formspree.io; frame-ancestors 'none';">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="canonical" href="https://bamidelealy.com/projects.html">
   <link rel="alternate" type="application/rss+xml" title="Bamidele Aly RSS" href="https://bamidelealy.com/rss.xml">
@@ -80,8 +80,8 @@
           <li><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
         </button>
       </nav>
     </div>
@@ -123,73 +123,41 @@
       <div class="container">
         <p class="section-eyebrow">Architecture</p>
         <h2 id="architecture-heading">The eight agents of Ile Owo.</h2>
-        <p>Hover, tap or focus any node to see what it does. The Orchestrator routes work through three review stages — sourcing, adversarial review and synthesis — to produce a defensible policy answer.</p>
+        <p>The Orchestrator routes each enquiry through three stages — sourcing, adversarial review and synthesis — to produce a defensible policy answer.</p>
 
         <figure class="agent-diagram-wrap">
-          <figcaption class="sr-only">Architecture diagram of the Ile Owo eight-agent system, showing an Orchestrator coordinating Filter and Summaryan agents in the sourcing stage, Historian, Insider and Outsider in the review stage, and Auditor and Scribe in the synthesis stage.</figcaption>
-          <svg class="agent-diagram" data-agent-diagram viewBox="0 0 920 460" role="img" aria-labelledby="architecture-heading" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                <path d="M0,0 L10,5 L0,10 Z" fill="currentColor" />
-              </marker>
-            </defs>
-
-            <!-- Stage labels -->
-            <text x="125" y="30" class="stage-label" fill="currentColor" opacity="0.55" font-size="12" font-weight="700" letter-spacing="2" text-anchor="middle">SOURCING</text>
-            <text x="460" y="30" class="stage-label" fill="currentColor" opacity="0.55" font-size="12" font-weight="700" letter-spacing="2" text-anchor="middle">ADVERSARIAL REVIEW</text>
-            <text x="795" y="30" class="stage-label" fill="currentColor" opacity="0.55" font-size="12" font-weight="700" letter-spacing="2" text-anchor="middle">SYNTHESIS</text>
-
-            <!-- Links (drawn before nodes so nodes sit on top) -->
-            <path class="agent-link" d="M460,200 C320,200 230,110 200,110" marker-end="url(#arrow)" style="color: var(--ink-muted);"/>
-            <path class="agent-link" d="M460,260 C320,260 230,330 200,330" marker-end="url(#arrow)" style="color: var(--ink-muted);"/>
-            <path class="agent-link" d="M540,200 C620,200 660,150 720,150" marker-end="url(#arrow)" style="color: var(--ink-muted);"/>
-            <path class="agent-link" d="M540,230 C620,230 660,230 720,230" marker-end="url(#arrow)" style="color: var(--ink-muted);"/>
-            <path class="agent-link" d="M540,260 C620,260 660,310 720,310" marker-end="url(#arrow)" style="color: var(--ink-muted);"/>
-            <path class="agent-link" d="M460,290 C460,340 540,380 600,400" marker-end="url(#arrow)" style="color: var(--ink-muted);"/>
-            <path class="agent-link" d="M540,290 C660,290 760,360 820,400" marker-end="url(#arrow)" style="color: var(--ink-muted);"/>
-            <path class="agent-link" d="M260,110 C320,110 370,170 420,210" marker-end="url(#arrow)" style="color: var(--ink-muted);"/>
-            <path class="agent-link" d="M260,330 C320,330 370,290 420,250" marker-end="url(#arrow)" style="color: var(--ink-muted);"/>
-
-            <!-- Orchestrator -->
-            <g class="agent-node orchestrator" tabindex="0" role="button" aria-label="Orchestrator" data-tip="Routes the user query through sourcing, review and synthesis. Holds the working context and decides which agent runs next.">
-              <rect x="420" y="200" width="120" height="60" rx="14"/>
-              <text x="480" y="234" text-anchor="middle">Orchestrator</text>
-            </g>
-
-            <!-- Sourcing -->
-            <g class="agent-node" tabindex="0" role="button" aria-label="Filter" data-tip="Filter — narrows the question against the corpus (UK Endorsement Board, BIS, Big 4 libraries, internal repos) and discards out-of-scope material.">
-              <rect x="80" y="80" width="120" height="60" rx="14"/>
-              <text x="140" y="114" text-anchor="middle">Filter</text>
-            </g>
-            <g class="agent-node" tabindex="0" role="button" aria-label="Summaryan" data-tip="Summaryan — extracts the load-bearing claims from each source and produces a structured summary the review agents can argue over.">
-              <rect x="80" y="300" width="120" height="60" rx="14"/>
-              <text x="140" y="334" text-anchor="middle">Summaryan</text>
-            </g>
-
-            <!-- Adversarial review -->
-            <g class="agent-node" tabindex="0" role="button" aria-label="Historian" data-tip="Historian — situates the issue against prior standard-setting decisions and earlier interpretations to surface analogues and inflection points.">
-              <rect x="720" y="120" width="120" height="60" rx="14"/>
-              <text x="780" y="154" text-anchor="middle">Historian</text>
-            </g>
-            <g class="agent-node" tabindex="0" role="button" aria-label="Insider" data-tip="Insider — argues the position a preparer would take. Knows where the standard gives discretion and where it gives a hard rule.">
-              <rect x="720" y="200" width="120" height="60" rx="14"/>
-              <text x="780" y="234" text-anchor="middle">Insider</text>
-            </g>
-            <g class="agent-node" tabindex="0" role="button" aria-label="Outsider" data-tip="Outsider — argues the position an external auditor or regulator would take, and surfaces challenges the Insider would prefer to avoid.">
-              <rect x="720" y="280" width="120" height="60" rx="14"/>
-              <text x="780" y="314" text-anchor="middle">Outsider</text>
-            </g>
-
-            <!-- Synthesis -->
-            <g class="agent-node" tabindex="0" role="button" aria-label="Auditor" data-tip="Auditor — adjudicates the Insider/Outsider exchange against the standard text and the Historian's analogues, and writes the resolved position.">
-              <rect x="540" y="380" width="120" height="60" rx="14"/>
-              <text x="600" y="414" text-anchor="middle">Auditor</text>
-            </g>
-            <g class="agent-node" tabindex="0" role="button" aria-label="Scribe" data-tip="Scribe — drafts the final advisory note: citations, working, and a clean summary in the house style of a professional policy team.">
-              <rect x="760" y="380" width="120" height="60" rx="14"/>
-              <text x="820" y="414" text-anchor="middle">Scribe</text>
-            </g>
-          </svg>
+          <figcaption class="sr-only">Architecture diagram of the Ile Owo eight-agent system. The Orchestrator coordinates Filter and Summaryan in the sourcing stage; Historian, Insider and Outsider in the adversarial review stage; and Auditor and Scribe in the synthesis stage.</figcaption>
+          <pre class="mermaid">flowchart LR
+  Q([Enquiry]) --> Orch
+  Orch{{Orchestrator}}
+  subgraph S1[Sourcing]
+    direction TB
+    Filter[Filter]
+    Summaryan[Summaryan]
+  end
+  subgraph S2[Adversarial review]
+    direction TB
+    Historian[Historian]
+    Insider[Insider]
+    Outsider[Outsider]
+  end
+  subgraph S3[Synthesis]
+    direction TB
+    Auditor[Auditor]
+    Scribe[Scribe]
+  end
+  Orch --> Filter --> Summaryan --> Orch
+  Orch --> Historian
+  Orch --> Insider
+  Orch --> Outsider
+  Historian --> Auditor
+  Insider --> Auditor
+  Outsider --> Auditor
+  Auditor --> Scribe --> Out([Advisory note])
+  classDef orch fill:#0071e3,stroke:#005ec4,color:#ffffff,font-weight:600
+  classDef io fill:transparent,stroke:#86868b,stroke-dasharray:3 3,color:#6e6e73
+  class Orch orch
+  class Q,Out io</pre>
         </figure>
 
         <ul class="agent-legend" aria-label="Agent roles">
@@ -233,6 +201,7 @@
       <p><a href="rss.xml">RSS</a> · <a href="sitemap.xml">Sitemap</a> · <a href="llms.txt">LLMs.txt</a></p>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js" defer></script>
   <script src="script.js" defer></script>
 </body>
 </html>
