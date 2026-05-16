@@ -59,60 +59,93 @@
     setTheme(document.documentElement.getAttribute('data-theme') || 'light');
   }
 
-  // Mermaid diagram — render with theme awareness, re-render on theme change
+  // Mermaid diagram — lazy-load the 900 KB library only when the diagram
+  // nears the viewport, then re-render on theme change.
   var mermaidEl = document.querySelector('.mermaid');
-  if (mermaidEl && typeof window.mermaid !== 'undefined') {
-    var source = mermaidEl.getAttribute('data-source') || mermaidEl.textContent.trim();
+  if (mermaidEl) {
+    var mermaidSource = mermaidEl.getAttribute('data-source') || mermaidEl.textContent.trim();
     mermaidEl.textContent = '';
+    var mermaidLoading = null;
+
+    var loadMermaidLib = function () {
+      if (window.mermaid) return Promise.resolve(window.mermaid);
+      if (mermaidLoading) return mermaidLoading;
+      mermaidLoading = new Promise(function (resolve, reject) {
+        var s = document.createElement('script');
+        s.src = 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js';
+        s.crossOrigin = 'anonymous';
+        s.referrerPolicy = 'no-referrer';
+        s.onload = function () { resolve(window.mermaid); };
+        s.onerror = function () { reject(new Error('mermaid load failed')); };
+        document.head.appendChild(s);
+      });
+      return mermaidLoading;
+    };
 
     var renderMermaid = function () {
-      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      window.mermaid.initialize({
-        startOnLoad: false,
-        securityLevel: 'strict',
-        theme: 'base',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Atkinson Hyperlegible", system-ui, sans-serif',
-        themeVariables: isDark ? {
-          background: '#161617',
-          primaryColor: '#2a2a2c',
-          primaryTextColor: '#f5f5f7',
-          primaryBorderColor: '#3a3a3c',
-          lineColor: '#86868b',
-          secondaryColor: '#1d1d1f',
-          tertiaryColor: '#0d2640',
-          clusterBkg: '#1d1d1f',
-          clusterBorder: '#2d2d30',
-          edgeLabelBackground: '#161617',
-          mainBkg: '#2a2a2c',
-          textColor: '#f5f5f7'
-        } : {
-          background: '#ffffff',
-          primaryColor: '#ffffff',
-          primaryTextColor: '#1d1d1f',
-          primaryBorderColor: '#d2d2d7',
-          lineColor: '#6e6e73',
-          secondaryColor: '#f5f5f7',
-          tertiaryColor: '#e8f1fd',
-          clusterBkg: '#f5f5f7',
-          clusterBorder: '#d2d2d7',
-          edgeLabelBackground: '#ffffff',
-          mainBkg: '#ffffff',
-          textColor: '#1d1d1f'
-        }
-      });
-      var id = 'm-' + Math.random().toString(36).slice(2, 9);
-      window.mermaid.render(id, source).then(function (result) {
-        mermaidEl.innerHTML = result.svg;
-        mermaidEl.setAttribute('data-processed', 'true');
-        if (result.bindFunctions) result.bindFunctions(mermaidEl);
+      return loadMermaidLib().then(function () {
+        if (!window.mermaid) return;
+        var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        window.mermaid.initialize({
+          startOnLoad: false,
+          securityLevel: 'strict',
+          theme: 'base',
+          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Atkinson Hyperlegible", system-ui, sans-serif',
+          themeVariables: isDark ? {
+            background: '#161617',
+            primaryColor: '#2a2a2c',
+            primaryTextColor: '#f5f5f7',
+            primaryBorderColor: '#3a3a3c',
+            lineColor: '#a8a8ae',
+            secondaryColor: '#1d1d1f',
+            tertiaryColor: '#0d2640',
+            clusterBkg: '#1d1d1f',
+            clusterBorder: '#3a3a3d',
+            edgeLabelBackground: '#161617',
+            mainBkg: '#2a2a2c',
+            textColor: '#f5f5f7'
+          } : {
+            background: '#ffffff',
+            primaryColor: '#ffffff',
+            primaryTextColor: '#1d1d1f',
+            primaryBorderColor: '#c7c7cc',
+            lineColor: '#545458',
+            secondaryColor: '#f5f5f7',
+            tertiaryColor: '#e8f1fd',
+            clusterBkg: '#f5f5f7',
+            clusterBorder: '#c7c7cc',
+            edgeLabelBackground: '#ffffff',
+            mainBkg: '#ffffff',
+            textColor: '#1d1d1f'
+          }
+        });
+        var id = 'm-' + Math.random().toString(36).slice(2, 9);
+        return window.mermaid.render(id, mermaidSource).then(function (result) {
+          mermaidEl.innerHTML = result.svg;
+          mermaidEl.setAttribute('data-processed', 'true');
+          if (result.bindFunctions) result.bindFunctions(mermaidEl);
+        });
       }).catch(function (err) {
         mermaidEl.textContent = 'Diagram failed to load.';
         if (window.console) console.error(err);
       });
     };
 
-    renderMermaid();
-    document.addEventListener('themechange', renderMermaid);
+    // Defer loading until the diagram nears the viewport
+    if ('IntersectionObserver' in window) {
+      var obs = new IntersectionObserver(function (entries) {
+        if (entries.some(function (e) { return e.isIntersecting; })) {
+          obs.disconnect();
+          renderMermaid();
+        }
+      }, { rootMargin: '400px 0px' });
+      obs.observe(mermaidEl);
+    } else {
+      renderMermaid();
+    }
+    document.addEventListener('themechange', function () {
+      if (mermaidEl.getAttribute('data-processed') === 'true') renderMermaid();
+    });
   }
 
   // Site search (Cmd/Ctrl+K or '/' to open, arrows to navigate, Enter to open)
