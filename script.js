@@ -115,6 +115,34 @@
     document.addEventListener('themechange', renderMermaid);
   }
 
+  // Decode base64 safely (used for obfuscated email)
+  var decodeAddr = function (encoded) {
+    if (!encoded) return '';
+    try { return atob(encoded); } catch (e) { return encoded; }
+  };
+
+  // Reveal-email button — no plain-text email in source until user explicitly asks
+  var revealBtn = document.getElementById('revealEmail');
+  var revealOut = document.getElementById('revealEmailOut');
+  if (revealBtn && revealOut) {
+    revealBtn.addEventListener('click', function () {
+      var form = document.getElementById('intakeForm');
+      var addr = form ? decodeAddr(form.getAttribute('data-mailto')) : '';
+      if (!addr) return;
+      revealOut.innerHTML = '<a href="mailto:' + addr + '">' + addr + '</a>';
+      revealOut.hidden = false;
+      revealBtn.hidden = true;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(addr).then(function () {
+          var note = document.createElement('span');
+          note.className = 'reveal-email-copied';
+          note.textContent = ' (copied to clipboard)';
+          revealOut.appendChild(note);
+        }).catch(function () { /* clipboard unavailable, ignore */ });
+      }
+    });
+  }
+
   // Contact intake form — Formspree fetch with mailto fallback, accessible validation
   var form = document.getElementById('intakeForm');
   if (form) {
@@ -189,13 +217,13 @@
           } else {
             return response.json().then(function (body) {
               var err = (body && body.errors && body.errors.map(function (x) { return x.message; }).join(', ')) || 'Send failed.';
-              setStatus(err + ' Email dele_aly@yahoo.fr if it keeps failing.', 'error');
+              setStatus(err + ' Please try again, or message me on LinkedIn.', 'error');
             }).catch(function () {
-              setStatus('Send failed. Email dele_aly@yahoo.fr if it keeps failing.', 'error');
+              setStatus('Send failed. Please try again, or message me on LinkedIn.', 'error');
             });
           }
         }).catch(function () {
-          setStatus('Network error. Email dele_aly@yahoo.fr if it keeps failing.', 'error');
+          setStatus('Network error. Please try again, or message me on LinkedIn.', 'error');
         }).finally(function () {
           if (submit) submit.disabled = false;
         });
@@ -214,7 +242,8 @@
         '—',
         'Submitted from bamidelealy.com'
       ].filter(Boolean).join('\n');
-      var to = form.getAttribute('data-mailto') || 'dele_aly@yahoo.fr';
+      var to = decodeAddr(form.getAttribute('data-mailto'));
+      if (!to) { setStatus('Unable to compose email. Try the form again or message me on LinkedIn.', 'error'); return; }
       var href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
       setStatus('Opening your email client…');
       window.location.href = href;

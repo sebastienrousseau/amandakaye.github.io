@@ -752,6 +752,27 @@
     font-size: .88rem;
     color: var(--ink-muted);
   }
+  .reveal-email {
+    appearance: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+    color: var(--accent);
+    font: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: .2em;
+  }
+  .reveal-email:hover { color: var(--accent-hover); }
+  .reveal-email-out a {
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .reveal-email-copied {
+    color: var(--ink-muted);
+    font-size: .85rem;
+  }
   .intake-status {
     margin: 0;
     min-block-size: 1.4em;

@@ -48,7 +48,12 @@
       "@type": "Person",
       "name": "Bamidele Aly",
       "gender": "Female",
-      "email": "mailto:dele_aly@yahoo.fr",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Enquiries",
+        "url": "https://bamidelealy.com/contact.html",
+        "availableLanguage": ["English", "French"]
+      },
       "sameAs": "https://www.linkedin.com/in/bamidelealy/"
     }
   }
@@ -111,7 +116,7 @@
         <h2 id="intake-heading">A short brief lets me triage faster.</h2>
         <p>Send your brief without leaving the page. Routed securely; I read every message.</p>
 
-        <form class="intake-form" id="intakeForm" data-endpoint="https://formspree.io/f/mvojvaej" data-redirect="thanks/" data-mailto="dele_aly@yahoo.fr" novalidate>
+        <form class="intake-form" id="intakeForm" data-endpoint="https://formspree.io/f/mvojvaej" data-redirect="thanks/" data-mailto="ZGVsZV9hbHlAeWFob28uZnI=" novalidate>
           <input type="hidden" name="_next" value="https://bamidelealy.com/thanks/">
           <div class="field-row">
             <div class="field">
@@ -159,7 +164,11 @@
             <a class="btn-secondary" href="https://www.linkedin.com/in/bamidelealy/" target="_blank" rel="noopener noreferrer me">Connect on LinkedIn</a>
           </div>
           <p class="intake-status" id="intakeStatus" role="alert" aria-live="assertive"></p>
-          <p class="intake-fallback">Prefer no form? Email <a href="mailto:dele_aly@yahoo.fr">dele_aly@yahoo.fr</a> directly.</p>
+          <p class="intake-fallback">
+            Prefer not to use the form?
+            <button type="button" class="reveal-email" id="revealEmail" aria-label="Reveal email address">Show email</button>
+            <span class="reveal-email-out" id="revealEmailOut" hidden></span>
+          </p>
         </form>
       </div>
     </section>
