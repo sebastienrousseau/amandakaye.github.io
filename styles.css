@@ -82,6 +82,7 @@
     scroll-behavior: smooth;
     scroll-padding-top: 88px;
     text-size-adjust: 100%;
+    overflow-x: clip;
   }
 
   body {
@@ -95,6 +96,13 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     transition: background-color .4s var(--ease-out), color .4s var(--ease-out);
+    overflow-x: clip;
+  }
+
+  /* Ensure long words always break — no horizontal scroll on phones */
+  h1, h2, h3, h4, p, li, dd, dt, blockquote, a {
+    overflow-wrap: break-word;
+    word-break: normal;
   }
 
   img { display: block; max-width: 100%; height: auto; }
@@ -374,21 +382,21 @@
   .search-input::placeholder { color: var(--ink-muted); }
   .search-cancel {
     flex: none;
-    white-space: nowrap;
+    display: inline-grid;
+    place-items: center;
     appearance: none;
-    border: 1px solid var(--line);
-    background: var(--surface);
-    color: var(--ink-soft);
+    inline-size: 32px;
+    block-size: 32px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--ink-muted);
     cursor: pointer;
-    padding: .25rem .55rem;
-    border-radius: 6px;
-    font-family: ui-monospace, SF Mono, Menlo, monospace;
-    font-size: .72rem;
-    font-weight: 600;
-    line-height: 1.4;
-    letter-spacing: .02em;
+    transition: background-color .15s var(--ease-out), color .15s var(--ease-out);
   }
-  .search-cancel:hover { color: var(--ink); border-color: var(--ink); background: var(--surface-soft); }
+  .search-cancel:hover { color: var(--ink); background: var(--surface-soft); }
+  .search-cancel svg { inline-size: 18px; block-size: 18px; pointer-events: none; }
 
   .search-results {
     overflow-y: auto;
