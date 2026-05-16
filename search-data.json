@@ -29,7 +29,12 @@
       { "t": "Mobile telephony in Sub-Saharan Africa", "d": "Top Up, Pay as You Go — chapter in Urban Challenges and Survival Strategies in Africa (2017).", "u": "historian.html#published-heading" },
 
       { "t": "Education", "d": "Université Paris I Panthéon-Sorbonne, Birkbeck (London), INALCO, ESCP Business School.", "u": "historian.html#education-heading" },
-      { "t": "Studio practice", "d": "A discipline that keeps the others honest — printmaking, watercolour, gouache, acrylics.", "u": "studio.html#practice-heading" }
+      { "t": "Studio practice", "d": "A discipline that keeps the others honest — printmaking, watercolour, gouache, acrylics.", "u": "studio.html#practice-heading" },
+
+      { "t": "Notes — index", "d": "Long-form essays on AI governance, multi-agent architectures and West African monetary history.", "u": "notes/" },
+      { "t": "Why eight agents, and not one chatbot", "d": "The design rationale for the Ile Owo eight-agent architecture and why a single chatbot fails the tests an accounting policy team applies.", "u": "notes/ile-owo-design.html" },
+      { "t": "Governance is the road, not the speed bump", "d": "AI model risk governance as adoption enabler. Risk-tiered classification, the AI Project Canvas, supervisory alignment.", "u": "notes/ai-governance-as-road.html" },
+      { "t": "Emergency money and counter-money, 1967–1970", "d": "Research project page on the Bank of Biafra, the Central Bank of Nigeria, and contested currency during the Nigerian Civil War.", "u": "notes/bank-of-biafra-project.html" }
     ]
   }
 }

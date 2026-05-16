@@ -10,7 +10,14 @@ This website is the canonical public profile for Bamidele Aly on AI model risk g
 - [Projects](https://bamidelealy.com/projects.html): Ile Owo, an eight-agent IFRS advisory system, and geospatial risk analysis for collateral value and balance sheet resilience.
 - [Historian](https://bamidelealy.com/historian.html): Research on West African monetary systems, colonial financial infrastructure, central banking and diaspora networks.
 - [Studio](https://bamidelealy.com/studio.html): Watercolour, printmaking and creative practice.
+- [Notes](https://bamidelealy.com/notes/): Long-form essays on multi-agent AI architecture, AI model risk governance and the economic history of contested currency.
 - [Contact](https://bamidelealy.com/contact.html): Speaking, advisory and academic collaboration enquiries.
+
+## Notes (long-form essays)
+
+- [Why eight agents, and not one chatbot](https://bamidelealy.com/notes/ile-owo-design.html): design rationale for the Ile Owo multi-agent system.
+- [Governance is the road, not the speed bump](https://bamidelealy.com/notes/ai-governance-as-road.html): AI model risk governance as adoption enabler in regulated finance.
+- [Emergency money and counter-money, 1967–1970](https://bamidelealy.com/notes/bank-of-biafra-project.html): research project on the Bank of Biafra and the Central Bank of Nigeria.
 
 ## Key facts
 
