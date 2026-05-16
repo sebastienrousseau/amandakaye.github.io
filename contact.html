@@ -27,7 +27,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sebastienrousseau/skeletonic-stylus@2.0.0/css/core/skeletonic.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
-  <link rel="stylesheet" href="styles.css?v=2026051604">
+  <link rel="stylesheet" href="styles.css?v=2026051605">
   <script>
     (function () {
       try {
@@ -122,8 +122,10 @@
         <h2 id="intake-heading">A short brief lets me triage faster.</h2>
         <p>Send your brief without leaving the page. Routed securely; I read every message.</p>
 
-        <form class="intake-form" id="intakeForm" data-endpoint="https://formspree.io/f/mvojvaej" data-redirect="thanks/" data-mailto="ZGVsZV9hbHlAeWFob28uZnI=" novalidate>
+        <form class="intake-form" id="intakeForm" action="https://formspree.io/f/mvojvaej" method="POST" data-redirect="thanks/" data-mailto="ZGVsZV9hbHlAeWFob28uZnI=" novalidate>
           <input type="hidden" name="_next" value="https://bamidelealy.com/thanks/">
+          <input type="hidden" name="_subject" value="Bamidele Aly — site enquiry">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">
           <div class="field-row">
             <div class="field">
               <label for="intake-name">Name <span class="required-mark" aria-hidden="true">required</span></label>
@@ -204,6 +206,6 @@
       <p><a href="rss.xml">RSS</a> · <a href="sitemap.xml">Sitemap</a> · <a href="llms.txt">LLMs.txt</a></p>
     </div>
   </footer>
-  <script src="script.js?v=2026051604" defer></script>
+  <script src="script.js?v=2026051605" defer></script>
 </body>
 </html>

@@ -408,7 +408,9 @@
       }
 
       var subject = '[' + purpose + '] ' + name + (org ? ' — ' + org : '');
-      var endpoint = form.getAttribute('data-endpoint');
+      // Prefer the standard form.action attribute; fall back to data-endpoint
+      // for backwards compatibility with older copies of the markup.
+      var endpoint = form.getAttribute('action') || form.getAttribute('data-endpoint') || '';
       var redirect = form.getAttribute('data-redirect');
       var submit = form.querySelector('button[type="submit"]');
       var useEndpoint = endpoint && /^https?:\/\//.test(endpoint) && endpoint.indexOf('YOUR_FORMSPREE_ID') === -1;
