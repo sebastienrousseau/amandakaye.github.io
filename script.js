@@ -66,6 +66,12 @@
     var mermaidSource = mermaidEl.getAttribute('data-source') || mermaidEl.textContent.trim();
     mermaidEl.textContent = '';
     var mermaidLoading = null;
+    var mermaidDirection = '';
+
+    var getDirection = function () { return window.innerWidth < 768 ? 'TD' : 'LR'; };
+    var sourceForDirection = function () {
+      return mermaidSource.replace(/^\s*flowchart\s+(LR|TD|TB|RL|BT)/m, 'flowchart ' + getDirection());
+    };
 
     var loadMermaidLib = function () {
       if (window.mermaid) return Promise.resolve(window.mermaid);
@@ -120,7 +126,8 @@
           }
         });
         var id = 'm-' + Math.random().toString(36).slice(2, 9);
-        return window.mermaid.render(id, mermaidSource).then(function (result) {
+        mermaidDirection = getDirection();
+        return window.mermaid.render(id, sourceForDirection()).then(function (result) {
           mermaidEl.innerHTML = result.svg;
           mermaidEl.setAttribute('data-processed', 'true');
           if (result.bindFunctions) result.bindFunctions(mermaidEl);
@@ -130,6 +137,15 @@
         if (window.console) console.error(err);
       });
     };
+
+    // Re-render on viewport changes (orientation, breakpoint cross)
+    var rerenderTimer;
+    window.addEventListener('resize', function () {
+      if (mermaidEl.getAttribute('data-processed') !== 'true') return;
+      if (getDirection() === mermaidDirection) return;
+      clearTimeout(rerenderTimer);
+      rerenderTimer = setTimeout(renderMermaid, 150);
+    }, { passive: true });
 
     // Defer loading until the diagram nears the viewport
     if ('IntersectionObserver' in window) {
