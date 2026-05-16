@@ -1,0 +1,35 @@
+{
+  "index": {
+    "en": [
+      { "t": "Home", "d": "Engineering trustworthy AI for global finance — Bamidele Aly on AI governance, Product Control and economic history.", "u": "index.html" },
+      { "t": "Projects", "d": "Applied AI systems for finance and risk — Ile Owo and geospatial credit-risk work.", "u": "projects.html" },
+      { "t": "Economic Historian", "d": "West African monetary systems, colonial financial infrastructure, central banking and Nigerian diaspora research.", "u": "historian.html" },
+      { "t": "Studio", "d": "Watercolour, Chinese painting, acrylics, gouache and printmaking.", "u": "studio.html" },
+      { "t": "Contact", "d": "Speaking, advisory and academic collaboration enquiries.", "u": "contact.html" },
+
+      { "t": "AI Model Risk Governance", "d": "Designing and operationalising governance frameworks for AI in regulated financial environments.", "u": "index.html#expertise-heading" },
+      { "t": "Finance Transformation & Applied AI", "d": "AI systems that solve real Product Control problems, including Ile Owo.", "u": "index.html#expertise-heading" },
+      { "t": "Credit Risk & Market Infrastructure", "d": "Credit risk across banks, NBFIs, sovereigns, supranationals and 85+ jurisdictions.", "u": "index.html#expertise-heading" },
+
+      { "t": "Ile Owo", "d": "An eight-agent IFRS and IAS advisory system built on the Anthropic Claude API in Python.", "u": "projects.html#ile-owo" },
+      { "t": "Ile Owo architecture", "d": "Orchestrator, Filter, Summaryan, Historian, Insider, Outsider, Auditor, Scribe — the eight-agent flow.", "u": "projects.html#ile-owo-architecture" },
+      { "t": "Geospatial Risk Analysis", "d": "Collateral value, balance sheet resilience and spatially correlated shocks.", "u": "projects.html" },
+
+      { "t": "FT Live — Open Finance Meets AI", "d": "FT Fintech Festival panel, November 2025.", "u": "index.html#speaking-heading" },
+      { "t": "The Economist — AI for CFOs", "d": "Deep Learning: Training the AI-First CFO, March 2026.", "u": "index.html#speaking-heading" },
+      { "t": "Banque de France", "d": "Crédibilités des monnaies, de John Law au bitcoin — monetary sovereignties in Nigeria.", "u": "index.html#speaking-heading" },
+
+      { "t": "Enemy Capital in Colonial Lagos", "d": "First World War seizure of German and Austro-Hungarian trading houses in Lagos.", "u": "historian.html#research-heading" },
+      { "t": "Central Banking in British West Africa", "d": "Institutional architecture, monetary policy and political economy across the territories.", "u": "historian.html#research-heading" },
+      { "t": "The Nigerian Diaspora in Europe", "d": "Formation, economic networks and trajectory of Nigerian communities across European cities.", "u": "historian.html#research-heading" },
+
+      { "t": "Bank of Biafra and Central Bank of Nigeria (1967-1970)", "d": "Emergency Money and Counter-Money — paper in preparation.", "u": "historian.html#published-heading" },
+      { "t": "Monetary Sovereignty in Ghana and Nigeria", "d": "Late 1950s to early 1960s — chapter in Identity Transformation and Politicization in Africa (Rowman & Littlefield, 2022).", "u": "historian.html#published-heading" },
+      { "t": "West African Sterling in Southern Nigeria, 1916", "d": "Chapter in There Came a Time: Essays on the Great War in Africa (TSL Books, 2018).", "u": "historian.html#published-heading" },
+      { "t": "Mobile telephony in Sub-Saharan Africa", "d": "Top Up, Pay as You Go — chapter in Urban Challenges and Survival Strategies in Africa (2017).", "u": "historian.html#published-heading" },
+
+      { "t": "Education", "d": "Université Paris I Panthéon-Sorbonne, Birkbeck (London), INALCO, ESCP Business School.", "u": "historian.html#education-heading" },
+      { "t": "Studio practice", "d": "A discipline that keeps the others honest — printmaking, watercolour, gouache, acrylics.", "u": "studio.html#practice-heading" }
+    ]
+  }
+}
