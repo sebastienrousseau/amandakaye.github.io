@@ -10,20 +10,23 @@
   <meta name="theme-color" content="#f1f1f1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
   <meta name="view-transition" content="same-origin">
-  <link rel="canonical" href="https://bamidelealy.github.io/projects.html">
-  <link rel="alternate" type="application/rss+xml" title="Bamidele Aly RSS" href="https://bamidelealy.github.io/rss.xml">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self' https://formspree.io; frame-ancestors 'none';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="canonical" href="https://bamidelealy.com/projects.html">
+  <link rel="alternate" type="application/rss+xml" title="Bamidele Aly RSS" href="https://bamidelealy.com/rss.xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Bamidele Aly">
   <meta property="og:title" content="Projects | Bamidele Aly">
   <meta property="og:description" content="Ile Owo and geospatial risk analysis projects at the intersection of AI, accounting policy and financial risk.">
-  <meta property="og:image" content="https://bamidelealy.github.io/assets/bamidele-aly-hsbc.jpg">
-  <meta property="og:url" content="https://bamidelealy.github.io/projects.html">
+  <meta property="og:image" content="https://bamidelealy.com/assets/bamidele-aly-hsbc.jpg">
+  <meta property="og:url" content="https://bamidelealy.com/projects.html">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sebastienrousseau/skeletonic-stylus@2.0.0/css/core/skeletonic.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
   <link rel="stylesheet" href="styles.css">
   <script>
     (function () {
@@ -39,7 +42,7 @@
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "Projects | Bamidele Aly",
-    "url": "https://bamidelealy.github.io/projects.html",
+    "url": "https://bamidelealy.com/projects.html",
     "inLanguage": "en-GB",
     "about": {"@type": "Person", "name": "Bamidele Aly", "gender": "Female"},
     "mainEntity": [
@@ -101,7 +104,7 @@
           <p class="project-kicker">An eight-agent IFRS advisory system.</p>
         </div>
         <div class="col-span-7 rich-text">
-          <p>Ile Owo, meaning "house of money" in Yoruba, is a multi-agent accounting policy advisor built on the Anthropic Claude API. Rather than a single chatbot, it mirrors how a real policy team works.</p>
+          <p>Ile Owo, meaning "house of money" in <span lang="yo">Yoruba</span>, is a multi-agent accounting policy advisor built on the Anthropic Claude API. Rather than a single chatbot, it mirrors how a real policy team works.</p>
           <p>The architecture includes an Orchestrator, Filter, Summaryan, Historian, Insider, Outsider, Auditor and Scribe. Sources span the UK Endorsement Board, BIS, Big 4 technical libraries and internal repositories.</p>
           <p>The architecture expanded from an earlier five-agent prototype to capture the adversarial review structure that gives professional policy advice its rigour. Built in Python on Ubuntu. Active development.</p>
           <ul class="tag-list">
@@ -148,41 +151,41 @@
             <path class="agent-link" d="M260,330 C320,330 370,290 420,250" marker-end="url(#arrow)" style="color: var(--ink-muted);"/>
 
             <!-- Orchestrator -->
-            <g class="agent-node orchestrator" role="button" aria-label="Orchestrator" data-tip="Routes the user query through sourcing, review and synthesis. Holds the working context and decides which agent runs next.">
+            <g class="agent-node orchestrator" tabindex="0" role="button" aria-label="Orchestrator" data-tip="Routes the user query through sourcing, review and synthesis. Holds the working context and decides which agent runs next.">
               <rect x="420" y="200" width="120" height="60" rx="14"/>
               <text x="480" y="234" text-anchor="middle">Orchestrator</text>
             </g>
 
             <!-- Sourcing -->
-            <g class="agent-node" role="button" aria-label="Filter" data-tip="Filter — narrows the question against the corpus (UK Endorsement Board, BIS, Big 4 libraries, internal repos) and discards out-of-scope material.">
+            <g class="agent-node" tabindex="0" role="button" aria-label="Filter" data-tip="Filter — narrows the question against the corpus (UK Endorsement Board, BIS, Big 4 libraries, internal repos) and discards out-of-scope material.">
               <rect x="80" y="80" width="120" height="60" rx="14"/>
               <text x="140" y="114" text-anchor="middle">Filter</text>
             </g>
-            <g class="agent-node" role="button" aria-label="Summaryan" data-tip="Summaryan — extracts the load-bearing claims from each source and produces a structured summary the review agents can argue over.">
+            <g class="agent-node" tabindex="0" role="button" aria-label="Summaryan" data-tip="Summaryan — extracts the load-bearing claims from each source and produces a structured summary the review agents can argue over.">
               <rect x="80" y="300" width="120" height="60" rx="14"/>
               <text x="140" y="334" text-anchor="middle">Summaryan</text>
             </g>
 
             <!-- Adversarial review -->
-            <g class="agent-node" role="button" aria-label="Historian" data-tip="Historian — situates the issue against prior standard-setting decisions and earlier interpretations to surface analogues and inflection points.">
+            <g class="agent-node" tabindex="0" role="button" aria-label="Historian" data-tip="Historian — situates the issue against prior standard-setting decisions and earlier interpretations to surface analogues and inflection points.">
               <rect x="720" y="120" width="120" height="60" rx="14"/>
               <text x="780" y="154" text-anchor="middle">Historian</text>
             </g>
-            <g class="agent-node" role="button" aria-label="Insider" data-tip="Insider — argues the position a preparer would take. Knows where the standard gives discretion and where it gives a hard rule.">
+            <g class="agent-node" tabindex="0" role="button" aria-label="Insider" data-tip="Insider — argues the position a preparer would take. Knows where the standard gives discretion and where it gives a hard rule.">
               <rect x="720" y="200" width="120" height="60" rx="14"/>
               <text x="780" y="234" text-anchor="middle">Insider</text>
             </g>
-            <g class="agent-node" role="button" aria-label="Outsider" data-tip="Outsider — argues the position an external auditor or regulator would take, and surfaces challenges the Insider would prefer to avoid.">
+            <g class="agent-node" tabindex="0" role="button" aria-label="Outsider" data-tip="Outsider — argues the position an external auditor or regulator would take, and surfaces challenges the Insider would prefer to avoid.">
               <rect x="720" y="280" width="120" height="60" rx="14"/>
               <text x="780" y="314" text-anchor="middle">Outsider</text>
             </g>
 
             <!-- Synthesis -->
-            <g class="agent-node" role="button" aria-label="Auditor" data-tip="Auditor — adjudicates the Insider/Outsider exchange against the standard text and the Historian's analogues, and writes the resolved position.">
+            <g class="agent-node" tabindex="0" role="button" aria-label="Auditor" data-tip="Auditor — adjudicates the Insider/Outsider exchange against the standard text and the Historian's analogues, and writes the resolved position.">
               <rect x="540" y="380" width="120" height="60" rx="14"/>
               <text x="600" y="414" text-anchor="middle">Auditor</text>
             </g>
-            <g class="agent-node" role="button" aria-label="Scribe" data-tip="Scribe — drafts the final advisory note: citations, working, and a clean summary in the house style of a professional policy team.">
+            <g class="agent-node" tabindex="0" role="button" aria-label="Scribe" data-tip="Scribe — drafts the final advisory note: citations, working, and a clean summary in the house style of a professional policy team.">
               <rect x="760" y="380" width="120" height="60" rx="14"/>
               <text x="820" y="414" text-anchor="middle">Scribe</text>
             </g>

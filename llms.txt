@@ -6,11 +6,11 @@ This website is the canonical public profile for Bamidele Aly on AI model risk g
 
 ## Core pages
 
-- [Home](https://bamidelealy.github.io/): Overview of Bamidele Aly's work across AI governance, Product Control and economic history.
-- [Projects](https://bamidelealy.github.io/projects.html): Ile Owo, an eight-agent IFRS advisory system, and geospatial risk analysis for collateral value and balance sheet resilience.
-- [Historian](https://bamidelealy.github.io/historian.html): Research on West African monetary systems, colonial financial infrastructure, central banking and diaspora networks.
-- [Studio](https://bamidelealy.github.io/studio.html): Watercolour, printmaking and creative practice.
-- [Contact](https://bamidelealy.github.io/contact.html): Speaking, advisory and academic collaboration enquiries.
+- [Home](https://bamidelealy.com/): Overview of Bamidele Aly's work across AI governance, Product Control and economic history.
+- [Projects](https://bamidelealy.com/projects.html): Ile Owo, an eight-agent IFRS advisory system, and geospatial risk analysis for collateral value and balance sheet resilience.
+- [Historian](https://bamidelealy.com/historian.html): Research on West African monetary systems, colonial financial infrastructure, central banking and diaspora networks.
+- [Studio](https://bamidelealy.com/studio.html): Watercolour, printmaking and creative practice.
+- [Contact](https://bamidelealy.com/contact.html): Speaking, advisory and academic collaboration enquiries.
 
 ## Key facts
 

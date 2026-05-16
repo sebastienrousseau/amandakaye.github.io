@@ -10,20 +10,23 @@
   <meta name="theme-color" content="#f1f1f1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
   <meta name="view-transition" content="same-origin">
-  <link rel="canonical" href="https://bamidelealy.github.io/contact.html">
-  <link rel="alternate" type="application/rss+xml" title="Bamidele Aly RSS" href="https://bamidelealy.github.io/rss.xml">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self' https://formspree.io; frame-ancestors 'none';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="canonical" href="https://bamidelealy.com/contact.html">
+  <link rel="alternate" type="application/rss+xml" title="Bamidele Aly RSS" href="https://bamidelealy.com/rss.xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Bamidele Aly">
   <meta property="og:title" content="Contact | Bamidele Aly">
   <meta property="og:description" content="Speaking, advisory and academic collaboration enquiries.">
-  <meta property="og:image" content="https://bamidelealy.github.io/assets/bamidele-aly-hsbc.jpg">
-  <meta property="og:url" content="https://bamidelealy.github.io/contact.html">
+  <meta property="og:image" content="https://bamidelealy.com/assets/bamidele-aly-hsbc.jpg">
+  <meta property="og:url" content="https://bamidelealy.com/contact.html">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sebastienrousseau/skeletonic-stylus@2.0.0/css/core/skeletonic.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
   <link rel="stylesheet" href="styles.css">
   <script>
     (function () {
@@ -39,7 +42,7 @@
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Contact | Bamidele Aly",
-    "url": "https://bamidelealy.github.io/contact.html",
+    "url": "https://bamidelealy.com/contact.html",
     "inLanguage": "en-GB",
     "mainEntity": {
       "@type": "Person",
@@ -106,9 +109,9 @@
       <div class="container narrow">
         <p class="section-eyebrow">Curated Intake</p>
         <h2 id="intake-heading">A short brief lets me triage faster.</h2>
-        <p>Submitting the form composes a structured email in your client — nothing leaves your browser until you press send.</p>
+        <p>Send your brief without leaving the page. Routed securely; I read every message.</p>
 
-        <form class="intake-form" id="intakeForm" data-mailto="dele_aly@yahoo.fr" novalidate>
+        <form class="intake-form" id="intakeForm" data-endpoint="https://formspree.io/f/YOUR_FORMSPREE_ID" data-mailto="dele_aly@yahoo.fr" novalidate>
           <div class="intake-row two-col">
             <div class="intake-row">
               <label for="intake-name">Name <span aria-hidden="true">*</span></label>
@@ -151,10 +154,10 @@
           </div>
 
           <div class="intake-actions">
-            <button class="btn-primary" type="submit">Compose email</button>
-            <a class="btn-secondary" href="https://www.linkedin.com/in/bamidelealy/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+            <button class="btn-primary" type="submit">Send message</button>
+            <a class="btn-secondary" href="https://www.linkedin.com/in/bamidelealy/" target="_blank" rel="noopener noreferrer me">Connect on LinkedIn</a>
           </div>
-          <p class="intake-status" id="intakeStatus" role="status" aria-live="polite"></p>
+          <p class="intake-status" id="intakeStatus" role="alert" aria-live="assertive"></p>
           <p class="intake-fallback">Prefer no form? Email <a href="mailto:dele_aly@yahoo.fr">dele_aly@yahoo.fr</a> directly.</p>
         </form>
       </div>

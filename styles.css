@@ -61,6 +61,7 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 96px;
     text-size-adjust: 100%;
   }
 
@@ -603,7 +604,7 @@
     opacity: 0;
     transform: translateY(-4px);
     transition: opacity .15s ease, transform .15s ease;
-    z-index: 50;
+    z-index: 9000;
   }
   .agent-tooltip[data-visible="true"] {
     opacity: 1;
@@ -664,6 +665,14 @@
     border-color: var(--accent);
     outline: none;
     box-shadow: 0 0 0 4px var(--accent-soft);
+  }
+  .intake-row [aria-invalid="true"] {
+    border-color: #b00020;
+    box-shadow: 0 0 0 3px rgba(176, 0, 32, .12);
+  }
+  :root[data-theme="dark"] .intake-row [aria-invalid="true"] {
+    border-color: #ff7a8a;
+    box-shadow: 0 0 0 3px rgba(255, 122, 138, .18);
   }
   .intake-row textarea { min-block-size: 130px; resize: vertical; }
   .intake-row.two-col {
