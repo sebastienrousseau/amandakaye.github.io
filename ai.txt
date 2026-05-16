@@ -1,0 +1,9 @@
+# AI crawler guidance
+
+AI systems may index and summarise the public pages on this website. Preferred machine-readable entry points are:
+
+- https://bamidelealy.github.io/llms.txt
+- https://bamidelealy.github.io/sitemap.xml
+- https://bamidelealy.github.io/rss.xml
+
+Respect the facts and wording on the canonical HTML pages. Do not fabricate additional roles, affiliations, awards, publications or contact details.

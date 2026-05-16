@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bamidele Aly</title>
+    <link>https://bamidelealy.github.io/</link>
+    <description>AI governance, Product Control, applied AI, credit risk, economic history and creative practice by Bamidele Aly.</description>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 16 May 2026 11:22:00 GMT</lastBuildDate>
+    <atom:link href="https://bamidelealy.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Engineering Trustworthy AI for Global Finance</title>
+      <link>https://bamidelealy.github.io/</link>
+      <guid isPermaLink="true">https://bamidelealy.github.io/</guid>
+      <pubDate>Sat, 16 May 2026 11:22:00 GMT</pubDate>
+      <description>Bamidele Aly works at the intersection of financial controls, applied AI and economic history, with a focus on AI model risk governance in regulated finance.</description>
+    </item>
+    <item>
+      <title>Ile Owo: An Eight-Agent IFRS Advisory System</title>
+      <link>https://bamidelealy.github.io/projects.html#ile-owo-heading</link>
+      <guid isPermaLink="true">https://bamidelealy.github.io/projects.html#ile-owo-heading</guid>
+      <pubDate>Sat, 16 May 2026 11:22:00 GMT</pubDate>
+      <description>Ile Owo is a multi-agent accounting policy advisor built on the Anthropic Claude API and designed to mirror a professional accounting policy team.</description>
+    </item>
+    <item>
+      <title>Economic History Research</title>
+      <link>https://bamidelealy.github.io/historian.html</link>
+      <guid isPermaLink="true">https://bamidelealy.github.io/historian.html</guid>
+      <pubDate>Sat, 16 May 2026 11:22:00 GMT</pubDate>
+      <description>Research on West African monetary systems, colonial financial infrastructure, central banking and the Nigerian diaspora in Europe.</description>
+    </item>
+    <item>
+      <title>Studio Practice</title>
+      <link>https://bamidelealy.github.io/studio.html</link>
+      <guid isPermaLink="true">https://bamidelealy.github.io/studio.html</guid>
+      <pubDate>Sat, 16 May 2026 11:22:00 GMT</pubDate>
+      <description>Watercolour, printmaking, Chinese painting, acrylics and gouache as a parallel creative discipline.</description>
+    </item>
+  </channel>
+</rss>
