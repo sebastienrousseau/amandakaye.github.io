@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#f1f1f1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
   <meta name="view-transition" content="same-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests;">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="canonical" href="https://bamidelealy.com/de/projekte.html">
   <link rel="alternate" hreflang="en-GB" href="https://bamidelealy.com/projects.html">
@@ -22,7 +22,7 @@
   <meta property="og:site_name" content="Bamidele Aly">
   <meta property="og:title" content="Projekte | Bamidele Aly">
   <meta property="og:description" content="Ile Owo und geospatiale Risikoanalyse an der Schnittstelle von KI, Bilanzierungspolitik und Finanzrisiko.">
-  <meta property="og:image" content="https://bamidelealy.com/assets/bamidele-aly-studio.jpeg?v=2026051800">
+  <meta property="og:image" content="https://bamidelealy.com/assets/bamidele-aly-studio.jpeg?v=2026051801">
   <meta property="og:url" content="https://bamidelealy.com/de/projekte.html">
   <meta property="og:locale" content="de_DE">
   <meta property="og:locale:alternate" content="en_GB">
@@ -31,10 +31,15 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/@sebastienrousseau/skeletonic-stylus@2.0.0/css/core/skeletonic.min.css" integrity="sha384-m3IoEkr7bPhgf7sPFcLfBi0Sc8jPdNX1pTq5AQn8S8/FrHskDcis1CRjtnWars6I" crossorigin="anonymous">
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sebastienrousseau/skeletonic-stylus@2.0.0/css/core/skeletonic.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
-  <link rel="stylesheet" href="/styles.css?v=2026051800">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sebastienrousseau/skeletonic-stylus@2.0.0/css/core/skeletonic.min.css" media="print" onload="this.media='all'" integrity="sha384-m3IoEkr7bPhgf7sPFcLfBi0Sc8jPdNX1pTq5AQn8S8/FrHskDcis1CRjtnWars6I" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sebastienrousseau/skeletonic-stylus@2.0.0/css/core/skeletonic.min.css" integrity="sha384-m3IoEkr7bPhgf7sPFcLfBi0Sc8jPdNX1pTq5AQn8S8/FrHskDcis1CRjtnWars6I" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+  </noscript>
+  <link rel="stylesheet" href="/styles.css?v=2026051801">
   <script>
     (function () {
       try {
@@ -221,7 +226,7 @@
     </section>
   </main>
 
-  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Suche" aria-hidden="true">
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Suche" inert>
     <div class="search-box">
       <div class="search-input-row">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
@@ -245,6 +250,6 @@
       <p><a href="/de/rss.xml">RSS</a> · <a href="/sitemap.xml">Sitemap</a> · <a href="/llms.txt">LLMs.txt</a></p>
     </div>
   </footer>
-  <script src="/script.js?v=2026051800" defer></script>
+  <script src="/script.js?v=2026051801" defer></script>
 </body>
 </html>

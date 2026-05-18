@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
   <meta name="view-transition" content="same-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests;">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="canonical" href="https://bamidelealy.com/fr/merci/">
   <link rel="alternate" hreflang="en-GB" href="https://bamidelealy.com/thanks/">
@@ -29,10 +29,15 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/@sebastienrousseau/skeletonic-stylus@2.0.0/css/core/skeletonic.min.css" integrity="sha384-m3IoEkr7bPhgf7sPFcLfBi0Sc8jPdNX1pTq5AQn8S8/FrHskDcis1CRjtnWars6I" crossorigin="anonymous">
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sebastienrousseau/skeletonic-stylus@2.0.0/css/core/skeletonic.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
-  <link rel="stylesheet" href="/styles.css?v=2026051800">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sebastienrousseau/skeletonic-stylus@2.0.0/css/core/skeletonic.min.css" media="print" onload="this.media='all'" integrity="sha384-m3IoEkr7bPhgf7sPFcLfBi0Sc8jPdNX1pTq5AQn8S8/FrHskDcis1CRjtnWars6I" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sebastienrousseau/skeletonic-stylus@2.0.0/css/core/skeletonic.min.css" integrity="sha384-m3IoEkr7bPhgf7sPFcLfBi0Sc8jPdNX1pTq5AQn8S8/FrHskDcis1CRjtnWars6I" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+  </noscript>
+  <link rel="stylesheet" href="/styles.css?v=2026051801">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23252525'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='700' font-size='14' fill='white'%3EBA%3C/text%3E%3C/svg%3E">
 
   <script>
@@ -136,7 +141,7 @@
     </section>
   </main>
 
-  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche" aria-hidden="true">
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche" inert>
     <div class="search-box">
       <div class="search-input-row">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
@@ -160,6 +165,6 @@
       <p><a href="/fr/rss.xml">RSS</a> · <a href="/sitemap.xml">Plan du site</a> · <a href="/llms.txt">LLMs.txt</a></p>
     </div>
   </footer>
-  <script src="/script.js?v=2026051800" defer></script>
+  <script src="/script.js?v=2026051801" defer></script>
 </body>
 </html>

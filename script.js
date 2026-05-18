@@ -97,7 +97,8 @@
       if (mermaidLoading) return mermaidLoading;
       mermaidLoading = new Promise(function (resolve, reject) {
         var s = document.createElement('script');
-        s.src = 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js';
+        s.src = 'https://cdn.jsdelivr.net/npm/mermaid@11.15.0/dist/mermaid.min.js';
+        s.integrity = 'sha384-yQ4mmBBT+vhTAwjFH0toJXNYJ6O4usWnt6EPIdWwrRvx2V/n5lXuDZQwQFeSFydF';
         s.crossOrigin = 'anonymous';
         s.referrerPolicy = 'no-referrer';
         s.onload = function () { resolve(window.mermaid); };
@@ -323,7 +324,7 @@
 
     var openSearch = function () {
       searchOverlay.classList.add('open');
-      searchOverlay.setAttribute('aria-hidden', 'false');
+      searchOverlay.removeAttribute('inert');
       searchInput.value = '';
       activeIdx = -1;
       lastQuery = '';
@@ -335,7 +336,7 @@
     };
     var closeSearch = function () {
       searchOverlay.classList.remove('open');
-      searchOverlay.setAttribute('aria-hidden', 'true');
+      searchOverlay.setAttribute('inert', '');
       searchInput.value = '';
       activeIdx = -1;
       lastQuery = '';
@@ -371,6 +372,21 @@
       if (slash) { e.preventDefault(); openSearch(); return; }
       if (!searchOverlay.classList.contains('open')) return;
       if (e.key === 'Escape') { e.preventDefault(); closeSearch(); return; }
+      // Trap Tab inside the dialog so focus can't escape to the page behind.
+      if (e.key === 'Tab') {
+        var focusables = searchOverlay.querySelectorAll(
+          'input, button:not([disabled]), [href], select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        if (!focusables.length) { e.preventDefault(); return; }
+        var first = focusables[0];
+        var last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault(); last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault(); first.focus();
+        }
+        return;
+      }
       var items = searchResults.querySelectorAll('.search-result');
       if (!items.length) return;
       if (e.key === 'ArrowDown') {

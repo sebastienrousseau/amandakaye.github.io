@@ -584,7 +584,7 @@
     color: var(--ink-muted);
     min-inline-size: 22px;
   }
-  .lang-switch-menu a[aria-current="true"] .lang-code { color: var(--accent); }
+  .lang-switch-menu a[aria-current="true"] .lang-code { color: var(--ink); }
   .lang-switch-menu .lang-name { flex: 1; }
   @media (max-width: 768px) {
     .lang-switch-trigger .lang-globe { display: none; }
