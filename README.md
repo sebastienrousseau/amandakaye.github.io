@@ -31,17 +31,19 @@
 
 **The site**
 
-- [Pages](#pages) — five canonical HTML pages + a `/thanks/` confirmation
+- [Pages](#pages) — six canonical pages, a notes section with three essays, a `/thanks/` confirmation, and a `/404.html`
+- [Locales](#locales) — English (canonical), French at `/fr/`, German at `/de/`, with translated slugs
 - [Architecture](#architecture) — file layout, no-build philosophy
 - [Design system](#design-system) — Apple-inspired tokens, typography, layers
 
 **Features**
 
-- [Search](#search) — Cmd/Ctrl+K palette with fuzzy match across all pages
+- [Search](#search) — Cmd/Ctrl+K palette with fuzzy match across all pages, locale-aware
 - [Theme](#theme) — OS-aware light/dark with persistence, no flash
+- [Language selector](#language-selector) — EN/FR/DE dropdown in the header
 - [Architecture diagram](#architecture-diagram) — lazy-loaded Mermaid flowchart
 - [Contact form](#contact-form) — Formspree intake with mailto fallback
-- [Internationalisation](#internationalisation) — `lang` spans for Yoruba and French
+- [Internationalisation](#internationalisation) — three locale trees with reciprocal `hreflang`
 
 **Engineering**
 
@@ -93,16 +95,24 @@ Push. GitHub Pages rebuilds.
 
 To add a new searchable page:
 
-1. Copy `studio.html` (smallest page) to `mypage.html` and rewrite the
-   content. Keep the `<head>` block intact so CSP, JSON-LD, theme
-   bootstrap and the search overlay travel with it.
-2. Add a single entry to `search-data.json`:
+1. Copy `studio.html` (smallest content page) to `mypage.html` and
+   rewrite the content. Keep the `<head>` block intact so CSP,
+   JSON-LD, theme bootstrap, the language selector and the search
+   overlay travel with it.
+2. Add an entry to `search-data.json` **inside `index.en`**:
 
    ```json
    { "t": "My page", "d": "Short description", "u": "mypage.html" }
    ```
 
-3. Add the URL to `sitemap.xml` with a sensible `<priority>`.
+   Then add the translated entries to `fr/search-data.json` (under
+   `index.fr`) and `de/search-data.json` (under `index.de`).
+3. Create the FR sibling at `fr/<translated-slug>.html` and the DE
+   sibling at `de/<translated-slug>.html`. Add reciprocal
+   `<link rel="alternate" hreflang>` tags to all three.
+4. Add the three URLs to `sitemap.xml` with a sensible `<priority>`,
+   each carrying `<xhtml:link rel="alternate" hreflang>` entries for
+   the other two locales.
 
 No build, no SSR, no rehydration — refresh the browser.
 
@@ -117,8 +127,44 @@ No build, no SSR, no rehydration — refresh the browser.
 | `historian.html` | West African monetary systems, publications, education. |
 | `studio.html` | Watercolour, Chinese painting, gouache, printmaking. |
 | `contact.html` | Curated intake form (Formspree) for speaking and advisory. |
+| `notes/index.html` | Long-form notes index — three editorial essays with scroll-snap chapters. |
+| `notes/ile-owo-design.html` | Why eight agents, and not one chatbot. |
+| `notes/ai-governance-as-road.html` | Governance is the road, not the speed bump. |
+| `notes/bank-of-biafra-project.html` | Emergency money and counter-money, 1967–1970. |
 | `thanks/index.html` | Post-submission confirmation, `noindex, follow`. |
+| `404.html` | Tri-lingual not-found page; language picked from URL prefix. |
 | `about.html` | Legacy compatibility redirect to `historian.html`. |
+
+Each EN page has a French sibling under `fr/` and a German sibling
+under `de/` — see [Locales](#locales) for the slug map.
+
+---
+
+## Locales
+
+The site ships in three locales — English (canonical), French and
+German. Each locale uses translated slugs so the URLs read naturally
+in their language.
+
+| EN canonical | FR canonical | DE canonical |
+|---|---|---|
+| `/` | `/fr/` | `/de/` |
+| `/projects.html` | `/fr/projets.html` | `/de/projekte.html` |
+| `/historian.html` | `/fr/historienne.html` | `/de/historikerin.html` |
+| `/studio.html` | `/fr/atelier.html` | `/de/atelier.html` |
+| `/contact.html` | `/fr/contact.html` | `/de/kontakt.html` |
+| `/notes/` | `/fr/notes/` | `/de/notizen/` |
+| `/notes/ile-owo-design.html` | `/fr/notes/conception-ile-owo.html` | `/de/notizen/ile-owo-konzept.html` |
+| `/notes/ai-governance-as-road.html` | `/fr/notes/gouvernance-ia-comme-route.html` | `/de/notizen/ki-governance-als-strasse.html` |
+| `/notes/bank-of-biafra-project.html` | `/fr/notes/projet-banque-biafra.html` | `/de/notizen/projekt-bank-von-biafra.html` |
+| `/thanks/` | `/fr/merci/` | `/de/danke/` |
+| `/about.html` | `/fr/a-propos.html` | `/de/ueber.html` |
+| `/404.html` | `/fr/404.html` | `/de/404.html` |
+
+Every indexable page declares `<link rel="alternate" hreflang>` for
+`en-GB`, `fr-FR`, `de-DE` and `x-default`. The sitemap mirrors this
+with `xhtml:link` alternates. Each locale has its own
+`search-data.json` and `rss.xml`.
 
 ---
 
@@ -126,24 +172,56 @@ No build, no SSR, no rehydration — refresh the browser.
 
 ```
 bamidelealy.github.io/
-├── index.html            ← root pages
+├── index.html            ← root EN pages
 ├── projects.html
 ├── historian.html
 ├── studio.html
 ├── contact.html
+├── about.html            ← legacy redirect → historian.html
+├── 404.html              ← tri-lingual not-found, locale picked from URL
+├── notes/
+│   ├── index.html
+│   ├── ile-owo-design.html
+│   ├── ai-governance-as-road.html
+│   └── bank-of-biafra-project.html
 ├── thanks/
 │   └── index.html        ← noindex thank-you confirmation
-├── styles.css            ← design system (≈24 KB raw, 5 KB gzip)
-├── script.js             ← interactions (≈9 KB raw, 2.4 KB gzip)
-├── search-data.json      ← search index, 24 entries
+├── fr/                   ← French locale tree, translated slugs
+│   ├── index.html
+│   ├── projets.html
+│   ├── historienne.html
+│   ├── atelier.html
+│   ├── contact.html
+│   ├── a-propos.html
+│   ├── 404.html
+│   ├── notes/{index,conception-ile-owo,gouvernance-ia-comme-route,projet-banque-biafra}.html
+│   ├── merci/index.html
+│   ├── rss.xml
+│   └── search-data.json
+├── de/                   ← German locale tree, translated slugs
+│   ├── index.html
+│   ├── projekte.html
+│   ├── historikerin.html
+│   ├── atelier.html
+│   ├── kontakt.html
+│   ├── ueber.html
+│   ├── 404.html
+│   ├── notizen/{index,ile-owo-konzept,ki-governance-als-strasse,projekt-bank-von-biafra}.html
+│   ├── danke/index.html
+│   ├── rss.xml
+│   └── search-data.json
+├── styles.css            ← design system (≈37 KB raw)
+├── script.js             ← interactions (≈22 KB raw)
+├── search-data.json      ← EN search index, 27 entries
 ├── assets/
 │   ├── bamidele-aly-studio.{jpeg,webp,avif}
 │   └── bamidele-studio.{jpeg,webp,avif}
-├── sitemap.xml
-├── rss.xml
+├── sitemap.xml           ← 27 URLs with reciprocal xhtml:link hreflang
+├── rss.xml               ← EN feed; FR + DE under their locale roots
 ├── robots.txt
 ├── llms.txt
 ├── ai.txt
+├── CNAME                 ← bamidelealy.com
 └── README.md
 ```
 
@@ -181,11 +259,17 @@ so the `site` layer always wins over the Skeletonic CDN baseline.
 
 ### Search
 
-`Cmd+K` (macOS), `Ctrl+K` or `/` opens a centred dialog. Substring +
-fuzzy-subsequence match across 24 entries in `search-data.json`. Arrow
-keys navigate, Enter follows, Esc closes. Under 560 px the dialog
-becomes full-bleed and the footer hints hide. The index is lazy-fetched
-on first open and cached for the session.
+`Cmd+K` (macOS), `Ctrl+K` (Windows/Linux, shown as `Strg+K` on German
+pages) or `/` opens a centred dialog. Substring + fuzzy-subsequence
+match across 27 entries per locale. Arrow keys navigate, Enter
+follows, Esc closes. Under 560 px the dialog becomes full-bleed and
+the footer hints hide. The index is lazy-fetched on first open and
+cached for the session.
+
+The loader is locale-aware: pages with `<html lang="fr-…">` load
+`/fr/search-data.json`, German pages load `/de/search-data.json`, all
+others load `/search-data.json`. Empty-state and "no results" strings
+are translated to match.
 
 ### Theme
 
@@ -194,6 +278,16 @@ OS-aware default via `prefers-color-scheme`, manual override stored in
 before paint, so there is no flash of incorrect theme. Toggling the
 theme dispatches a `themechange` custom event — the Mermaid diagram
 listens and re-renders with the matching palette.
+
+### Language selector
+
+Every page (except redirect / 404 pages) carries an EN/FR/DE dropdown
+in the header — a globe icon, the current locale code, and a chevron.
+The dropdown items link directly to the equivalent page in each
+locale (using the localised slug), so a visitor can switch languages
+without losing context. The current locale is marked with
+`aria-current="true"`. The dropdown closes on outside click and on
+`Escape`.
 
 ### Architecture diagram
 
@@ -213,10 +307,27 @@ plain-text email.
 
 ### Internationalisation
 
-Foreign-language inline phrases are tagged with `lang="yo"` (Yoruba)
-and `lang="fr"` (French) so screen readers pronounce them correctly.
-JSON-LD `Person.knowsLanguage` enumerates English, French, German,
-Yoruba, Japanese and Dutch.
+The site ships three full locale trees — English (canonical, `en-GB`),
+French (`fr-FR` under `/fr/`) and German (`de-DE` under `/de/`). Each
+HTML page declares its locale on `<html lang>`, carries reciprocal
+`<link rel="alternate" hreflang>` for all four values
+(`en-GB`, `fr-FR`, `de-DE`, `x-default`), and uses `og:locale` +
+`og:locale:alternate` for OpenGraph.
+
+Translated assets live alongside each tree:
+
+- `fr/search-data.json`, `de/search-data.json` — 27 entries each,
+  keyed by `index.fr` / `index.de`.
+- `fr/rss.xml`, `de/rss.xml` — per-locale Atom feeds.
+- `fr/404.html`, `de/404.html` — locale-specific error pages.
+
+`sitemap.xml` lists every locale variant as its own `<url>` with
+`<xhtml:link rel="alternate" hreflang>` entries for the other two
+locales. JSON-LD `inLanguage` matches the page locale. Foreign-language
+inline phrases are still tagged with `lang="yo"` (Yoruba) inside text
+content so screen readers pronounce them correctly. JSON-LD
+`Person.knowsLanguage` enumerates English, French, German, Yoruba,
+Japanese and Dutch (localised in each tree).
 
 ---
 
@@ -296,12 +407,12 @@ No analytics, no cookies, no trackers, no client-side storage beyond
 
 | File | Purpose |
 |---|---|
-| `sitemap.xml` | Five canonical URLs, `lastmod`, `changefreq`, `priority`. |
-| `rss.xml` | Atom-style feed for the four core content entries. |
-| `robots.txt` | Explicit allow for `GPTBot`, `ChatGPT-User`, `PerplexityBot`, `ClaudeBot`, `Google-Extended`, `CCBot`. |
-| `llms.txt` | Canonical summary, key facts, citation guidance for LLMs. |
-| `ai.txt` | Supplementary AI-crawler directives. |
-| `<script type="application/ld+json">` | `@graph` of `Person`, `ProfilePage`, `WebSite`, `Event`, `Book`, `Chapter`, `SoftwareSourceCode`, `ContactPoint`. |
+| `sitemap.xml` | 27 URLs (9 pages × 3 locales) with reciprocal `xhtml:link rel="alternate" hreflang`, `lastmod`, `changefreq`, `priority`. |
+| `rss.xml`, `fr/rss.xml`, `de/rss.xml` | Atom-style feed for each locale. |
+| `robots.txt` | Explicit allow for `GPTBot`, `ChatGPT-User`, `PerplexityBot`, `ClaudeBot`, `Google-Extended`, `CCBot`. Lists all three locale feeds. |
+| `llms.txt` | Canonical summary in all three languages, key facts, citation guidance. |
+| `ai.txt` | Supplementary AI-crawler directives; advertises locale-specific entry points. |
+| `<script type="application/ld+json">` | `@graph` of `Person`, `ProfilePage`, `WebSite`, `Event`, `Book`, `Chapter`, `SoftwareSourceCode`, `ContactPoint` — with `inLanguage` matching `<html lang>`. |
 
 ### Deployment
 
@@ -309,7 +420,8 @@ GitHub Pages from `main`. The repo must be named
 `bamidelealy.github.io` (or the Pages source set to "Deploy from a
 branch — main"). For a custom apex domain (`bamidelealy.com`):
 
-1. Add a `CNAME` file at the repo root containing `bamidelealy.com`.
+1. A `CNAME` file containing `bamidelealy.com` already ships at the
+   repo root, so the custom domain is tracked in git.
 2. Configure DNS A records at the apex (or `ALIAS`/`ANAME` if your
    provider supports them):
 
@@ -336,12 +448,21 @@ No formatting tooling. HTML / CSS / JS are hand-authored to be
 diff-friendly. Local audit recipes:
 
 ```bash
-# Validate every JSON-LD block on every page
+# Validate every JSON-LD block on every page (all locales)
 python3 -c "
 import re, json, pathlib
-for p in ['index.html','projects.html','historian.html','studio.html','contact.html','thanks/index.html']:
-  for m in re.finditer(r'<script type=\"application/ld\+json\">(.*?)</script>', pathlib.Path(p).read_text(), re.S):
+for p in pathlib.Path('.').rglob('*.html'):
+  if '/.git/' in str(p): continue
+  for m in re.finditer(r'<script type=\"application/ld\+json\">(.*?)</script>', p.read_text(), re.S):
     json.loads(m.group(1))
+print('OK')
+"
+
+# Validate each locale's search index
+python3 -c "
+import json
+for p in ['search-data.json','fr/search-data.json','de/search-data.json']:
+  json.loads(open(p).read())
 print('OK')
 "
 

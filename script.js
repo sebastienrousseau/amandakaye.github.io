@@ -215,8 +215,9 @@
   var searchTrigger = document.getElementById('searchTrigger');
   if (searchOverlay && searchInput && searchResults) {
     var isMac = /Mac|iPhone|iPad|iPod/.test(navigator.platform || navigator.userAgent || '');
+    var ctrlLabel = hLang === 'de' ? 'Strg+K' : 'Ctrl+K';
     document.querySelectorAll('.search-shortcut').forEach(function (el) {
-      el.textContent = isMac ? '⌘K' : 'Ctrl+K';
+      el.textContent = isMac ? '⌘K' : ctrlLabel;
     });
 
     var indexData = null;
