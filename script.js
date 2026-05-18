@@ -7,6 +7,25 @@
     el.textContent = new Date().getFullYear();
   });
 
+  // Lightweight i18n labels for header controls (mirrors the page's lang attr)
+  var hLang = (document.documentElement.getAttribute('lang') || 'en').slice(0, 2).toLowerCase();
+  var L = hLang === 'fr' ? {
+    openNav: 'Ouvrir la navigation',
+    closeNav: 'Fermer la navigation',
+    toDark: 'Passer au thème sombre',
+    toLight: 'Passer au thème clair'
+  } : hLang === 'de' ? {
+    openNav: 'Navigation öffnen',
+    closeNav: 'Navigation schließen',
+    toDark: 'Zum dunklen Design wechseln',
+    toLight: 'Zum hellen Design wechseln'
+  } : {
+    openNav: 'Open navigation',
+    closeNav: 'Close navigation',
+    toDark: 'Switch to dark theme',
+    toLight: 'Switch to light theme'
+  };
+
   // Mobile nav
   var nav = document.querySelector('.site-nav');
   var navToggle = document.getElementById('navToggle');
@@ -14,12 +33,12 @@
     var closeNav = function () {
       nav.classList.remove('open');
       navToggle.setAttribute('aria-expanded', 'false');
-      navToggle.setAttribute('aria-label', 'Open navigation');
+      navToggle.setAttribute('aria-label', L.openNav);
     };
     navToggle.addEventListener('click', function () {
       var open = nav.classList.toggle('open');
       navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      navToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      navToggle.setAttribute('aria-label', open ? L.closeNav : L.openNav);
     });
     nav.querySelectorAll('.nav-link').forEach(function (link) {
       link.addEventListener('click', closeNav);
@@ -46,7 +65,7 @@
     document.documentElement.setAttribute('data-theme', theme);
     try { localStorage.setItem('theme', theme); } catch (e) { /* no-op */ }
     if (themeBtn) {
-      themeBtn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+      themeBtn.setAttribute('aria-label', theme === 'dark' ? L.toLight : L.toDark);
       themeBtn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
     }
     document.dispatchEvent(new CustomEvent('themechange', { detail: { theme: theme } }));
@@ -164,6 +183,31 @@
     });
   }
 
+  // Language switcher — dropdown in the header, closes on outside click / Escape
+  document.querySelectorAll('[data-lang-switch]').forEach(function (root) {
+    var trigger = root.querySelector('.lang-switch-trigger');
+    if (!trigger) return;
+    var close = function () {
+      root.setAttribute('data-open', 'false');
+      trigger.setAttribute('aria-expanded', 'false');
+    };
+    var open = function () {
+      root.setAttribute('data-open', 'true');
+      trigger.setAttribute('aria-expanded', 'true');
+    };
+    trigger.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (root.getAttribute('data-open') === 'true') close();
+      else open();
+    });
+    document.addEventListener('click', function (e) {
+      if (!root.contains(e.target)) close();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && root.getAttribute('data-open') === 'true') close();
+    });
+  });
+
   // Site search (Cmd/Ctrl+K or '/' to open, arrows to navigate, Enter to open)
   var searchOverlay = document.getElementById('searchOverlay');
   var searchInput = document.getElementById('searchInput');
@@ -180,13 +224,29 @@
     var activeIdx = -1;
     var lastQuery = '';
 
+    var pageLang = (document.documentElement.getAttribute('lang') || 'en').slice(0, 2).toLowerCase();
+    var langPath = pageLang === 'fr' ? '/fr/search-data.json'
+                 : pageLang === 'de' ? '/de/search-data.json'
+                 : '/search-data.json';
+    var langKey = pageLang === 'fr' ? 'fr' : pageLang === 'de' ? 'de' : 'en';
+    var t = pageLang === 'fr' ? {
+      loading: 'Chargement…',
+      noResults: 'Aucun résultat pour « {q} »'
+    } : pageLang === 'de' ? {
+      loading: 'Wird geladen…',
+      noResults: 'Keine Ergebnisse für „{q}"'
+    } : {
+      loading: 'Loading…',
+      noResults: 'No results for "{q}"'
+    };
+
     var loadIndex = function () {
       if (indexData) return Promise.resolve(indexData);
       if (indexLoading) return indexLoading;
-      indexLoading = fetch('search-data.json', { credentials: 'same-origin' })
+      indexLoading = fetch(langPath, { credentials: 'same-origin' })
         .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status)); })
         .then(function (data) {
-          var entries = (data && data.index && (data.index.en || [])) || [];
+          var entries = (data && data.index && (data.index[langKey] || data.index.en || [])) || [];
           indexData = entries;
           return indexData;
         })
@@ -216,13 +276,13 @@
     var renderResults = function (q) {
       lastQuery = q;
       if (q.length === 0) {
-        if (!indexData) return renderEmpty('Loading…');
+        if (!indexData) return renderEmpty(t.loading);
         // Show all entries when query is empty
         renderList(indexData);
         return;
       }
       if (!indexData) {
-        renderEmpty('Loading…');
+        renderEmpty(t.loading);
         loadIndex().then(function () {
           if (lastQuery === q) renderResults(q);
         });
@@ -233,7 +293,7 @@
         if (fuzzyMatch(q, e.t) || fuzzyMatch(q, e.d || '')) hits.push(e);
       });
       if (hits.length === 0) {
-        renderEmpty('No results for "' + q + '"');
+        renderEmpty(t.noResults.replace('{q}', q));
         return;
       }
       renderList(hits);
@@ -266,7 +326,7 @@
       searchInput.value = '';
       activeIdx = -1;
       lastQuery = '';
-      renderEmpty('Loading…');
+      renderEmpty(t.loading);
       loadIndex().then(function () { renderResults(''); });
       // Focus synchronously inside the click handler so iOS opens the keyboard
       searchInput.focus({ preventScroll: true });
@@ -368,6 +428,35 @@
   // Contact intake form — Formspree fetch with mailto fallback, accessible validation
   var form = document.getElementById('intakeForm');
   if (form) {
+    var formLang = (document.documentElement.getAttribute('lang') || 'en').slice(0, 2).toLowerCase();
+    var fT = formLang === 'fr' ? {
+      missing: 'Veuillez compléter les champs requis (Nom, Objet, Message).',
+      sending: 'Envoi du message…',
+      sent: 'Message envoyé. Redirection…',
+      sendFail: 'Échec de l’envoi.',
+      retry: ' Veuillez réessayer, ou écrivez-moi sur LinkedIn.',
+      network: 'Erreur réseau. Veuillez réessayer, ou écrivez-moi sur LinkedIn.',
+      mailFail: 'Impossible de composer l’e-mail. Réessayez le formulaire ou écrivez-moi sur LinkedIn.',
+      opening: 'Ouverture de votre client e-mail…'
+    } : formLang === 'de' ? {
+      missing: 'Bitte füllen Sie die Pflichtfelder aus (Name, Anliegen, Nachricht).',
+      sending: 'Nachricht wird gesendet…',
+      sent: 'Nachricht gesendet. Weiterleitung…',
+      sendFail: 'Senden fehlgeschlagen.',
+      retry: ' Bitte erneut versuchen oder mir auf LinkedIn schreiben.',
+      network: 'Netzwerkfehler. Bitte erneut versuchen oder mir auf LinkedIn schreiben.',
+      mailFail: 'E-Mail kann nicht erstellt werden. Bitte das Formular erneut versuchen oder mir auf LinkedIn schreiben.',
+      opening: 'Ihr E-Mail-Programm wird geöffnet…'
+    } : {
+      missing: 'Please complete the required fields (Name, Purpose, Message).',
+      sending: 'Sending message…',
+      sent: 'Message sent. Redirecting…',
+      sendFail: 'Send failed.',
+      retry: ' Please try again, or message me on LinkedIn.',
+      network: 'Network error. Please try again, or message me on LinkedIn.',
+      mailFail: 'Unable to compose email. Try the form again or message me on LinkedIn.',
+      opening: 'Opening your email client…'
+    };
     var status = document.getElementById('intakeStatus');
     var setStatus = function (msg, state) {
       if (!status) return;
@@ -397,7 +486,7 @@
       if (!purpose) missing.push('intake-purpose');
       if (!message) missing.push('intake-message');
       if (missing.length) {
-        setStatus('Please complete the required fields (Name, Purpose, Message).', 'error');
+        setStatus(fT.missing, 'error');
         missing.forEach(function (id) {
           var el = document.getElementById(id);
           if (el) el.setAttribute('aria-invalid', 'true');
@@ -424,7 +513,7 @@
         payload.set('message', message);
         payload.set('_subject', subject);
 
-        setStatus('Sending message…');
+        setStatus(fT.sending);
         if (submit) submit.disabled = true;
 
         fetch(endpoint, {
@@ -433,21 +522,21 @@
           headers: { 'Accept': 'application/json' }
         }).then(function (response) {
           if (response.ok) {
-            setStatus('Message sent. Redirecting…', 'success');
+            setStatus(fT.sent, 'success');
             form.reset();
             if (redirect) {
               window.location.assign(redirect);
             }
           } else {
             return response.json().then(function (body) {
-              var err = (body && body.errors && body.errors.map(function (x) { return x.message; }).join(', ')) || 'Send failed.';
-              setStatus(err + ' Please try again, or message me on LinkedIn.', 'error');
+              var err = (body && body.errors && body.errors.map(function (x) { return x.message; }).join(', ')) || fT.sendFail;
+              setStatus(err + fT.retry, 'error');
             }).catch(function () {
-              setStatus('Send failed. Please try again, or message me on LinkedIn.', 'error');
+              setStatus(fT.sendFail + fT.retry, 'error');
             });
           }
         }).catch(function () {
-          setStatus('Network error. Please try again, or message me on LinkedIn.', 'error');
+          setStatus(fT.network, 'error');
         }).finally(function () {
           if (submit) submit.disabled = false;
         });
@@ -467,9 +556,9 @@
         'Submitted from bamidelealy.com'
       ].filter(Boolean).join('\n');
       var to = decodeAddr(form.getAttribute('data-mailto'));
-      if (!to) { setStatus('Unable to compose email. Try the form again or message me on LinkedIn.', 'error'); return; }
+      if (!to) { setStatus(fT.mailFail, 'error'); return; }
       var href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-      setStatus('Opening your email client…');
+      setStatus(fT.opening);
       window.location.href = href;
     });
   }

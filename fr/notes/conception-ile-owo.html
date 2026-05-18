@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pourquoi huit agents, et non un seul chatbot | Bamidele Aly</title>
+  <meta name="description" content="Le schéma du chatbot unique échoue aux tests précis qu’une équipe de doctrine fait subir à un junior. Huit agents les passent.">
+  <meta name="author" content="Bamidele Aly">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <meta name="view-transition" content="same-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="canonical" href="https://bamidelealy.com/fr/notes/conception-ile-owo.html">
+  <link rel="alternate" hreflang="en-GB" href="https://bamidelealy.com/notes/ile-owo-design.html">
+  <link rel="alternate" hreflang="fr-FR" href="https://bamidelealy.com/fr/notes/conception-ile-owo.html">
+  <link rel="alternate" hreflang="de-DE" href="https://bamidelealy.com/de/notizen/ile-owo-konzept.html">
+  <link rel="alternate" hreflang="x-default" href="https://bamidelealy.com/notes/ile-owo-design.html">
+  <link rel="alternate" type="application/rss+xml" title="Bamidele Aly — Flux RSS" href="https://bamidelealy.com/fr/rss.xml">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Bamidele Aly">
+  <meta property="og:title" content="Pourquoi huit agents, et non un seul chatbot">
+  <meta property="og:description" content="Le schéma du chatbot unique échoue aux tests précis qu’une équipe de doctrine fait subir à un junior. Huit agents les passent.">
+  <meta property="og:image" content="https://bamidelealy.com/assets/bamidele-aly-studio.jpeg?v=2026051800">
+  <meta property="og:url" content="https://bamidelealy.com/fr/notes/conception-ile-owo.html">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sebastienrousseau/skeletonic-stylus@2.0.0/css/core/skeletonic.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/styles.css?v=2026051800">
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Pourquoi huit agents, et non un seul chatbot",
+    "datePublished": "2026-05-16",
+    "dateModified": "2026-05-18",
+    "url": "https://bamidelealy.com/fr/notes/conception-ile-owo.html",
+    "inLanguage": "fr-FR",
+    "author": {"@type": "Person", "name": "Bamidele Aly", "gender": "Female", "url": "https://bamidelealy.com/fr/"},
+    "publisher": {"@type": "Person", "name": "Bamidele Aly"},
+    "image": "https://bamidelealy.com/assets/bamidele-aly-studio.jpeg?v=2026051800",
+    "about": "Architecture IA multi-agents pour le conseil en doctrine comptable",
+    "keywords": "Ile Owo, multi-agents, IFRS, doctrine comptable, architecture IA"
+  }
+  </script>
+</head>
+<body class="essay-snap">
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/fr/" aria-label="Bamidele Aly — accueil"><span class="brand-mark" aria-hidden="true">BA</span><span class="brand-text">BAMIDELE ALY</span></a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Ouvrir la navigation"><span></span><span></span><span></span></button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a class="nav-link" href="/fr/">Accueil</a></li>
+          <li><a class="nav-link" href="/fr/projets.html">Projets</a></li>
+          <li><a class="nav-link" href="/fr/historienne.html">Historienne</a></li>
+          <li><a class="nav-link" href="/fr/atelier.html">Atelier</a></li>
+          <li><a class="nav-link active" href="/fr/notes/" aria-current="page">Notes</a></li>
+          <li><a class="nav-link" href="/fr/contact.html">Contact</a></li>
+        </ul>
+        <button class="search-trigger" id="searchTrigger" type="button" aria-label="Rechercher">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <span class="search-trigger-label">Rechercher</span>
+          <span class="search-shortcut" aria-hidden="true">Ctrl+K</span>
+        </button>
+        <div class="lang-switch" data-lang-switch data-open="false">
+          <button class="lang-switch-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu" aria-label="Changer de langue">
+            <svg class="lang-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg>
+            <span class="lang-switch-current">FR</span>
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="lang-switch-menu" id="langMenu" role="menu">
+            <li role="none"><a role="menuitem" hreflang="en-GB" href="/notes/ile-owo-design.html" lang="en"><span class="lang-code">EN</span><span class="lang-name">English</span></a></li>
+            <li role="none"><a role="menuitem" hreflang="fr-FR" href="/fr/notes/conception-ile-owo.html" lang="fr" aria-current="true"><span class="lang-code">FR</span><span class="lang-name">Français</span></a></li>
+            <li role="none"><a role="menuitem" hreflang="de-DE" href="/de/notizen/ile-owo-konzept.html" lang="de"><span class="lang-code">DE</span><span class="lang-name">Deutsch</span></a></li>
+          </ul>
+        </div>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Passer au thème sombre" aria-pressed="false">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <section class="essay-hero">
+        <div class="container">
+          <span class="essay-eyebrow">IA appliquée</span>
+          <h1 class="essay-title">Pourquoi huit agents, et non un seul chatbot.</h1>
+          <p class="essay-dek">Le schéma du chatbot unique échoue aux tests précis qu’une équipe de doctrine fait subir à un junior. Huit agents les passent.</p>
+          <p class="essay-meta">
+            <span>Par <a href="/fr/">Bamidele Aly</a></span>
+            <span class="dot" aria-hidden="true"></span>
+            <span>7 min de lecture</span>
+            <span class="dot" aria-hidden="true"></span>
+            <time datetime="2026-05">Mai 2026</time>
+          </p>
+        </div>
+      </section>
+
+      <section class="essay-body">
+        <div class="container">
+          <section class="essay-chapter" id="shape">
+            <h2>La forme du travail de doctrine</h2>
+            <p>Le conseil en doctrine, dans un cabinet Big 4 ou une équipe interne, n’est pas un jeu de questions-réponses. C’est un raisonnement adversarial dans l’incertitude. Deux lectures d’un même paragraphe d’IAS 36 peuvent être également défendables. La question est laquelle l’auditeur acceptera et que le régulateur ne contestera pas. Ce n’est pas un problème d’extraction de faits.</p>
+            <p>Une vraie équipe de doctrine joue cela structurellement. Le préparateur rédige la position. Un réviseur la conteste depuis la perspective d’un auditeur sceptique. Un associé senior arbitre entre les deux et décide quel cadrage est robuste. Le résultat n’est pas la première réponse du préparateur ; c’est la réponse qui a survécu à l’échange.</p>
+            <p>Un chatbot unique ne dispose d’aucun de ces mécanismes. Il produit une réponse plausible et s’arrête. La plausibilité est le mode d’échec. Le lecteur ne peut pas distinguer, depuis la seule sortie, laquelle de trois ou quatre lectures alternatives également plausibles le modèle a envisagée et écartée. On est donc forcé de répéter le prompt avec des variations pour faire apparaître ce qui aurait dû être visible dès la première réponse.</p>
+          </section>
+
+          <section class="essay-chapter" id="cast">
+            <h2>Ce que chacun des huit agents fait</h2>
+            <p>Ile Owo nomme explicitement les rôles et achemine le travail entre eux. L’<strong>Orchestrateur</strong> tient le contexte de travail et choisit quel agent exécute ensuite. Le <strong>Filtre</strong> restreint la requête au corpus pertinent — endossements de l’UK Endorsement Board, publications de la BRI, bibliothèques techniques des Big 4, mémos de doctrine internes — et écarte le hors-sujet. Le <strong>Synthéticien</strong> extrait les revendications porteuses de chaque source.</p>
+            <p>L’étape médiane abrite la structure adversariale. L’<strong>Historien</strong> situe la question dans les décisions de normalisation antérieures : quand ce paragraphe a-t-il été interprété pour la dernière fois, par qui, avec quelles modifications ultérieures ? Le <strong>Préparateur</strong> défend la position du préparateur — là où la norme laisse de la latitude, là où elle impose une règle stricte. Le <strong>Contradicteur</strong> tient la position de l’auditeur ou du régulateur, en faisant émerger les contestations que le Préparateur aurait préféré éviter.</p>
+            <p>La synthèse repose sur deux agents supplémentaires. L’<strong>Auditeur</strong> tranche l’échange Préparateur/Contradicteur au regard de la norme et des analogues de l’Historien, et écrit la position résolue. Le <strong>Rédacteur</strong> produit la note de doctrine finale dans le style maison — citations, démarche, synthèse.</p>
+          </section>
+
+          <p class="essay-pull">La plausibilité est le mode d’échec. Un chatbot unique produit une réponse plausible et s’arrête ; le lecteur ne voit pas ce qui a été envisagé et écarté.</p>
+
+          <section class="essay-chapter" id="beats">
+            <h2>Pourquoi cela surpasse un grand modèle unique</h2>
+            <p>Trois raisons, par ordre d’importance. <strong>Spécialisation</strong> d’abord : le prompt de chaque agent est ajusté à son rôle. Celui du Contradicteur récompense la position que le Préparateur a manquée ; celui du Préparateur récompense la rédaction la plus défendable. Un chatbot unique, moyenné sur les deux rôles, n’en écrit aucun bien.</p>
+            <p><strong>Isolation contextuelle</strong> ensuite : chaque agent fonctionne avec sa mémoire de travail propre. Le Contradicteur ne voit pas le brouillon du Préparateur tant qu’il n’a pas formulé ses propres objections. Cela élimine la compression de politesse qui survient quand un seul modèle écrit la réponse et la critique d’un coup — il finit toujours par adoucir la critique pour qu’elle s’accorde au brouillon.</p>
+            <p><strong>Piste d’audit</strong> enfin, et c’est celle dont se soucie le régulateur. La sortie de chaque agent est enregistrée avec horodatage, citations sources et raisonnement intermédiaire. Quand un superviseur demande « comment cette position est-elle apparue ? », la réponse n’est pas un transcript de chat : c’est un enregistrement structuré des sources considérées, des positions testées et de la revue qui a fait émerger tel contre-argument. C’est un artefact révisable. Un chatbot unique ne produit que la réponse finale et le prompt ; tout l’entre-deux reste implicite.</p>
+          </section>
+
+          <section class="essay-chapter" id="limits">
+            <h2>Ce que cela ne résout pas</h2>
+            <p>Ile Owo ne certifie pas l’exhaustivité. Le Filtre peut avoir manqué une source pertinente ; l’Historien peut avoir manqué un précédent ; l’Auditeur peut avoir sous-pondéré une préoccupation connue du régulateur. Le système est un accélérateur de brouillon et un premier réviseur structuré, pas une autorité décisionnaire.</p>
+            <p>Il ne remplace pas non plus le jugement humain sur les questions véritablement inédites — celles où la réponse est « il faut interroger le normalisateur directement ». Dans ces cas, la sortie la plus utile des agents n’est pas leur conclusion ; c’est l’inventaire des considérations soulevées, qui devient le dossier de briefing de la conversation à venir.</p>
+            <p>Traitez-le comme le premier brouillon d’un collaborateur senior, rédigé en vingt minutes plutôt qu’en trois jours. Puis lisez-le comme tout premier brouillon de quelqu’un en qui vous n’avez pas encore pleinement confiance : en cherchant ce qui manque plutôt que ce qui est là.</p>
+          </section>
+
+          <footer class="essay-footer">
+            <span><a href="/fr/notes/">← Toutes les notes</a></span>
+            <span><a href="/fr/projets.html#ile-owo">Voir la page projet Ile Owo →</a></span>
+          </footer>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche" aria-hidden="true">
+    <div class="search-box">
+      <div class="search-input-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <label for="searchInput" class="sr-only">Rechercher sur le site</label>
+        <input id="searchInput" class="search-input" type="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Rechercher sur le site…" aria-label="Rechercher sur le site">
+        <button type="button" class="search-cancel" aria-label="Fermer la recherche">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div id="searchResults" class="search-results" role="region" aria-live="polite" aria-label="Résultats de recherche"></div>
+      <div class="search-footer">
+        <span><kbd>↑</kbd><kbd>↓</kbd> Naviguer</span>
+        <span><kbd>↵</kbd> Ouvrir</span>
+        <span><kbd>Échap</kbd> Fermer</span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Bamidele Aly. Tous droits réservés.</p>
+      <p><a href="/fr/rss.xml">RSS</a> · <a href="/sitemap.xml">Plan du site</a> · <a href="/llms.txt">LLMs.txt</a></p>
+    </div>
+  </footer>
+  <script src="/script.js?v=2026051800" defer></script>
+</body>
+</html>

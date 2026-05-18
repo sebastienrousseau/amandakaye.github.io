@@ -5,8 +5,10 @@
     <link>https://bamidelealy.com/</link>
     <description>AI governance, Product Control, applied AI, credit risk, economic history and creative practice by Bamidele Aly.</description>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 16 May 2026 11:22:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2026 11:22:00 GMT</lastBuildDate>
     <atom:link href="https://bamidelealy.com/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://bamidelealy.com/fr/rss.xml" rel="alternate" type="application/rss+xml" hreflang="fr-FR" title="Bamidele Aly (FR)" />
+    <atom:link href="https://bamidelealy.com/de/rss.xml" rel="alternate" type="application/rss+xml" hreflang="de-DE" title="Bamidele Aly (DE)" />
     <item>
       <title>Engineering Trustworthy AI for Global Finance</title>
       <link>https://bamidelealy.com/</link>

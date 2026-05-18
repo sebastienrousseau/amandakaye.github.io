@@ -1,0 +1,40 @@
+{
+  "index": {
+    "fr": [
+      { "t": "Accueil", "d": "Concevoir une IA de confiance pour la finance mondiale — Bamidele Aly sur la gouvernance de l’IA, le Product Control et l’histoire économique.", "u": "/fr/" },
+      { "t": "Projets", "d": "Des systèmes d’IA appliquée pour la finance et le risque — Ile Owo et l’analyse géospatiale du risque de crédit.", "u": "/fr/projets.html" },
+      { "t": "Historienne économique", "d": "Recherche sur les systèmes monétaires ouest-africains, les infrastructures financières coloniales, la banque centrale et la diaspora nigériane.", "u": "/fr/historienne.html" },
+      { "t": "Atelier", "d": "Aquarelle, peinture chinoise, acryliques, gouache et gravure.", "u": "/fr/atelier.html" },
+      { "t": "Contact", "d": "Demandes d’interventions, de conseil et de collaboration académique.", "u": "/fr/contact.html" },
+
+      { "t": "Gouvernance du risque de modèles d’IA", "d": "Conception et mise en œuvre de cadres de gouvernance pour l’IA dans les environnements financiers régulés.", "u": "/fr/#expertise-heading" },
+      { "t": "Transformation finance & IA appliquée", "d": "Systèmes d’IA qui résolvent de vrais problèmes de Product Control, dont Ile Owo.", "u": "/fr/#expertise-heading" },
+      { "t": "Risque de crédit & infrastructures de marché", "d": "Risque de crédit auprès de banques, NBFI, souverains, supranationaux et plus de 85 juridictions.", "u": "/fr/#expertise-heading" },
+
+      { "t": "Ile Owo", "d": "Un système-conseiller IFRS et IAS à huit agents bâti sur l’API Claude d’Anthropic, en Python.", "u": "/fr/projets.html#ile-owo" },
+      { "t": "Architecture d’Ile Owo", "d": "Orchestrateur, Filtre, Synthéticien, Historien, Préparateur, Contradicteur, Auditeur, Rédacteur — le flux à huit agents.", "u": "/fr/projets.html#architecture-ile-owo" },
+      { "t": "Analyse géospatiale du risque", "d": "Valeur des collatéraux, résilience du bilan et chocs spatialement corrélés.", "u": "/fr/projets.html" },
+
+      { "t": "FT Live — Open Finance Meets AI", "d": "Panel FT Fintech Festival, novembre 2025.", "u": "/fr/#speaking-heading" },
+      { "t": "The Economist — AI for CFOs", "d": "Deep Learning : Training the AI-First CFO, mars 2026.", "u": "/fr/#speaking-heading" },
+      { "t": "Banque de France", "d": "Crédibilités des monnaies, de John Law au bitcoin — souverainetés monétaires au Nigeria.", "u": "/fr/#speaking-heading" },
+
+      { "t": "Capitaux ennemis dans le Lagos colonial", "d": "Saisie des maisons de commerce allemandes et austro-hongroises à Lagos pendant la Première Guerre mondiale.", "u": "/fr/historienne.html#research-heading" },
+      { "t": "La banque centrale en Afrique-Occidentale britannique", "d": "Architecture institutionnelle, politique monétaire et économie politique des territoires.", "u": "/fr/historienne.html#research-heading" },
+      { "t": "La diaspora nigériane en Europe", "d": "Formation, réseaux économiques et trajectoires des communautés nigérianes dans les villes européennes.", "u": "/fr/historienne.html#research-heading" },
+
+      { "t": "Banque du Biafra et Banque centrale du Nigeria (1967-1970)", "d": "Monnaie d’urgence et contre-monnaie — article en préparation.", "u": "/fr/historienne.html#published-heading" },
+      { "t": "Souveraineté monétaire au Ghana et au Nigeria", "d": "Fin des années 1950 au début des années 1960 — chapitre dans Identity Transformation and Politicization in Africa (Rowman & Littlefield, 2022).", "u": "/fr/historienne.html#published-heading" },
+      { "t": "Le West African sterling au Sud du Nigeria, 1916", "d": "Chapitre dans There Came a Time: Essays on the Great War in Africa (TSL Books, 2018).", "u": "/fr/historienne.html#published-heading" },
+      { "t": "La téléphonie mobile en Afrique subsaharienne", "d": "« Top Up, Pay as You Go ! » — chapitre dans Urban Challenges and Survival Strategies in Africa (2017).", "u": "/fr/historienne.html#published-heading" },
+
+      { "t": "Formation", "d": "Université Paris I Panthéon-Sorbonne, Birkbeck (Londres), INALCO, ESCP Business School.", "u": "/fr/historienne.html#education-heading" },
+      { "t": "Pratique d’atelier", "d": "Une discipline qui garde les autres honnêtes — gravure, aquarelle, gouache, acryliques.", "u": "/fr/atelier.html#practice-heading" },
+
+      { "t": "Notes — index", "d": "Essais longs sur la gouvernance de l’IA, les architectures multi-agents et l’histoire monétaire de l’Afrique de l’Ouest.", "u": "/fr/notes/" },
+      { "t": "Pourquoi huit agents, et non un seul chatbot", "d": "La justification de conception de l’architecture à huit agents d’Ile Owo et pourquoi un chatbot unique échoue aux tests d’une équipe de doctrine.", "u": "/fr/notes/conception-ile-owo.html" },
+      { "t": "La gouvernance est la route, pas le ralentisseur", "d": "La gouvernance du risque de modèles d’IA comme catalyseur d’adoption. Classification par niveau de risque, AI Project Canvas, alignement prudentiel.", "u": "/fr/notes/gouvernance-ia-comme-route.html" },
+      { "t": "Monnaie d’urgence et contre-monnaie, 1967–1970", "d": "Page de projet de recherche sur la Banque du Biafra, la Banque centrale du Nigeria et l’émission contestée pendant la guerre civile.", "u": "/fr/notes/projet-banque-biafra.html" }
+    ]
+  }
+}

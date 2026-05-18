@@ -1,0 +1,40 @@
+{
+  "index": {
+    "de": [
+      { "t": "Startseite", "d": "Vertrauenswürdige KI für die globale Finanzwelt — Bamidele Aly zu KI-Governance, Product Control und Wirtschaftsgeschichte.", "u": "/de/" },
+      { "t": "Projekte", "d": "Angewandte KI-Systeme für Finanzen und Risiko — Ile Owo und geospatiale Kreditrisikoanalyse.", "u": "/de/projekte.html" },
+      { "t": "Wirtschaftshistorikerin", "d": "Westafrikanische Geldsysteme, koloniale Finanzinfrastruktur, Zentralbankwesen und Forschung zur nigerianischen Diaspora.", "u": "/de/historikerin.html" },
+      { "t": "Atelier", "d": "Aquarell, chinesische Malerei, Acryl, Gouache und Druckgrafik.", "u": "/de/atelier.html" },
+      { "t": "Kontakt", "d": "Anfragen zu Vorträgen, Beratung und akademischer Zusammenarbeit.", "u": "/de/kontakt.html" },
+
+      { "t": "Governance von KI-Modellrisiken", "d": "Entwurf und Operationalisierung von Governance-Rahmen für KI in regulierten Finanzumfeldern.", "u": "/de/#expertise-heading" },
+      { "t": "Finanztransformation & angewandte KI", "d": "KI-Systeme für echte Product-Control-Probleme, darunter Ile Owo.", "u": "/de/#expertise-heading" },
+      { "t": "Kreditrisiko & Marktinfrastrukturen", "d": "Kreditrisiko in Banken, NBFI, Staaten, Supranationals und über 85 Länderrisiken.", "u": "/de/#expertise-heading" },
+
+      { "t": "Ile Owo", "d": "Ein achtagentenbasiertes IFRS- und IAS-Beratungssystem auf der Anthropic-Claude-API in Python.", "u": "/de/projekte.html#ile-owo" },
+      { "t": "Ile-Owo-Architektur", "d": "Orchestrator, Filter, Summarian, Historiker, Insider, Outsider, Auditor, Scribe — der Achter-Agenten-Fluss.", "u": "/de/projekte.html#ile-owo-architektur" },
+      { "t": "Geospatiale Risikoanalyse", "d": "Sicherheitenwert, Bilanzresilienz und räumlich korrelierte Schocks.", "u": "/de/projekte.html" },
+
+      { "t": "FT Live — Open Finance Meets AI", "d": "Panel beim FT Fintech Festival, November 2025.", "u": "/de/#speaking-heading" },
+      { "t": "The Economist — AI for CFOs", "d": "Deep Learning: Training the AI-First CFO, März 2026.", "u": "/de/#speaking-heading" },
+      { "t": "Banque de France", "d": "Crédibilités des monnaies, de John Law au bitcoin — monetäre Souveränitäten in Nigeria.", "u": "/de/#speaking-heading" },
+
+      { "t": "Feindliches Kapital im kolonialen Lagos", "d": "Beschlagnahme deutscher und österreichisch-ungarischer Handelshäuser in Lagos im Ersten Weltkrieg.", "u": "/de/historikerin.html#research-heading" },
+      { "t": "Zentralbankwesen in British West Africa", "d": "Institutionelle Architektur, Geldpolitik und politische Ökonomie über die Territorien.", "u": "/de/historikerin.html#research-heading" },
+      { "t": "Die nigerianische Diaspora in Europa", "d": "Entstehung, ökonomische Netzwerke und Trajektorien nigerianischer Gemeinden in europäischen Städten.", "u": "/de/historikerin.html#research-heading" },
+
+      { "t": "Bank von Biafra und Zentralbank von Nigeria (1967-1970)", "d": "Notgeld und Gegen-Geld — Papier in Vorbereitung.", "u": "/de/historikerin.html#published-heading" },
+      { "t": "Monetäre Souveränität in Ghana und Nigeria", "d": "Späte 1950er bis frühe 1960er Jahre — Kapitel in Identity Transformation and Politicization in Africa (Rowman & Littlefield, 2022).", "u": "/de/historikerin.html#published-heading" },
+      { "t": "Das West African Sterling im südlichen Nigeria, 1916", "d": "Kapitel in There Came a Time: Essays on the Great War in Africa (TSL Books, 2018).", "u": "/de/historikerin.html#published-heading" },
+      { "t": "Mobiltelefonie in Subsahara-Afrika", "d": "„Top Up, Pay as You Go!“ — Kapitel in Urban Challenges and Survival Strategies in Africa (2017).", "u": "/de/historikerin.html#published-heading" },
+
+      { "t": "Ausbildung", "d": "Université Paris I Panthéon-Sorbonne, Birkbeck (London), INALCO, ESCP Business School.", "u": "/de/historikerin.html#education-heading" },
+      { "t": "Atelier-Praxis", "d": "Eine Disziplin, die die anderen ehrlich hält — Druckgrafik, Aquarell, Gouache, Acryl.", "u": "/de/atelier.html#practice-heading" },
+
+      { "t": "Notizen — Index", "d": "Lange Essays zu KI-Governance, Multi-Agenten-Architekturen und westafrikanischer Geldgeschichte.", "u": "/de/notizen/" },
+      { "t": "Warum acht Agenten und nicht ein Chatbot", "d": "Designbegründung für die Achter-Agenten-Architektur von Ile Owo und warum ein einzelner Chatbot an den Prüfungen eines Bilanzierungs-Policy-Teams scheitert.", "u": "/de/notizen/ile-owo-konzept.html" },
+      { "t": "Governance ist die Straße, nicht die Bremsschwelle", "d": "Governance von KI-Modellrisiken als Wegbereiter der Einführung. Risikobasierte Klassifizierung, AI Project Canvas, aufsichtliche Anschlussfähigkeit.", "u": "/de/notizen/ki-governance-als-strasse.html" },
+      { "t": "Notgeld und Gegen-Geld, 1967–1970", "d": "Forschungsprojektseite zur Bank von Biafra, zur Zentralbank von Nigeria und zur umstrittenen Währungsausgabe im nigerianischen Bürgerkrieg.", "u": "/de/notizen/projekt-bank-von-biafra.html" }
+    ]
+  }
+}

@@ -23,3 +23,8 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: https://bamidelealy.com/sitemap.xml
+
+# Localized RSS feeds
+# https://bamidelealy.com/rss.xml      (en-GB)
+# https://bamidelealy.com/fr/rss.xml   (fr-FR)
+# https://bamidelealy.com/de/rss.xml   (de-DE)
