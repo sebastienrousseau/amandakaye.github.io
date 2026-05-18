@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#f1f1f1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
   <meta name="view-transition" content="same-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests;">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="canonical" href="https://bamidelealy.com/projects.html">
   <link rel="alternate" hreflang="en-GB" href="https://bamidelealy.com/projects.html">
@@ -22,21 +22,11 @@
   <meta property="og:site_name" content="Bamidele Aly">
   <meta property="og:title" content="Projects | Bamidele Aly">
   <meta property="og:description" content="Ile Owo and geospatial risk analysis projects at the intersection of AI, accounting policy and financial risk.">
-  <meta property="og:image" content="https://bamidelealy.com/assets/bamidele-aly-studio.jpeg?v=2026051801">
+  <meta property="og:image" content="https://bamidelealy.com/assets/bamidele-aly-studio.jpeg?v=2026051802">
   <meta property="og:url" content="https://bamidelealy.com/projects.html">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/@sebastienrousseau/skeletonic-stylus@2.0.0/css/core/skeletonic.min.css" integrity="sha384-m3IoEkr7bPhgf7sPFcLfBi0Sc8jPdNX1pTq5AQn8S8/FrHskDcis1CRjtnWars6I" crossorigin="anonymous">
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sebastienrousseau/skeletonic-stylus@2.0.0/css/core/skeletonic.min.css" media="print" onload="this.media='all'" integrity="sha384-m3IoEkr7bPhgf7sPFcLfBi0Sc8jPdNX1pTq5AQn8S8/FrHskDcis1CRjtnWars6I" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" media="print" onload="this.media='all'">
-  <noscript>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sebastienrousseau/skeletonic-stylus@2.0.0/css/core/skeletonic.min.css" integrity="sha384-m3IoEkr7bPhgf7sPFcLfBi0Sc8jPdNX1pTq5AQn8S8/FrHskDcis1CRjtnWars6I" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
-  </noscript>
-  <link rel="stylesheet" href="styles.css?v=2026051801">
+  <meta name="twitter:image" content="https://bamidelealy.com/assets/bamidele-aly-studio.jpeg?v=2026051802">
+  <link rel="stylesheet" href="styles.css?v=2026051802">
   <script>
     (function () {
       try {
@@ -73,6 +63,8 @@
     ]
   }
   </script>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -155,37 +147,7 @@
 
         <figure class="agent-diagram-wrap">
           <figcaption class="sr-only">Architecture diagram of the Ile Owo eight-agent system. The Orchestrator coordinates Filter and Summaryan in the sourcing stage; Historian, Insider and Outsider in the adversarial review stage; and Auditor and Scribe in the synthesis stage.</figcaption>
-          <pre class="mermaid">flowchart LR
-  Q([Enquiry]) --> Orch
-  Orch{{Orchestrator}}
-  subgraph S1[Sourcing]
-    direction TB
-    Filter[Filter]
-    Summaryan[Summaryan]
-  end
-  subgraph S2[Adversarial review]
-    direction TB
-    Historian[Historian]
-    Insider[Insider]
-    Outsider[Outsider]
-  end
-  subgraph S3[Synthesis]
-    direction TB
-    Auditor[Auditor]
-    Scribe[Scribe]
-  end
-  Orch --> Filter --> Summaryan --> Orch
-  Orch --> Historian
-  Orch --> Insider
-  Orch --> Outsider
-  Historian --> Auditor
-  Insider --> Auditor
-  Outsider --> Auditor
-  Auditor --> Scribe --> Out([Advisory note])
-  classDef orch fill:#0071e3,stroke:#005ec4,color:#ffffff,font-weight:600
-  classDef io fill:transparent,stroke:#86868b,stroke-dasharray:3 3,color:#6e6e73
-  class Orch orch
-  class Q,Out io</pre>
+          <img class="mermaid-svg" src="/assets/diagrams/ile-owo-en.svg?v=2026051802" alt="Architecture diagram of the Ile Owo eight-agent system" width="1104" height="533" loading="lazy" decoding="async">
         </figure>
 
         <ul class="agent-legend" aria-label="Agent roles">
@@ -247,6 +209,6 @@
       <p><a href="rss.xml">RSS</a> · <a href="sitemap.xml">Sitemap</a> · <a href="llms.txt">LLMs.txt</a></p>
     </div>
   </footer>
-  <script src="script.js?v=2026051801" defer></script>
+  <script src="script.js?v=2026051802" defer></script>
 </body>
 </html>

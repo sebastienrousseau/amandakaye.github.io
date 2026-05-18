@@ -3,7 +3,55 @@
    inspired by Apple's restraint: generous whitespace, tight typography,
    a refined grayscale palette with a single accent. */
 
-@layer skeletonic.base, skeletonic.layout, skeletonic.elements, skeletonic.components, site;
+/* Self-hosted Atkinson Hyperlegible — no Google Fonts dependency.
+   Total 4 subsets ≈ 53 KB; font-display: swap so text paints immediately. */
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('assets/fonts/atkinson-400-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('assets/fonts/atkinson-400-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('assets/fonts/atkinson-700-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('assets/fonts/atkinson-700-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Skeletonic primitives are inlined directly below — the few resets we
+   actually depend on, sourced from Skeletonic 2.0.0's base layer. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Body word-wrap so long technical terms never blow out the viewport */
+a, abbr, address, article, aside, audio, b, blockquote, body, button,
+caption, cite, code, dd, del, dfn, dl, dt, em, fieldset, figure, footer,
+form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins,
+kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, samp,
+section, select, small, span, strong, sub, sup, table, tbody, td, tfoot,
+th, thead, time, tr, ul, var, video { word-break: break-word; }
+
+[hidden] { display: none; }
 
 @view-transition { navigation: auto; }
 
@@ -909,30 +957,16 @@
     box-shadow: var(--shadow-sm);
     overflow-x: auto;
   }
-  .mermaid {
-    min-block-size: 320px;
-    font-family: var(--font-text);
-    display: grid;
-    place-items: center;
-    color: var(--ink-muted);
-    overflow: hidden;
-  }
-  .mermaid svg {
+  /* Pre-rendered diagram — light SVG on a card so the dark theme still
+     reads it on a soft surface, no Mermaid runtime required. */
+  .mermaid-svg {
+    display: block;
+    inline-size: 100%;
     max-inline-size: 100%;
     block-size: auto;
-    margin-inline: auto;
-    display: block;
-  }
-  .mermaid:not([data-processed="true"]) {
-    font-size: 0;
-    line-height: 0;
-    white-space: pre-wrap;
-  }
-  .mermaid:not([data-processed="true"])::before {
-    content: "Loading diagram…";
-    color: var(--ink-muted);
-    font-size: .95rem;
-    line-height: 1.4;
+    background: #ffffff;
+    border-radius: var(--radius);
+    padding: clamp(.5rem, 1.5vw, 1rem);
   }
   .agent-legend {
     margin: 1.5rem 0 0;

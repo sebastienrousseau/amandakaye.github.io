@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
   <meta name="view-transition" content="same-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests;">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="canonical" href="https://bamidelealy.com/fr/notes/projet-banque-biafra.html">
   <link rel="alternate" hreflang="en-GB" href="https://bamidelealy.com/notes/bank-of-biafra-project.html">
@@ -23,25 +23,15 @@
   <meta property="og:site_name" content="Bamidele Aly">
   <meta property="og:title" content="Monnaie d’urgence et contre-monnaie, 1967–1970">
   <meta property="og:description" content="Projet de recherche sur la Banque du Biafra, la Banque centrale du Nigeria et l’émission contestée de monnaie en temps de guerre civile.">
-  <meta property="og:image" content="https://bamidelealy.com/assets/bamidele-aly-studio.jpeg?v=2026051801">
+  <meta property="og:image" content="https://bamidelealy.com/assets/bamidele-aly-studio.jpeg?v=2026051802">
   <meta property="og:url" content="https://bamidelealy.com/fr/notes/projet-banque-biafra.html">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:locale:alternate" content="en_GB">
   <meta property="og:locale:alternate" content="de_DE">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bamidelealy.com/assets/bamidele-aly-studio.jpeg?v=2026051802">
 
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/@sebastienrousseau/skeletonic-stylus@2.0.0/css/core/skeletonic.min.css" integrity="sha384-m3IoEkr7bPhgf7sPFcLfBi0Sc8jPdNX1pTq5AQn8S8/FrHskDcis1CRjtnWars6I" crossorigin="anonymous">
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sebastienrousseau/skeletonic-stylus@2.0.0/css/core/skeletonic.min.css" media="print" onload="this.media='all'" integrity="sha384-m3IoEkr7bPhgf7sPFcLfBi0Sc8jPdNX1pTq5AQn8S8/FrHskDcis1CRjtnWars6I" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" media="print" onload="this.media='all'">
-  <noscript>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sebastienrousseau/skeletonic-stylus@2.0.0/css/core/skeletonic.min.css" integrity="sha384-m3IoEkr7bPhgf7sPFcLfBi0Sc8jPdNX1pTq5AQn8S8/FrHskDcis1CRjtnWars6I" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
-  </noscript>
-  <link rel="stylesheet" href="/styles.css?v=2026051801">
+  <link rel="stylesheet" href="/styles.css?v=2026051802">
 
   <script>
     (function () {
@@ -64,11 +54,13 @@
     "inLanguage": "fr-FR",
     "author": {"@type": "Person", "name": "Bamidele Aly", "gender": "Female", "url": "https://bamidelealy.com/fr/"},
     "publisher": {"@type": "Person", "name": "Bamidele Aly"},
-    "image": "https://bamidelealy.com/assets/bamidele-aly-studio.jpeg?v=2026051801",
+    "image": "https://bamidelealy.com/assets/bamidele-aly-studio.jpeg?v=2026051802",
     "about": "Histoire économique de la souveraineté monétaire pendant la guerre civile nigériane",
     "keywords": "Banque du Biafra, Banque centrale du Nigeria, souveraineté monétaire, guerre civile nigériane, histoire économique"
   }
   </script>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
 </head>
 <body class="essay-snap">
   <a class="skip-link" href="#main">Aller au contenu principal</a>
@@ -131,15 +123,17 @@
         <div class="container">
           <section class="essay-chapter" id="question">
             <h2>La question</h2>
-            <p>La guerre civile nigériane de 1967–1970 produit un second émetteur de monnaie, bref et contesté, sur le sol nigérian. La République du Biafra, déclarant son indépendance en mai 1967, émet ses propres billets et pièces en livre en 1968 puis en 1969. La Banque centrale du Nigeria réplique en démonétisant la livre nigériane en janvier 1968 et en réémettant de nouveaux billets que l’administration biafraise ne peut pas convertir.</p>
-            <p>Cette séquence — monnaie sécessionniste, contre-monnaie fédérale et clivage entre ce qui circule et ce qui a cours légal — soulève une question que la littérature sur les caisses d’émission et l’indépendance des banques centrales ne traite pas proprement : que signifie la souveraineté monétaire lorsque le périmètre territorial de l’autorité émettrice est lui-même l’objet du litige ?</p>
+            <p>La guerre civile nigériane dure de 1967 à 1970. Pendant cette brève période, le sol nigérian voit apparaître un second émetteur de monnaie. La République du Biafra déclare son indépendance en mai 1967. Elle émet ensuite ses propres billets et pièces en livre, d’abord en 1968, puis en 1969.</p>
+            <p>La Banque centrale du Nigeria réagit. En janvier 1968, elle démonétise la livre nigériane. Elle émet de nouveaux billets. L’administration biafraise ne peut pas les convertir.</p>
+            <p>Cette séquence — monnaie sécessionniste, contre-monnaie fédérale, clivage entre ce qui circule et ce qui a cours légal — soulève une question que la littérature ne traite pas proprement. Que signifie la souveraineté monétaire lorsque le périmètre territorial de l’autorité émettrice est lui-même contesté ?</p>
           </section>
 
           <section class="essay-chapter" id="sources">
             <h2>Sources</h2>
-            <p>Le projet s’appuie sur quatre corpus. Le premier, c’est le matériau numismatique : les émissions biafraises, la livre nigériane d’avant-guerre, le remplacement nigérian post-1968. Dates de frappe, blocs signatures et éléments de sécurité établissent la chronologie.</p>
-            <p>Le second, c’est la correspondance institutionnelle — archives de la Banque d’Angleterre, publications et mémorandums internes (publiés) de la Banque centrale du Nigeria, et fonds de la Mission historique de la Banque de France où les banques de réserve européennes ont consigné leur lecture du conflit. Le troisième, c’est la presse de l’époque : journaux nigérians, britanniques et français rendent compte de la démonétisation, des émissions biafraises et de la contrebande de billets pré-1968 à travers les lignes.</p>
-            <p>Le quatrième, ce sont les mémoires et l’histoire orale d’officiels des deux camps. La littérature y est lacunaire — beaucoup de décisions ont été prises informellement, et nombre de ceux qui en savaient le plus ne sont plus ou n’ont jamais écrit — mais ces lacunes elles-mêmes renseignent sur la manière dont les décisions monétaires étaient prises.</p>
+            <p>Le projet s’appuie sur quatre corpus. Le premier est le matériau numismatique : les émissions biafraises, la livre nigériane d’avant-guerre, le remplacement nigérian post-1968. Dates de frappe, blocs signatures et éléments de sécurité fixent la chronologie.</p>
+            <p>Le deuxième est la correspondance institutionnelle. Archives de la Banque d’Angleterre. Publications et mémorandums internes de la Banque centrale du Nigeria, là où ils ont été rendus publics. Fonds de la Mission historique de la Banque de France, où les banques de réserve européennes ont consigné leur lecture du conflit.</p>
+            <p>Le troisième est la presse de l’époque. Les journaux nigérians, britanniques et français rendent compte de la démonétisation, des émissions biafraises et de la contrebande de billets pré-1968 à travers les lignes.</p>
+            <p>Le quatrième regroupe les mémoires et l’histoire orale d’officiels des deux camps. La littérature est lacunaire. Beaucoup de décisions ont été prises informellement, et nombre de ceux qui en savaient le plus ne sont plus là ou n’ont rien écrit. Les lacunes elles-mêmes sont parlantes.</p>
           </section>
 
           <p class="essay-pull">Que signifie la souveraineté monétaire lorsque le périmètre territorial de l’autorité émettrice est lui-même l’objet du litige ?</p>
@@ -190,6 +184,6 @@
       <p><a href="/fr/rss.xml">RSS</a> · <a href="/sitemap.xml">Plan du site</a> · <a href="/llms.txt">LLMs.txt</a></p>
     </div>
   </footer>
-  <script src="/script.js?v=2026051801" defer></script>
+  <script src="/script.js?v=2026051802" defer></script>
 </body>
 </html>
