@@ -1,47 +1,21 @@
 ;;
 ;; Domain:     bamidelealy.com.
-;; Purpose:    Custom apex for the GitHub Pages site at
-;;             https://github.com/sebastienrousseau/bamidelealy.github.io.
+;; Purpose:    Proxied apex; the Cloudflare edge handles TLS termination
+;;             and forwards traffic to the configured origin (currently
+;;             the GitHub Pages site at sebastienrousseau.github.io).
 ;; Exported:   2026-05-18
 ;;
-;; Apex A/AAAA records point at GitHub Pages' anycast endpoints (see
-;; https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
-;; The www subdomain is a CNAME to the canonical GitHub Pages host so
-;; both apex and www resolve to the same origin without renaming the repo.
-;;
-;; Records are proxied through Cloudflare (orange cloud) so HSTS, the
-;; edge TLS termination, the bot rules and the cache all stay in front
-;; of GitHub Pages.
-;;
-;; CAA locks public-cert issuance to the two CAs GitHub Pages currently
-;; uses (Let's Encrypt via DigiCert, plus Sectigo for fallback). The
-;; iodef line is the contact reported to a CA when an unauthorised
-;; issuance is attempted.
+;; Apex A is an RFC 5737 TEST-NET-1 placeholder; the Cloudflare proxy
+;; resolves the real origin at the edge before any backend contact.
+;; Both apex and www MUST stay proxied (orange cloud).
 ;;
 
 ;; NS Records (Cloudflare-assigned)
 bamidelealy.com.	86400	IN	NS	ines.ns.cloudflare.com.
 bamidelealy.com.	86400	IN	NS	ivan.ns.cloudflare.com.
 
-;; A Records (proxied, GitHub Pages apex IPs)
-bamidelealy.com.	1	IN	A	185.199.108.153 ; cf_tags=cf-proxied:true
-bamidelealy.com.	1	IN	A	185.199.109.153 ; cf_tags=cf-proxied:true
-bamidelealy.com.	1	IN	A	185.199.110.153 ; cf_tags=cf-proxied:true
-bamidelealy.com.	1	IN	A	185.199.111.153 ; cf_tags=cf-proxied:true
-
-;; AAAA Records (proxied, GitHub Pages apex IPv6)
-bamidelealy.com.	1	IN	AAAA	2606:50c0:8000::153 ; cf_tags=cf-proxied:true
-bamidelealy.com.	1	IN	AAAA	2606:50c0:8001::153 ; cf_tags=cf-proxied:true
-bamidelealy.com.	1	IN	AAAA	2606:50c0:8002::153 ; cf_tags=cf-proxied:true
-bamidelealy.com.	1	IN	AAAA	2606:50c0:8003::153 ; cf_tags=cf-proxied:true
+;; A Record (proxied placeholder)
+bamidelealy.com.	1	IN	A	192.0.2.1 ; cf_tags=cf-proxied:true
 
 ;; CNAME Record (proxied)
-www.bamidelealy.com.	1	IN	CNAME	sebastienrousseau.github.io. ; cf_tags=cf-proxied:true
-
-;; CAA Records — restrict cert issuance to Let's Encrypt (GitHub Pages)
-;;                and Sectigo (fallback), and tell unauthorised CAs where
-;;                to report attempted misissuance.
-bamidelealy.com.	86400	IN	CAA	0 issue "letsencrypt.org"
-bamidelealy.com.	86400	IN	CAA	0 issue "sectigo.com"
-bamidelealy.com.	86400	IN	CAA	0 issuewild ";"
-bamidelealy.com.	86400	IN	CAA	0 iodef "mailto:security@bamidelealy.com"
+www.bamidelealy.com.	1	IN	CNAME	bamidelealy.com. ; cf_tags=cf-proxied:true
