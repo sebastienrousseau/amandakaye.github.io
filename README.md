@@ -31,7 +31,7 @@
 
 **The site**
 
-- [Pages](#pages) — six canonical pages, a notes section with three essays, a `/thanks/` confirmation, and a `/404.html`
+- [Pages](#pages) — six canonical pages, a notes section with essays and field reports, a `/thanks/` confirmation, and a `/404.html`
 - [Locales](#locales) — English (canonical), French at `/fr/`, German at `/de/`, with translated slugs
 - [Architecture](#architecture) — file layout, no-build philosophy
 - [Design system](#design-system) — Apple-inspired tokens, typography, layers
@@ -51,7 +51,7 @@
 - [Accessibility](#accessibility) — WCAG 2.2 AA target size, AAA contrast
 - [Security](#security) — strict CSP, no plain-text email, no trackers
 - [SEO and AI discovery](#seo-and-ai-discovery) — JSON-LD `@graph`, sitemap, `llms.txt`
-- [Deployment](#deployment) — GitHub Pages, custom domain via `CNAME`
+- [Deployment](#deployment) — GitHub Pages, custom domain and DNS notes
 - [Development](#development) — local server, audit recipes
 
 **Operational**
@@ -78,6 +78,16 @@ python3 -m http.server 8000
 Then open `http://localhost:8000/`. No build step, no Node toolchain, no
 dependencies to install. The site is hand-authored HTML, CSS and vanilla
 JavaScript, gzip-served via GitHub Pages.
+
+### Quality check
+
+```bash
+python3 tools/quality-check.py
+```
+
+The check validates JSON/XML syntax, internal links, core page metadata,
+image alternatives and dimensions, locale `hreflang` coverage and search
+targets. The same command runs in GitHub Actions on pull requests.
 
 ### Deploy
 
@@ -127,7 +137,10 @@ No build, no SSR, no rehydration — refresh the browser.
 | `historian.html` | West African monetary systems, publications, education. |
 | `studio.html` | Watercolour, Chinese painting, gouache, printmaking. |
 | `contact.html` | Curated intake form (Formspree) for speaking and advisory. |
-| `notes/index.html` | Long-form notes index — three editorial essays with scroll-snap chapters. |
+| `notes/index.html` | Long-form notes index — editorial essays and field reports. |
+| `notes/commercialising-quantum-global-2026.html` | Field report on Commercialising Quantum Global 2026, quantum readiness and finance. |
+| `notes/commercialising-quantum-global-2026-day-1.html` | Day 1 proceedings — promise, platforms and ecosystems. |
+| `notes/commercialising-quantum-global-2026-day-2.html` | Day 2 proceedings — regulation, Q-Day and finance. |
 | `notes/ile-owo-design.html` | Why eight agents, and not one chatbot. |
 | `notes/ai-governance-as-road.html` | Governance is the road, not the speed bump. |
 | `notes/bank-of-biafra-project.html` | Emergency money and counter-money, 1967–1970. |
@@ -154,6 +167,9 @@ in their language.
 | `/studio.html` | `/fr/atelier.html` | `/de/atelier.html` |
 | `/contact.html` | `/fr/contact.html` | `/de/kontakt.html` |
 | `/notes/` | `/fr/notes/` | `/de/notizen/` |
+| `/notes/commercialising-quantum-global-2026.html` | `/fr/notes/commercialisation-quantique-global-2026.html` | `/de/notizen/commercialising-quantum-global-2026.html` |
+| `/notes/commercialising-quantum-global-2026-day-1.html` | `/fr/notes/commercialisation-quantique-global-2026-jour-1.html` | `/de/notizen/commercialising-quantum-global-2026-tag-1.html` |
+| `/notes/commercialising-quantum-global-2026-day-2.html` | `/fr/notes/commercialisation-quantique-global-2026-jour-2.html` | `/de/notizen/commercialising-quantum-global-2026-tag-2.html` |
 | `/notes/ile-owo-design.html` | `/fr/notes/conception-ile-owo.html` | `/de/notizen/ile-owo-konzept.html` |
 | `/notes/ai-governance-as-road.html` | `/fr/notes/gouvernance-ia-comme-route.html` | `/de/notizen/ki-governance-als-strasse.html` |
 | `/notes/bank-of-biafra-project.html` | `/fr/notes/projet-banque-biafra.html` | `/de/notizen/projekt-bank-von-biafra.html` |
@@ -181,6 +197,9 @@ bamidelealy.github.io/
 ├── 404.html              ← tri-lingual not-found, locale picked from URL
 ├── notes/
 │   ├── index.html
+│   ├── commercialising-quantum-global-2026.html
+│   ├── commercialising-quantum-global-2026-day-1.html
+│   ├── commercialising-quantum-global-2026-day-2.html
 │   ├── ile-owo-design.html
 │   ├── ai-governance-as-road.html
 │   └── bank-of-biafra-project.html
@@ -194,7 +213,7 @@ bamidelealy.github.io/
 │   ├── contact.html
 │   ├── a-propos.html
 │   ├── 404.html
-│   ├── notes/{index,conception-ile-owo,gouvernance-ia-comme-route,projet-banque-biafra}.html
+│   ├── notes/{index,commercialisation-quantique-global-2026,commercialisation-quantique-global-2026-jour-1,commercialisation-quantique-global-2026-jour-2,conception-ile-owo,gouvernance-ia-comme-route,projet-banque-biafra}.html
 │   ├── merci/index.html
 │   ├── rss.xml
 │   └── search-data.json
@@ -206,7 +225,7 @@ bamidelealy.github.io/
 │   ├── kontakt.html
 │   ├── ueber.html
 │   ├── 404.html
-│   ├── notizen/{index,ile-owo-konzept,ki-governance-als-strasse,projekt-bank-von-biafra}.html
+│   ├── notizen/{index,commercialising-quantum-global-2026,commercialising-quantum-global-2026-tag-1,commercialising-quantum-global-2026-tag-2,ile-owo-konzept,ki-governance-als-strasse,projekt-bank-von-biafra}.html
 │   ├── danke/index.html
 │   ├── rss.xml
 │   └── search-data.json
