@@ -5,10 +5,17 @@
     <link>https://bamidelealy.com/</link>
     <description>AI governance, Product Control, applied AI, credit risk, economic history and creative practice by Bamidele Aly.</description>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 18 May 2026 11:22:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2026 10:00:00 GMT</lastBuildDate>
     <atom:link href="https://bamidelealy.com/rss.xml" rel="self" type="application/rss+xml" />
     <atom:link href="https://bamidelealy.com/fr/rss.xml" rel="alternate" type="application/rss+xml" hreflang="fr-FR" title="Bamidele Aly (FR)" />
     <atom:link href="https://bamidelealy.com/de/rss.xml" rel="alternate" type="application/rss+xml" hreflang="de-DE" title="Bamidele Aly (DE)" />
+    <item>
+      <title>Commercialising Quantum Global 2026: what finance should do now</title>
+      <link>https://bamidelealy.com/notes/commercialising-quantum-global-2026.html</link>
+      <guid isPermaLink="true">https://bamidelealy.com/notes/commercialising-quantum-global-2026.html</guid>
+      <pubDate>Sun, 19 Jul 2026 10:00:00 GMT</pubDate>
+      <description>A field report on quantum commercialisation, post-quantum cryptography, AI convergence, enterprise readiness and practical implications for Product Control, Financial Control and Business Finance.</description>
+    </item>
     <item>
       <title>Engineering Trustworthy AI for Global Finance</title>
       <link>https://bamidelealy.com/</link>

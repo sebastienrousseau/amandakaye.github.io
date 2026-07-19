@@ -32,6 +32,9 @@
       { "t": "Atelier-Praxis", "d": "Eine Disziplin, die die anderen ehrlich hält — Druckgrafik, Aquarell, Gouache, Acryl.", "u": "/de/atelier.html#practice-heading" },
 
       { "t": "Notizen — Index", "d": "Lange Essays zu KI-Governance, Multi-Agenten-Architekturen und westafrikanischer Geldgeschichte.", "u": "/de/notizen/" },
+      { "t": "Commercialising Quantum Global 2026", "d": "Feldbericht zu Quantenkommerzialisierung, Post-Quantum-Kryptografie, KI-Konvergenz, Unternehmensreife und praktischen Implikationen für Finance.", "u": "/de/notizen/commercialising-quantum-global-2026.html" },
+      { "t": "Commercialising Quantum Global 2026 Tag 1", "d": "Bericht zu Tag 1: UK-Strategie, Plattformen, Ökosysteme, KI-Konvergenz, Sensorik, Standards und Risikokapital.", "u": "/de/notizen/commercialising-quantum-global-2026-tag-1.html" },
+      { "t": "Commercialising Quantum Global 2026 Tag 2", "d": "Bericht zu Tag 2: Regulierung, HSBC-Reife, PQC, Q-Day, Finance Use Cases, industrielle Resilienz und KI-Konvergenz.", "u": "/de/notizen/commercialising-quantum-global-2026-tag-2.html" },
       { "t": "Warum acht Agenten und nicht ein Chatbot", "d": "Designbegründung für die Achter-Agenten-Architektur von Ile Owo und warum ein einzelner Chatbot an den Prüfungen eines Bilanzierungs-Policy-Teams scheitert.", "u": "/de/notizen/ile-owo-konzept.html" },
       { "t": "Governance ist die Straße, nicht die Bremsschwelle", "d": "Governance von KI-Modellrisiken als Wegbereiter der Einführung. Risikobasierte Klassifizierung, AI Project Canvas, aufsichtliche Anschlussfähigkeit.", "u": "/de/notizen/ki-governance-als-strasse.html" },
       { "t": "Notgeld und Gegen-Geld, 1967–1970", "d": "Forschungsprojektseite zur Bank von Biafra, zur Zentralbank von Nigeria und zur umstrittenen Währungsausgabe im nigerianischen Bürgerkrieg.", "u": "/de/notizen/projekt-bank-von-biafra.html" }

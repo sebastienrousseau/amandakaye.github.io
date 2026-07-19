@@ -473,4 +473,67 @@
       window.location.href = href;
     });
   }
+
+  var articleHero = document.querySelector('.essay-hero');
+  var articleMeta = articleHero && articleHero.querySelector('.essay-meta');
+  if (articleHero && articleMeta && !articleHero.querySelector('.article-actions')) {
+    var canonical = document.querySelector('link[rel="canonical"]');
+    var shareUrl = canonical ? canonical.getAttribute('href') : window.location.href;
+    var titleEl = articleHero.querySelector('.essay-title');
+    var shareTitle = titleEl ? titleEl.textContent.trim() : document.title;
+    var encodedUrl = encodeURIComponent(shareUrl);
+    var encodedTitle = encodeURIComponent(shareTitle);
+    var actions = document.createElement('div');
+    actions.className = 'article-actions';
+    actions.setAttribute('aria-label', 'Share article');
+
+    var icons = {
+      linkedin: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.83v1.64h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.14V21h-4v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94V21h-4V9Z"/></svg>',
+      x: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.86 10.47 21.15 2h-1.73l-6.33 7.36L8.03 2H2.2l7.64 11.12L2.2 22h1.73l6.68-7.77L15.95 22h5.83l-7.92-11.53Zm-2.36 2.75-.77-1.1L4.57 3.3H7.2l4.98 7.13.77 1.1 6.47 9.27h-2.63l-5.29-7.58Z"/></svg>',
+      facebook: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 8.7V6.9c0-.86.2-1.3 1.4-1.3H17V2.2c-.78-.08-1.56-.13-2.35-.14-3.48 0-4.65 2.12-4.65 4.52V8.7H7v3.8h3V22h4v-9.5h2.75l.45-3.8H14Z"/></svg>',
+      email: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v12H4z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m4 7 8 6 8-6"/></svg>',
+      copy: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M10 13a5 5 0 0 0 7.07 0l2.12-2.12a5 5 0 0 0-7.07-7.07L10.9 5.03"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14 11a5 5 0 0 0-7.07 0L4.81 13.12a5 5 0 0 0 7.07 7.07l1.22-1.22"/></svg>'
+    };
+    var links = [
+      ['LinkedIn', 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodedUrl, icons.linkedin],
+      ['X', 'https://twitter.com/intent/tweet?url=' + encodedUrl + '&text=' + encodedTitle, icons.x],
+      ['Facebook', 'https://www.facebook.com/sharer/sharer.php?u=' + encodedUrl, icons.facebook],
+      ['Email', 'mailto:?subject=' + encodedTitle + '&body=' + encodedUrl, icons.email]
+    ];
+    var label = document.createElement('span');
+    label.className = 'article-actions-label';
+    label.textContent = 'Share article';
+    actions.appendChild(label);
+    links.forEach(function (item) {
+      var anchor = document.createElement('a');
+      anchor.className = 'article-share-link';
+      anchor.href = item[1];
+      anchor.target = item[0] === 'Email' ? '' : '_blank';
+      if (item[0] !== 'Email') anchor.rel = 'noopener noreferrer';
+      anchor.setAttribute('aria-label', 'Share on ' + item[0]);
+      anchor.innerHTML = item[2];
+      actions.appendChild(anchor);
+    });
+    var copyButton = document.createElement('button');
+    copyButton.className = 'article-copy-link';
+    copyButton.type = 'button';
+    copyButton.setAttribute('aria-label', 'Copy article link');
+    copyButton.innerHTML = icons.copy;
+    copyButton.addEventListener('click', function () {
+      var done = function () {
+        copyButton.setAttribute('aria-label', 'Article link copied');
+        setTimeout(function () { copyButton.setAttribute('aria-label', 'Copy article link'); }, 1800);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(shareUrl).then(done).catch(function () {
+          window.prompt('Copy article link', shareUrl);
+        });
+      } else {
+        window.prompt('Copy article link', shareUrl);
+      }
+    });
+    actions.appendChild(copyButton);
+    articleMeta.insertAdjacentElement('afterend', actions);
+  }
+
 })();
