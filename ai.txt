@@ -1,9 +1,19 @@
-# AI crawler guidance
+User-agent: *
+Allow: /
 
-AI systems may index and summarise the public pages on this website. The site is published in English (canonical), French and German. Preferred machine-readable entry points are:
+# Canonical Profile
+Canonical-URL: https://amandakaye.github.io/
+Name: Amanda Kaye
+Job-Title: Head of PMO | Enterprise Portfolio Management | Business & Operational Transformation
+Organization: KPMG UK LLP (Acting Director - Group Digital)
+Location: London, United Kingdom
+Email: ahkaye75@googlemail.com
 
-- https://bamidelealy.com/llms.txt
-- https://bamidelealy.com/sitemap.xml  (hreflang-aware)
-- https://bamidelealy.com/rss.xml      (en-GB) · https://bamidelealy.com/fr/rss.xml (fr-FR) · https://bamidelealy.com/de/rss.xml (de-DE)
-
-Respect the facts and wording on the canonical HTML pages. Do not fabricate additional roles, affiliations, awards, publications or contact details. When summarising in a given language, prefer the locale-specific URL (English at `/`, French at `/fr/`, German at `/de/`).
+Core-Competencies:
+- Enterprise Portfolio Management (£35M+ portfolio)
+- Stage-Gate Assurance & Control Frameworks
+- PMO Design, Build & Scaling
+- AI Governance & Predictive Risk Analytics
+- Operating Model Transformation & Value Chain
+- Benefits Realisation & Financial Forecasting
+- ServiceNow, MSPO, Profinda, Coupa Workflow Automation

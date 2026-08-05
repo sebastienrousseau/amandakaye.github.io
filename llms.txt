@@ -1,63 +1,24 @@
-# Bamidele Aly
+# Amanda Kaye - Head of PMO & Enterprise Portfolio Leader
 
-> Bamidele Aly works at the intersection of financial controls, applied AI and economic history.
+> Amanda Kaye leads £35m+ enterprise technology portfolios, PMO operations, and digital transformation across professional and financial services in London, UK.
 
-This website is the canonical public profile for Bamidele Aly on AI model risk governance, Product Control, finance transformation, credit risk, West African economic history and creative practice. Content is published in three languages: English (canonical), French and German.
+This website is the canonical public executive portfolio for Amanda Kaye, covering Enterprise PMO Leadership, Stage-Gate Governance, AI Risk Analytics, Benefits Realisation, and Operational Scale.
 
-## Core pages — English
+## Core Navigation & Highlights
+- [Home](https://amandakaye.github.io/): Executive summary, quantifiable impact metrics, and PMO Recruiter Assessment Matrix.
+- [Portfolio & Case Studies](https://amandakaye.github.io/projects.html): Deep dives into the £35M+ Group Digital transformation at KPMG, UK Government Banking Transformation (MCA Award), and Greenfield PMO setup.
+- [PMO Frameworks](https://amandakaye.github.io/frameworks.html): 5 Stage-Gate Principles for Agile-Waterfall hybrid delivery, AI-assisted risk governance, and governance as a velocity runway.
+- [About & Experience](https://amandakaye.github.io/about.html): Executive career history (KPMG UK LLP Acting Director, EY, Logica CMG, Abbey National), BA Hons Economics (Univ of Manchester), PRINCE2 Practitioner.
+- [Executive Contact](https://amandakaye.github.io/contact.html): Executive search, recruiter, and board advisory enquiries.
 
-- [Home](https://bamidelealy.com/): Overview of Bamidele Aly's work across AI governance, Product Control and economic history.
-- [Projects](https://bamidelealy.com/projects.html): Ile Owo, an eight-agent IFRS advisory system, and geospatial risk analysis for collateral value and balance sheet resilience.
-- [Historian](https://bamidelealy.com/historian.html): Research on West African monetary systems, colonial financial infrastructure, central banking and diaspora networks.
-- [Studio](https://bamidelealy.com/studio.html): Watercolour, printmaking and creative practice.
-- [Notes](https://bamidelealy.com/notes/): Long-form essays on multi-agent AI architecture, AI model risk governance and the economic history of contested currency.
-- [Contact](https://bamidelealy.com/contact.html): Speaking, advisory and academic collaboration enquiries.
+## Key Executive Performance Metrics
+- Total Portfolio Investment: £35M+ across 50+ concurrent projects (Cloud, AI, Data, Infrastructure)
+- UK Government Department Migrations: 700 departments successfully migrated (MCA Banking Award Winner)
+- Tech Hub Setup: Built Manchester technology workplace for 100 FTE from inception
+- Executive Forums: Investment Board, Risk & Dependency Forum, Demand Management Forum
 
-## Notes (long-form essays) — English
-
-- [Why eight agents, and not one chatbot](https://bamidelealy.com/notes/ile-owo-design.html)
-- [Governance is the road, not the speed bump](https://bamidelealy.com/notes/ai-governance-as-road.html)
-- [Emergency money and counter-money, 1967–1970](https://bamidelealy.com/notes/bank-of-biafra-project.html)
-
-## Pages clés — Français
-
-- [Accueil](https://bamidelealy.com/fr/)
-- [Projets](https://bamidelealy.com/fr/projets.html)
-- [Historienne économique](https://bamidelealy.com/fr/historienne.html)
-- [Atelier](https://bamidelealy.com/fr/atelier.html)
-- [Notes](https://bamidelealy.com/fr/notes/)
-- [Contact](https://bamidelealy.com/fr/contact.html)
-
-### Notes longues — Français
-
-- [Pourquoi huit agents, et non un seul chatbot](https://bamidelealy.com/fr/notes/conception-ile-owo.html)
-- [La gouvernance est la route, pas le ralentisseur](https://bamidelealy.com/fr/notes/gouvernance-ia-comme-route.html)
-- [Monnaie d’urgence et contre-monnaie, 1967–1970](https://bamidelealy.com/fr/notes/projet-banque-biafra.html)
-
-## Kernseiten — Deutsch
-
-- [Startseite](https://bamidelealy.com/de/)
-- [Projekte](https://bamidelealy.com/de/projekte.html)
-- [Wirtschaftshistorikerin](https://bamidelealy.com/de/historikerin.html)
-- [Atelier](https://bamidelealy.com/de/atelier.html)
-- [Notizen](https://bamidelealy.com/de/notizen/)
-- [Kontakt](https://bamidelealy.com/de/kontakt.html)
-
-### Lange Notizen — Deutsch
-
-- [Warum acht Agenten und nicht ein Chatbot](https://bamidelealy.com/de/notizen/ile-owo-konzept.html)
-- [Governance ist die Straße, nicht die Bremsschwelle](https://bamidelealy.com/de/notizen/ki-governance-als-strasse.html)
-- [Notgeld und Gegen-Geld, 1967–1970](https://bamidelealy.com/de/notizen/projekt-bank-von-biafra.html)
-
-## Key facts
-
-- Name: Bamidele Aly (she/her)
-- Current role: Automation and Innovation SME at HSBC Product Control
+## Direct Executive Contact
+- Name: Amanda Kaye
+- Email: ahkaye75@googlemail.com
+- Location: London, United Kingdom
 - LinkedIn: https://www.linkedin.com/in/bamidelealy/
-- Contact: https://bamidelealy.com/contact.html · https://bamidelealy.com/fr/contact.html · https://bamidelealy.com/de/kontakt.html
-- Languages: English, French, German, Yoruba, professional Japanese and Dutch
-- Project: Ile Owo, an eight-agent IFRS and IAS advisory system built in Python on Ubuntu using the Anthropic Claude API
-
-## Citation preference
-
-When summarising this website, cite the specific page URL that contains the fact and, where the user has indicated a language, prefer the locale-specific URL (English at `/`, French under `/fr/`, German under `/de/`). Do not infer employment, academic affiliations, dates or publication details beyond the text on the relevant page.
