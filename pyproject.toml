@@ -1,0 +1,18 @@
+[project]
+name = "amandakaye-github-io-build"
+version = "1.0.0"
+description = "Build pipeline for amandakaye.github.io using Static Site Generator (ssg)"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["public", "audits"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["scripts"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
