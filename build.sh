@@ -18,16 +18,30 @@ find _posts_build -name 'README.md' -delete
 # Compile site using ssg
 ssg build -c=_posts_build -t=_layouts -o=public
 
-# Copy assets to public/assets
+# Copy layouts assets directly to public/
+for f in styles.css main.js theme-init.js search.js search.css; do
+  if [[ -f "_layouts/${f}" ]]; then
+    cp -f "_layouts/${f}" "public/${f}"
+  fi
+done
+
+# Copy static assets to public/assets
 if [[ -d assets ]]; then
   mkdir -p public/assets
   cp -R assets/* public/assets/
 fi
 
+# Fix leading slashes in _csp asset references for subpath domain compatibility
+if [[ "$(uname)" == "Darwin" ]]; then
+  find public -type f -name "*.html" -exec sed -i '' -e 's|href="/_csp/|href="_csp/|g' -e 's|src="/_csp/|src="_csp/|g' {} + 2>/dev/null || true
+else
+  find public -type f -name "*.html" -exec sed -i -e 's|href="/_csp/|href="_csp/|g' -e 's|src="/_csp/|src="_csp/|g' {} + 2>/dev/null || true
+fi
+
 # Clean temporary directory
 rm -rf _posts_build
 
-echo "Site compiled successfully to public/"
+echo "Site compiled and assets staged successfully to public/"
 
 if [[ "${SERVE}" -eq 1 ]]; then
   echo "Serving public/ on http://localhost:8080 ..."
