@@ -31,6 +31,9 @@ else
   find public -type f -name "*.html" -exec sed -i -e 's|href="/_csp/|href="_csp/|g' -e 's|src="/_csp/|src="_csp/|g' -e 's| integrity="[^"]*"||g' {} + 2>/dev/null || true
 fi
 
+# Enforce noindex disallow rules in all robots.txt for client demo security
+find public -name "robots.txt" -exec sh -c 'printf "User-agent: *\nDisallow: /\n" > "$1"' _ {} \;
+
 # Clean temporary directory
 rm -rf _posts_build
 
