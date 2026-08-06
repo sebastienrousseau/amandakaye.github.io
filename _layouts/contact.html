@@ -13,7 +13,7 @@
   <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">SSG</span><span class="brand-text">Portfolio</span></a>
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">AK</span><span class="brand-text">Amanda Kaye</span></a>
       <nav class="site-nav" aria-label="Primary navigation">
         <ul class="nav-menu" id="navMenu">
           <li><a class="nav-link" href="index.html">Home</a></li>
@@ -30,15 +30,30 @@
   <main id="main">
     <section class="container narrow" style="padding-block:3.5rem;">
       <p class="section-eyebrow">ENQUIRIES &amp; ADVISORY</p>
-      <h1>{{title}}</h1>
-      <p class="hero-subhead">{{description}}</p>
+      <h1>Executive Contact</h1>
+      <p class="hero-subhead">Get in touch for executive leadership, advisory, and transformation enquiries.</p>
       <hr style="border:0; border-top:1px solid var(--line-soft); margin-block:2rem;">
-      {{content}}
+      
+      <form class="contact-form" action="https://formspree.io/f/xvovzwpy" method="POST">
+        <div class="form-group" style="margin-bottom:1rem;">
+          <label for="name" style="display:block; font-weight:700;">Your Name &amp; Title</label>
+          <input type="text" id="name" name="name" required style="width:100%; padding:0.75rem; border:1px solid var(--line); border-radius:6px;">
+        </div>
+        <div class="form-group" style="margin-bottom:1rem;">
+          <label for="email" style="display:block; font-weight:700;">Work Email Address</label>
+          <input type="email" id="email" name="email" required style="width:100%; padding:0.75rem; border:1px solid var(--line); border-radius:6px;">
+        </div>
+        <div class="form-group" style="margin-bottom:1.5rem;">
+          <label for="message" style="display:block; font-weight:700;">Message</label>
+          <textarea id="message" name="message" rows="5" required style="width:100%; padding:0.75rem; border:1px solid var(--line); border-radius:6px;"></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Submit Executive Enquiry</button>
+      </form>
     </section>
   </main>
 
   <footer class="site-footer" style="border-top:1px solid var(--line-soft); padding:3rem 0; margin-top:4rem;">
-    <div class="container text-center"><p>&copy; 2026 {{author}}. Built with SSG.</p></div>
+    <div class="container text-center"><p>&copy; 2026 Amanda Kaye. Built with SSG.</p></div>
   </footer>
   <script src="main.js"></script>
 </body>
