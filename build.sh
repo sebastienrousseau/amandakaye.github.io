@@ -24,6 +24,14 @@ if [[ -d assets ]]; then
   cp -R assets/* public/assets/
 fi
 
+# Generate .html file fallbacks for directory outputs (e.g. projects/index.html -> projects.html)
+find public -type f -name "index.html" | while read -r idx; do
+  dir="$(dirname "$idx")"
+  if [[ "$dir" != "public" ]]; then
+    cp -f "$idx" "${dir}.html" 2>/dev/null || true
+  fi
+done
+
 # Fix subpath URLs and remove SRI integrity attributes for CSP compatibility
 if [[ "$(uname)" == "Darwin" ]]; then
   find public -type f -name "*.html" -exec sed -i '' -e 's|href="/_csp/|href="_csp/|g' -e 's|src="/_csp/|src="_csp/|g' -e 's| integrity="[^"]*"||g' {} + 2>/dev/null || true
