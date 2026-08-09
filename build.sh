@@ -24,19 +24,52 @@ if [[ -d assets ]]; then
   cp -R assets/* public/assets/
 fi
 
-# Generate .html file fallbacks for directory outputs (e.g. projects/index.html -> projects.html)
+# Copy favicon.ico to public/
+if [[ -f favicon.ico ]]; then
+  cp -f favicon.ico public/favicon.ico
+fi
+
+# Generate .html file fallbacks and stage ALL asset dependencies into subdirectories
 find public -type f -name "index.html" | while read -r idx; do
   dir="$(dirname "$idx")"
   if [[ "$dir" != "public" ]]; then
     cp -f "$idx" "${dir}.html" 2>/dev/null || true
+
+    # Stage ALL JS, CSS, favicon, search index, and _csp assets into subdirectories for 100% 200 OK resolution
+    parent="$(dirname "$dir")"
+    cp -f "${parent}"/*.js "${dir}/" 2>/dev/null || true
+    cp -f "${parent}"/*.css "${dir}/" 2>/dev/null || true
+    cp -f "${parent}"/search-index*.json "${dir}/" 2>/dev/null || true
+    if [[ -f "${parent}/favicon.ico" ]]; then
+      cp -f "${parent}/favicon.ico" "${dir}/favicon.ico" 2>/dev/null || true
+    fi
+
+    if [[ -d "${parent}/_csp" ]]; then
+      mkdir -p "${dir}/_csp"
+      cp -R "${parent}/_csp/"* "${dir}/_csp/" 2>/dev/null || true
+    fi
+    if [[ -d "${parent}/assets" ]]; then
+      mkdir -p "${dir}/assets"
+      cp -R "${parent}/assets/"* "${dir}/assets/" 2>/dev/null || true
+    fi
   fi
 done
 
 # Fix subpath URLs and remove SRI integrity attributes for CSP compatibility
 if [[ "$(uname)" == "Darwin" ]]; then
-  find public -type f -name "*.html" -exec sed -i '' -e 's|href="/_csp/|href="_csp/|g' -e 's|src="/_csp/|src="_csp/|g' -e 's| integrity="[^"]*"||g' {} + 2>/dev/null || true
+  find public -type f -name "*.html" -exec sed -i '' \
+    -e 's|href="/_csp/|href="_csp/|g' \
+    -e 's|src="/_csp/|src="_csp/|g' \
+    -e 's| integrity="[^"]*"||g' \
+    -e 's|</head>|<link rel="icon" type="image/x-icon" href="favicon.ico"></head>|g' \
+    {} + 2>/dev/null || true
 else
-  find public -type f -name "*.html" -exec sed -i -e 's|href="/_csp/|href="_csp/|g' -e 's|src="/_csp/|src="_csp/|g' -e 's| integrity="[^"]*"||g' {} + 2>/dev/null || true
+  find public -type f -name "*.html" -exec sed -i \
+    -e 's|href="/_csp/|href="_csp/|g' \
+    -e 's|src="/_csp/|src="_csp/|g' \
+    -e 's| integrity="[^"]*"||g' \
+    -e 's|</head>|<link rel="icon" type="image/x-icon" href="favicon.ico"></head>|g' \
+    {} + 2>/dev/null || true
 fi
 
 # Enforce noindex disallow rules in all robots.txt for client demo security
