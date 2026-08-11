@@ -1,0 +1,47 @@
+[
+  {
+    "date": "2026-08-08",
+    "description": "Explore technical specifications and the SSG platform comparison matrix in Vanguard Director Pro.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "Specifications & SSG Performance Matrix",
+    "url": "http://127.0.0.1:8000/about/",
+    "wordCount": 0
+  },
+  {
+    "date": "2026-08-08",
+    "description": "Inquire about theme licensing, developer customization, and SSG static site deployment in Vanguard Director Pro.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "Theme Inquiries & Support",
+    "url": "http://127.0.0.1:8000/contact/",
+    "wordCount": 0
+  },
+  {
+    "date": "2026-08-08",
+    "description": "Discover theme architecture, modular CSS design tokens, and layout grids in Vanguard Director Pro.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "Theme Architecture & Token Frameworks",
+    "url": "http://127.0.0.1:8000/frameworks/",
+    "wordCount": 0
+  },
+  {
+    "date": "2026-08-08",
+    "description": "Vanguard Director Pro is a high-impact executive showcase theme built for Static Site Generator (SSG). Featuring 100/100 Lighthouse performance, WCAG AAA accessibility, and zero-JS layout grids.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "Vanguard Director Pro | Premium Static Site Generator Theme",
+    "url": "http://127.0.0.1:8000/index.html",
+    "wordCount": 0
+  },
+  {
+    "date": "2026-08-08",
+    "description": "Explore live implementation case studies and showcase layouts engineered with Vanguard Director Pro and Static Site Generator (SSG).",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "Showcase & SSG Case Studies",
+    "url": "http://127.0.0.1:8000/projects/",
+    "wordCount": 0
+  }
+]

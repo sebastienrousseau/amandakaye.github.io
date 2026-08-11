@@ -1,0 +1,12 @@
+{
+  "background_color": "#ffffff",
+  "description": "Explore technical specifications and the SSG platform comparison matrix in Vanguard Director Pro.",
+  "display": "standalone",
+  "icons": [],
+  "name": "Vanguard Director Pro",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "Vanguard",
+  "start_url": ".",
+  "theme_color": null
+}

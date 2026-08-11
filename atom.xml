@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>MySsgSite</title>
+  <link href="http://127.0.0.1:8000/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="http://127.0.0.1:8000"/>
+  <id>http://127.0.0.1:8000</id>
+  <updated></updated>
+  <entry>
+    <title>Specifications &amp; SSG Performance Matrix</title>
+    <link href="http://127.0.0.1:8000/about/"/>
+    <id>http://127.0.0.1:8000/about/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Explore technical specifications and the SSG platform comparison matrix in Vanguard Director Pro.</summary>
+    <author><name>SSG Theme Suite</name></author>
+  </entry>
+  <entry>
+    <title>Theme Inquiries &amp; Support</title>
+    <link href="http://127.0.0.1:8000/contact/"/>
+    <id>http://127.0.0.1:8000/contact/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Inquire about theme licensing, developer customization, and SSG static site deployment in Vanguard Director Pro.</summary>
+    <author><name>SSG Theme Suite</name></author>
+  </entry>
+  <entry>
+    <title>Theme Architecture &amp; Token Frameworks</title>
+    <link href="http://127.0.0.1:8000/frameworks/"/>
+    <id>http://127.0.0.1:8000/frameworks/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Discover theme architecture, modular CSS design tokens, and layout grids in Vanguard Director Pro.</summary>
+    <author><name>SSG Theme Suite</name></author>
+  </entry>
+  <entry>
+    <title>Showcase &amp; SSG Case Studies</title>
+    <link href="http://127.0.0.1:8000/projects/"/>
+    <id>http://127.0.0.1:8000/projects/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Explore live implementation case studies and showcase layouts engineered with Vanguard Director Pro and Static Site Generator (SSG).</summary>
+    <author><name>SSG Theme Suite</name></author>
+  </entry>
+</feed>

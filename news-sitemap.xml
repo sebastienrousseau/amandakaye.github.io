@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+<url>
+  <loc>http://127.0.0.1:8000/about/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>SSG Theme Suite</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>Specifications & SSG Performance Matrix</news:title>
+    <news:keywords>Vanguard Director Pro, Specifications, SSG Performance Matrix, Static Site Generator</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>http://127.0.0.1:8000/contact/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>SSG Theme Suite</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>Theme Inquiries & Support</news:title>
+    <news:keywords>Vanguard Director Pro, Contact, SSG Support, Static Site Generator</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>http://127.0.0.1:8000/frameworks/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>SSG Theme Suite</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>Theme Architecture & Token Frameworks</news:title>
+    <news:keywords>Vanguard Director Pro, Theme Architecture, Design Tokens, SSG Frameworks</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>http://127.0.0.1:8000/projects/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>SSG Theme Suite</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>Showcase & SSG Case Studies</news:title>
+    <news:keywords>Vanguard Director Pro, SSG Showcase, Case Studies, Static Site Generator</news:keywords>
+  </news:news>
+</url>
+</urlset>

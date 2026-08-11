@@ -1,0 +1,11 @@
+{
+  "background_color": "#ffffff",
+  "description": "Vanguard Director Pro is a high-impact executive showcase theme built for Static Site Generator (SSG). Featuring 100/100 Lighthouse performance, WCAG AAA accessibility, and zero-JS layout grids.",
+  "display": "standalone",
+  "name": "Vanguard Director Pro",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "Vanguard",
+  "start_url": ".",
+  "theme_color": null
+}
