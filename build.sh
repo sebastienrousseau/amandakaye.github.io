@@ -29,14 +29,17 @@ if [[ -f favicon.ico ]]; then
   cp -f favicon.ico public/favicon.ico
 fi
 
-# Generate Vanguard theme release packages
+# Generate Vanguard theme release packages in public/ and public/downloads/
+mkdir -p public/downloads
 zip -r public/vanguard.zip _layouts/ _data/ styles.css build.sh -x "*.DS_Store" 2>/dev/null || true
 tar -czf public/vanguard.tar.gz _layouts/ _data/ styles.css build.sh 2>/dev/null || true
+cp -f public/vanguard.zip public/downloads/vanguard.zip 2>/dev/null || true
+cp -f public/vanguard.tar.gz public/downloads/vanguard.tar.gz 2>/dev/null || true
 
 # Generate .html file fallbacks and stage ALL asset dependencies into subdirectories
 find public -type f -name "index.html" | while read -r idx; do
   dir="$(dirname "$idx")"
-  if [[ "$dir" != "public" ]]; then
+  if [[ "$dir" != "public" && "$dir" != "public/downloads" ]]; then
     cp -f "$idx" "${dir}.html" 2>/dev/null || true
 
     # Stage ALL JS, CSS, favicon, search index, and _csp assets into subdirectories for 100% 200 OK resolution
@@ -58,6 +61,20 @@ find public -type f -name "index.html" | while read -r idx; do
     fi
   fi
 done
+
+# Python post-processing: strip any auto-injected <div lang="en"> bleeding blocks completely
+python3 -c '
+import glob, re
+for path in glob.glob("public/**/*.html", recursive=True):
+    with open(path, "r", encoding="utf-8") as f:
+        content = f.read()
+    cleaned = re.sub(r"<div lang=\"en\">.*?</div>", "", content, flags=re.DOTALL)
+    cleaned = re.sub(r"&lt;div lang=\"en\"&gt;.*?&lt;/div&gt;", "", cleaned, flags=re.DOTALL)
+    cleaned = re.sub(r"<meta [^>]*content=\"&amp;lt;div lang=&quot;en&quot; [^>]*>", "", cleaned)
+    if cleaned != content:
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(cleaned)
+' 2>/dev/null || true
 
 # Fix subpath URLs and remove SRI integrity attributes for CSP compatibility
 if [[ "$(uname)" == "Darwin" ]]; then
