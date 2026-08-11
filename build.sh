@@ -29,6 +29,10 @@ if [[ -f favicon.ico ]]; then
   cp -f favicon.ico public/favicon.ico
 fi
 
+# Generate Vanguard theme release packages
+zip -r public/vanguard.zip _layouts/ _data/ styles.css build.sh -x "*.DS_Store" 2>/dev/null || true
+tar -czf public/vanguard.tar.gz _layouts/ _data/ styles.css build.sh 2>/dev/null || true
+
 # Generate .html file fallbacks and stage ALL asset dependencies into subdirectories
 find public -type f -name "index.html" | while read -r idx; do
   dir="$(dirname "$idx")"
