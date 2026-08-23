@@ -1,0 +1,69 @@
+{
+  "feed_url": "http://127.0.0.1:8000/feed.json",
+  "home_page_url": "http://127.0.0.1:8000/",
+  "items": [
+    {
+      "authors": [
+        {
+          "name": "SSG Theme Suite"
+        }
+      ],
+      "content_html": "Explore technical specifications and the SSG platform comparison matrix in Vanguard Director Pro.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/about/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Specifications & SSG Performance Matrix",
+      "url": "http://127.0.0.1:8000/about/"
+    },
+    {
+      "authors": [
+        {
+          "name": "SSG Theme Suite"
+        }
+      ],
+      "content_html": "Inquire about theme licensing, developer customization, and SSG static site deployment in Vanguard Director Pro.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/contact/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Theme Inquiries & Support",
+      "url": "http://127.0.0.1:8000/contact/"
+    },
+    {
+      "authors": [
+        {
+          "name": "SSG Theme Suite"
+        }
+      ],
+      "content_html": "Discover theme architecture, modular CSS design tokens, and layout grids in Vanguard Director Pro.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/frameworks/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Theme Architecture & Token Frameworks",
+      "url": "http://127.0.0.1:8000/frameworks/"
+    },
+    {
+      "authors": [
+        {
+          "name": "SSG Theme Suite"
+        }
+      ],
+      "content_html": "Explore live implementation case studies and showcase layouts engineered with Vanguard Director Pro and Static Site Generator (SSG).",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/projects/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Showcase & SSG Case Studies",
+      "url": "http://127.0.0.1:8000/projects/"
+    }
+  ],
+  "language": "en-GB",
+  "title": "MySsgSite",
+  "version": "https://jsonfeed.org/version/1.1"
+}
