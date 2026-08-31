@@ -1,0 +1,19 @@
+{
+  "background_color": "#ffffff",
+  "description": "Inquire about theme licensing, developer customization, and SSG static site deployment in Vanguard Director Pro.",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "",
+      "type": "image/svg+xml"
+    }
+  ],
+  "name": "Vanguard Director Pro",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "Vanguard",
+  "start_url": ".",
+  "theme_color": null
+}

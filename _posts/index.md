@@ -1,12 +1,15 @@
 ---
-name: "Vanguard Director Pro"
-short_name: "Vanguard"
-title: "Vanguard Director Pro | Premium Static Site Generator Theme"
-description: "Vanguard Director Pro is a high-impact executive showcase theme built for Static Site Generator (SSG). Featuring 100/100 Lighthouse performance, WCAG AAA accessibility, and zero-JS layout grids."
-keywords: "Vanguard Director Pro, SSG Theme, Static Site Generator, Lighthouse 100, WCAG AAA"
-author: "SSG Theme Suite"
-date: "2026-08-08"
+name: "Amanda Kaye"
+short_name: "AK"
+title: "Amanda Kaye | Head of PMO & Enterprise Portfolio Leader"
+description: "Amanda Kaye is Head of PMO & Enterprise Portfolio Leader with 20+ years leading £35M+ digital transformation, AI governance, and strategic delivery at KPMG UK LLP."
+keywords: "Amanda Kaye, Head of PMO, Enterprise Portfolio Management, PMO Director, KPMG, Business Transformation, AI Governance, Stage Gate Control, Portfolio ROI, Strategic Alignment, London PMO Executive"
+author: "Amanda Kaye"
+date: "2026-08-31"
 language: "en-GB"
 layout: "index"
-permalink: "https://amandakaye.github.io/index.html"
+permalink: "https://amandakaye.github.io/"
 ---
+
+# Amanda Kaye
+Acting Director – Group Digital, Head of Portfolio PMO Operations at KPMG UK LLP. Trusted advisor to senior executives, turning complex £35M+ investment portfolios into predictable business value, robust stage-gate controls, and scalable operating models.

@@ -1,0 +1,69 @@
+{
+  "feed_url": "https://amandakaye.github.io/feed.json",
+  "home_page_url": "https://amandakaye.github.io/",
+  "items": [
+    {
+      "authors": [
+        {
+          "name": "SSG Theme Suite"
+        }
+      ],
+      "content_html": "Explore technical specifications and the SSG platform comparison matrix in Vanguard Director Pro.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "https://amandakaye.github.io/about/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Specifications & SSG Performance Matrix",
+      "url": "https://amandakaye.github.io/about/"
+    },
+    {
+      "authors": [
+        {
+          "name": "SSG Theme Suite"
+        }
+      ],
+      "content_html": "Inquire about theme licensing, developer customization, and SSG static site deployment in Vanguard Director Pro.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "https://amandakaye.github.io/contact/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Theme Inquiries & Support",
+      "url": "https://amandakaye.github.io/contact/"
+    },
+    {
+      "authors": [
+        {
+          "name": "SSG Theme Suite"
+        }
+      ],
+      "content_html": "Discover theme architecture, modular CSS design tokens, and layout grids in Vanguard Director Pro.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "https://amandakaye.github.io/frameworks/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Theme Architecture & Token Frameworks",
+      "url": "https://amandakaye.github.io/frameworks/"
+    },
+    {
+      "authors": [
+        {
+          "name": "SSG Theme Suite"
+        }
+      ],
+      "content_html": "Explore live implementation case studies and showcase layouts engineered with Vanguard Director Pro and Static Site Generator (SSG).",
+      "date_modified": "",
+      "date_published": "",
+      "id": "https://amandakaye.github.io/projects/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Showcase & SSG Case Studies",
+      "url": "https://amandakaye.github.io/projects/"
+    }
+  ],
+  "language": "en-GB",
+  "title": "Amanda Kaye",
+  "version": "https://jsonfeed.org/version/1.1"
+}

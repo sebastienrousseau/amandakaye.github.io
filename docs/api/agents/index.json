@@ -1,0 +1,21 @@
+{
+  "api": "ssg-agent-api",
+  "counts": {
+    "posts": 5,
+    "topics": 0
+  },
+  "links": {
+    "index": "https://amandakaye.github.io/api/agents/index.json",
+    "person": "https://amandakaye.github.io/api/agents/person.json",
+    "posts": "https://amandakaye.github.io/api/agents/posts.json",
+    "topics": "https://amandakaye.github.io/api/agents/topics.json"
+  },
+  "site": {
+    "description": "Head of PMO & Enterprise Portfolio Leader with 20+ years leading £35M+ digital transformation, AI governance, and strategic delivery in London.",
+    "language": "en-GB",
+    "name": "Amanda Kaye",
+    "title": "Amanda Kaye | Head of PMO & Enterprise Portfolio Leader",
+    "url": "https://amandakaye.github.io"
+  },
+  "version": "0.0.56"
+}

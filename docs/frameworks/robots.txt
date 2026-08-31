@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://amandakaye.github.io/frameworks.html/sitemap.xml

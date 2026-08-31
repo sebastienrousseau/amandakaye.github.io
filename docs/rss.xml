@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vanguard Director Pro | Premium Static Site Generator Theme</title>
+    <link>https://amandakaye.github.io/index.html</link>
+    <description>Vanguard Director Pro is a high-impact executive showcase theme built for Static Site Generator (SSG). Featuring 100/100 Lighthouse performance, WCAG AAA accessibility, and zero-JS layout grids.</description>
+    <atom:link href="https://amandakaye.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <language>en</language>
+    <item>
+      <title>Showcase & SSG Case Studies</title>
+      <link>https://amandakaye.github.io/projects/</link>
+      <description>Explore live implementation case studies and showcase layouts engineered with Vanguard Director Pro and Static Site Generator (SSG).</description>
+      <guid isPermaLink="true">https://amandakaye.github.io/projects/</guid>
+      <pubDate></pubDate>
+      <author>SSG Theme Suite</author>
+    </item>
+    <item>
+      <title>Specifications & SSG Performance Matrix</title>
+      <link>https://amandakaye.github.io/about/</link>
+      <description>Explore technical specifications and the SSG platform comparison matrix in Vanguard Director Pro.</description>
+      <guid isPermaLink="true">https://amandakaye.github.io/about/</guid>
+      <pubDate></pubDate>
+      <author>SSG Theme Suite</author>
+    </item>
+    <item>
+      <title>Theme Architecture & Token Frameworks</title>
+      <link>https://amandakaye.github.io/frameworks/</link>
+      <description>Discover theme architecture, modular CSS design tokens, and layout grids in Vanguard Director Pro.</description>
+      <guid isPermaLink="true">https://amandakaye.github.io/frameworks/</guid>
+      <pubDate></pubDate>
+      <author>SSG Theme Suite</author>
+    </item>
+    <item>
+      <title>Theme Inquiries & Support</title>
+      <link>https://amandakaye.github.io/contact/</link>
+      <description>Inquire about theme licensing, developer customization, and SSG static site deployment in Vanguard Director Pro.</description>
+      <guid isPermaLink="true">https://amandakaye.github.io/contact/</guid>
+      <pubDate></pubDate>
+      <author>SSG Theme Suite</author>
+    </item>
+  </channel>
+</rss>

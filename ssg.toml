@@ -1,0 +1,20 @@
+# Generated site-level configuration for amandakaye.github.io
+site_name = "Amanda Kaye"
+site_title = "Amanda Kaye | Head of PMO & Enterprise Portfolio Leader"
+site_description = "Head of PMO & Enterprise Portfolio Leader with 20+ years leading £35M+ digital transformation, AI governance, and strategic delivery in London."
+base_url = "https://amandakaye.github.io"
+language = "en-GB"
+
+content_dir = "_posts"
+template_dir = "_layouts"
+output_dir = "docs"
+
+[agents]
+agents_txt = true
+ai_plugin = true
+
+[agents.mcp]
+enabled = true
+
+[edge_headers]
+targets = ["netlify", "cloudflare", "vercel"]

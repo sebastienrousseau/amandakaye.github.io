@@ -20,3 +20,11 @@ check:
 
 clean:
 	@rm -rf public/ _posts_build/
+
+# WCAG 2.2 Level AAA & Frontmatter Quality Targets
+.PHONY: contrast validate
+contrast:
+	@/usr/bin/python3 scripts/audit-contrast.py
+
+validate:
+	@/usr/bin/python3 scripts/validate-frontmatter.py
