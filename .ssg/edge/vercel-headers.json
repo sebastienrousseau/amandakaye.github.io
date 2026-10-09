@@ -1,0 +1,122 @@
+{
+  "_pqc_note": [
+    "PQC posture: TLS 1.3 with the X25519+ML-KEM-768 hybrid",
+    "key-exchange suite (RFC 9420 / draft-ietf-tls-hybrid-design).",
+    "Cloudflare auto-negotiates as of mid-2026; Netlify is",
+    "behind an opt-in in the platform dashboard; Vercel surfaces",
+    "the suite once the upstream CDN (Cloudflare/AWS) enables it.",
+    "Configure at the platform level — this file is documentation",
+    "of the recommended posture, not a runtime knob.",
+    "Cloudflare:    https://developers.cloudflare.com/ssl/post-quantum-cryptography/",
+    "Netlify:       https://docs.netlify.com/edge-functions/overview/",
+    "Vercel:        https://vercel.com/docs/edge-network/headers"
+  ],
+  "headers": [
+    {
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https: data:; font-src 'self' https:; connect-src 'self'; frame-ancestors 'none'"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), geolocation=(), microphone=()"
+        }
+      ],
+      "source": "/(.*)"
+    },
+    {
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'sha256-803evqDvfGxp4QZipS72UgHmtKPpIzRpjMQlVvB2pdc='; style-src 'self'; img-src 'self' https: data:; font-src 'self' https:; connect-src 'self'; frame-ancestors 'none'"
+        }
+      ],
+      "source": "/"
+    },
+    {
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'sha256-qr0rdFUHwhmxwtllESdn4ZFF9/PL135QAn6WPHUtjI0='; style-src 'self'; img-src 'self' https: data:; font-src 'self' https:; connect-src 'self'; frame-ancestors 'none'"
+        }
+      ],
+      "source": "/about/"
+    },
+    {
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'sha256-HXg2SrTw6uhT053XtVdw+UpAe1m6kaYAQM0zxZ9H64Q='; style-src 'self'; img-src 'self' https: data:; font-src 'self' https:; connect-src 'self'; frame-ancestors 'none'"
+        }
+      ],
+      "source": "/accessibility/"
+    },
+    {
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'sha256-7jF4NQL6619rfaulAipnpVuIYIpoK9BES1y9lQHvXFw='; style-src 'self'; img-src 'self' https: data:; font-src 'self' https:; connect-src 'self'; frame-ancestors 'none'"
+        }
+      ],
+      "source": "/contact/"
+    },
+    {
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'sha256-WPQ9l0/oZktjvwd5WS7aC29EYjKLaEkvcxdd45BtfGA='; style-src 'self'; img-src 'self' https: data:; font-src 'self' https:; connect-src 'self'; frame-ancestors 'none'"
+        }
+      ],
+      "source": "/frameworks/"
+    },
+    {
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'sha256-9xUinCklVSHy4HohpFLPduR5/qaYV+14LkUbDty+chM='; style-src 'self'; img-src 'self' https: data:; font-src 'self' https:; connect-src 'self'; frame-ancestors 'none'"
+        }
+      ],
+      "source": "/made-with-ssg/"
+    },
+    {
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'sha256-Mj+v1eR/m/NQamK3b2N3OHzUS/b6XiBKic8kImW47Ek='; style-src 'self'; img-src 'self' https: data:; font-src 'self' https:; connect-src 'self'; frame-ancestors 'none'"
+        }
+      ],
+      "source": "/privacy/"
+    },
+    {
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'sha256-NkWyFbiFeAFMYp5R+EiGdU4F7ZvR8jGYy/q+MPg8aUY='; style-src 'self'; img-src 'self' https: data:; font-src 'self' https:; connect-src 'self'; frame-ancestors 'none'"
+        }
+      ],
+      "source": "/projects/"
+    },
+    {
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'sha256-mhVQGh6zHDcpoYHkilN290Ter6kE3FXWZclQmVnI3ro='; style-src 'self'; img-src 'self' https: data:; font-src 'self' https:; connect-src 'self'; frame-ancestors 'none'"
+        }
+      ],
+      "source": "/terms/"
+    }
+  ]
+}

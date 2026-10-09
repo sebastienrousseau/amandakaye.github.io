@@ -1,0 +1,19 @@
+{
+  "background_color": "#ffffff",
+  "description": "Accessibility statement for Amanda Kaye's executive portfolio, adhering to WCAG 2.2 Level AA and AAA standards with high",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "",
+      "type": "image/svg+xml"
+    }
+  ],
+  "name": "Amanda Kaye",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "AK",
+  "start_url": ".",
+  "theme_color": null
+}

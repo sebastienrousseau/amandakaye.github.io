@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Amanda Kaye</title>
+  <link href="https://amandakaye.github.io/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://amandakaye.github.io"/>
+  <id>https://amandakaye.github.io</id>
+  <updated></updated>
+  <entry>
+    <title>About &amp; Executive Experience | Amanda Kaye - Head of PMO</title>
+    <link href="https://amandakaye.github.io/about/"/>
+    <id>https://amandakaye.github.io/about/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Executive career biography and leadership profile of Amanda Kaye, Head of PMO with 20+ years directing £35M+ enterprise portfolios at KPMG UK LLP and EY.</summary>
+    <author><name>Amanda Kaye</name></author>
+  </entry>
+  <entry>
+    <title>Accessibility Statement | Amanda Kaye - Head of PMO</title>
+    <link href="https://amandakaye.github.io/accessibility/"/>
+    <id>https://amandakaye.github.io/accessibility/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Accessibility statement for Amanda Kaye&apos;s executive portfolio, adhering to WCAG 2.2 Level AA and AAA standards with high contrast and screen reader support.</summary>
+    <author><name>Amanda Kaye</name></author>
+  </entry>
+  <entry>
+    <title>Executive Contact &amp; Advisory | Amanda Kaye - Head of PMO</title>
+    <link href="https://amandakaye.github.io/contact/"/>
+    <id>https://amandakaye.github.io/contact/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Connect with Amanda Kaye for Head of PMO roles, interim transformation advisory, executive board consultation, and speaking engagements.</summary>
+    <author><name>Amanda Kaye</name></author>
+  </entry>
+  <entry>
+    <title>PMO Frameworks &amp; Governance | Amanda Kaye - Head of PMO</title>
+    <link href="https://amandakaye.github.io/frameworks/"/>
+    <id>https://amandakaye.github.io/frameworks/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Actionable PMO operating models, Stage-Gate governance principles, AI risk models, and portfolio ROI prioritisation architectures developed by Amanda Kaye.</summary>
+    <author><name>Amanda Kaye</name></author>
+  </entry>
+  <entry>
+    <title>Made with SSG | Amanda Kaye - Head of PMO</title>
+    <link href="https://amandakaye.github.io/made-with-ssg/"/>
+    <id>https://amandakaye.github.io/made-with-ssg/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Website created with Static Site Generator (SSG) — engineered for extreme performance, 100/100 Lighthouse metrics, and WCAG AAA compliance.</summary>
+    <author><name>Amanda Kaye</name></author>
+  </entry>
+  <entry>
+    <title>Privacy Policy | Amanda Kaye - Head of PMO</title>
+    <link href="https://amandakaye.github.io/privacy/"/>
+    <id>https://amandakaye.github.io/privacy/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Privacy policy and data protection standards for Amanda Kaye&apos;s portfolio, operating with zero tracking cookies and strict UK GDPR compliance.</summary>
+    <author><name>Amanda Kaye</name></author>
+  </entry>
+  <entry>
+    <title>Portfolio &amp; Case Studies | Amanda Kaye - Head of PMO</title>
+    <link href="https://amandakaye.github.io/projects/"/>
+    <id>https://amandakaye.github.io/projects/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Transformation case studies led by Amanda Kaye: £35M+ technology portfolio, MCA Award-winning 700 government departments banking migration, and PMO builds.</summary>
+    <author><name>Amanda Kaye</name></author>
+  </entry>
+  <entry>
+    <title>Terms of Use | Amanda Kaye - Head of PMO</title>
+    <link href="https://amandakaye.github.io/terms/"/>
+    <id>https://amandakaye.github.io/terms/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Terms of use governing access and intellectual property permissions for Amanda Kaye&apos;s executive PMO portfolio.</summary>
+    <author><name>Amanda Kaye</name></author>
+  </entry>
+</feed>
