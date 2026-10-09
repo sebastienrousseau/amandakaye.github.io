@@ -1,6 +1,6 @@
 {
   "background_color": "#ffffff",
-  "description": "Discover theme architecture, modular CSS design tokens, and layout grids in Vanguard Director Pro.",
+  "description": "Actionable PMO operating models, Stage-Gate governance principles, AI risk models, and portfolio ROI prioritisation arch",
   "display": "standalone",
   "icons": [
     {
@@ -10,10 +10,10 @@
       "type": "image/svg+xml"
     }
   ],
-  "name": "Vanguard Director Pro",
+  "name": "Amanda Kaye",
   "orientation": "portrait-primary",
   "scope": "/",
-  "short_name": "Vanguard",
+  "short_name": "AK",
   "start_url": ".",
   "theme_color": null
 }

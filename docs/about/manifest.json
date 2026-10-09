@@ -1,6 +1,6 @@
 {
   "background_color": "#ffffff",
-  "description": "Explore technical specifications and the SSG platform comparison matrix in Vanguard Director Pro.",
+  "description": "Executive career biography and leadership profile of Amanda Kaye, Head of PMO with 20+ years directing £35M+ enterprise ",
   "display": "standalone",
   "icons": [
     {
@@ -10,10 +10,10 @@
       "type": "image/svg+xml"
     }
   ],
-  "name": "Vanguard Director Pro",
+  "name": "Amanda Kaye",
   "orientation": "portrait-primary",
   "scope": "/",
-  "short_name": "Vanguard",
+  "short_name": "AK",
   "start_url": ".",
   "theme_color": null
 }

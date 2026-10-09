@@ -1,7 +1,7 @@
 {
   "api": "ssg-agent-api",
   "counts": {
-    "posts": 5,
+    "posts": 9,
     "topics": 0
   },
   "links": {
@@ -17,5 +17,5 @@
     "title": "Amanda Kaye | Head of PMO & Enterprise Portfolio Leader",
     "url": "https://amandakaye.github.io"
   },
-  "version": "0.0.56"
+  "version": "0.0.66"
 }

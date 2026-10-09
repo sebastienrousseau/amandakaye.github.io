@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://amandakaye.github.io/projects.html/sitemap.xml
+Sitemap: https://amandakaye.github.io/projects/index.html/sitemap.xml

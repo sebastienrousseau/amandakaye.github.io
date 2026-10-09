@@ -1,14 +1,14 @@
 {
-  "author": "SSG Theme Suite",
-  "date": "2026-08-08",
-  "description": "Explore technical specifications and the SSG platform comparison matrix in Vanguard Director Pro.",
-  "keywords": "Vanguard Director Pro, Specifications, SSG Performance Matrix, Static Site Generator",
+  "author": "Amanda Kaye",
+  "date": "2026-08-31",
+  "description": "Executive career biography and leadership profile of Amanda Kaye, Head of PMO with 20+ years directing £35M+ enterprise portfolios at KPMG UK LLP and EY.",
+  "keywords": "Amanda Kaye About, PMO Career History, KPMG UK LLP, Ernst and Young, Executive PMO Director, Digital Portfolio Management, AI Governance, London PMO Leader",
   "language": "en-GB",
   "layout": "about",
-  "name": "Vanguard Director Pro",
-  "permalink": "https://amandakaye.github.io/about.html",
-  "reading_time": 1,
-  "short_name": "Vanguard",
-  "title": "Specifications & SSG Performance Matrix",
-  "word_count": 0
+  "name": "Amanda Kaye",
+  "permalink": "https://amandakaye.github.io/about/index.html",
+  "reading_time": 2,
+  "short_name": "AK",
+  "title": "About & Executive Experience | Amanda Kaye - Head of PMO",
+  "word_count": 528
 }

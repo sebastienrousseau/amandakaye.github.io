@@ -1,6 +1,6 @@
 {
   "background_color": "#ffffff",
-  "description": "Explore live implementation case studies and showcase layouts engineered with Vanguard Director Pro and Static Site Gene",
+  "description": "Transformation case studies led by Amanda Kaye: £35M+ technology portfolio, MCA Award-winning 700 government departments",
   "display": "standalone",
   "icons": [
     {
@@ -10,10 +10,10 @@
       "type": "image/svg+xml"
     }
   ],
-  "name": "Vanguard Director Pro",
+  "name": "Amanda Kaye",
   "orientation": "portrait-primary",
   "scope": "/",
-  "short_name": "Vanguard",
+  "short_name": "AK",
   "start_url": ".",
   "theme_color": null
 }

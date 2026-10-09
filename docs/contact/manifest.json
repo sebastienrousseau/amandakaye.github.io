@@ -1,6 +1,6 @@
 {
   "background_color": "#ffffff",
-  "description": "Inquire about theme licensing, developer customization, and SSG static site deployment in Vanguard Director Pro.",
+  "description": "Connect with Amanda Kaye for Head of PMO roles, interim transformation advisory, executive board consultation, and speak",
   "display": "standalone",
   "icons": [
     {
@@ -10,10 +10,10 @@
       "type": "image/svg+xml"
     }
   ],
-  "name": "Vanguard Director Pro",
+  "name": "Amanda Kaye",
   "orientation": "portrait-primary",
   "scope": "/",
-  "short_name": "Vanguard",
+  "short_name": "AK",
   "start_url": ".",
   "theme_color": null
 }

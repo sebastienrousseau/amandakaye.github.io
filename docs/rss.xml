@@ -1,42 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vanguard Director Pro | Premium Static Site Generator Theme</title>
-    <link>https://amandakaye.github.io/index.html</link>
-    <description>Vanguard Director Pro is a high-impact executive showcase theme built for Static Site Generator (SSG). Featuring 100/100 Lighthouse performance, WCAG AAA accessibility, and zero-JS layout grids.</description>
+    <title>Amanda Kaye | Head of PMO &amp; Enterprise Portfolio Leader</title>
+    <link>https://amandakaye.github.io/</link>
+    <description>Amanda Kaye is Head of PMO &amp; Enterprise Portfolio Leader with 20+ years leading £35M+ digital transformation, AI governance, and strategic delivery at KPMG UK LLP.</description>
     <atom:link href="https://amandakaye.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <language>en</language>
     <item>
-      <title>Showcase & SSG Case Studies</title>
-      <link>https://amandakaye.github.io/projects/</link>
-      <description>Explore live implementation case studies and showcase layouts engineered with Vanguard Director Pro and Static Site Generator (SSG).</description>
-      <guid isPermaLink="true">https://amandakaye.github.io/projects/</guid>
-      <pubDate></pubDate>
-      <author>SSG Theme Suite</author>
-    </item>
-    <item>
-      <title>Specifications & SSG Performance Matrix</title>
+      <title>About & Executive Experience | Amanda Kaye - Head of PMO</title>
       <link>https://amandakaye.github.io/about/</link>
-      <description>Explore technical specifications and the SSG platform comparison matrix in Vanguard Director Pro.</description>
+      <description>Executive career biography and leadership profile of Amanda Kaye, Head of PMO with 20+ years directing £35M+ enterprise portfolios at KPMG UK LLP and EY.</description>
       <guid isPermaLink="true">https://amandakaye.github.io/about/</guid>
       <pubDate></pubDate>
-      <author>SSG Theme Suite</author>
+      <author>Amanda Kaye</author>
     </item>
     <item>
-      <title>Theme Architecture & Token Frameworks</title>
-      <link>https://amandakaye.github.io/frameworks/</link>
-      <description>Discover theme architecture, modular CSS design tokens, and layout grids in Vanguard Director Pro.</description>
-      <guid isPermaLink="true">https://amandakaye.github.io/frameworks/</guid>
+      <title>Accessibility Statement | Amanda Kaye - Head of PMO</title>
+      <link>https://amandakaye.github.io/accessibility/</link>
+      <description>Accessibility statement for Amanda Kaye&apos;s executive portfolio, adhering to WCAG 2.2 Level AA and AAA standards with high contrast and screen reader support.</description>
+      <guid isPermaLink="true">https://amandakaye.github.io/accessibility/</guid>
       <pubDate></pubDate>
-      <author>SSG Theme Suite</author>
+      <author>Amanda Kaye</author>
     </item>
     <item>
-      <title>Theme Inquiries & Support</title>
+      <title>Executive Contact & Advisory | Amanda Kaye - Head of PMO</title>
       <link>https://amandakaye.github.io/contact/</link>
-      <description>Inquire about theme licensing, developer customization, and SSG static site deployment in Vanguard Director Pro.</description>
+      <description>Connect with Amanda Kaye for Head of PMO roles, interim transformation advisory, executive board consultation, and speaking engagements.</description>
       <guid isPermaLink="true">https://amandakaye.github.io/contact/</guid>
       <pubDate></pubDate>
-      <author>SSG Theme Suite</author>
+      <author>Amanda Kaye</author>
+    </item>
+    <item>
+      <title>Made with SSG | Amanda Kaye - Head of PMO</title>
+      <link>https://amandakaye.github.io/made-with-ssg/</link>
+      <description>Website created with Static Site Generator (SSG) — engineered for extreme performance, 100/100 Lighthouse metrics, and WCAG AAA compliance.</description>
+      <guid isPermaLink="true">https://amandakaye.github.io/made-with-ssg/</guid>
+      <pubDate></pubDate>
+      <author>Amanda Kaye</author>
+    </item>
+    <item>
+      <title>PMO Frameworks & Governance | Amanda Kaye - Head of PMO</title>
+      <link>https://amandakaye.github.io/frameworks/</link>
+      <description>Actionable PMO operating models, Stage-Gate governance principles, AI risk models, and portfolio ROI prioritisation architectures developed by Amanda Kaye.</description>
+      <guid isPermaLink="true">https://amandakaye.github.io/frameworks/</guid>
+      <pubDate></pubDate>
+      <author>Amanda Kaye</author>
+    </item>
+    <item>
+      <title>Portfolio & Case Studies | Amanda Kaye - Head of PMO</title>
+      <link>https://amandakaye.github.io/projects/</link>
+      <description>Transformation case studies led by Amanda Kaye: £35M+ technology portfolio, MCA Award-winning 700 government departments banking migration, and PMO builds.</description>
+      <guid isPermaLink="true">https://amandakaye.github.io/projects/</guid>
+      <pubDate></pubDate>
+      <author>Amanda Kaye</author>
+    </item>
+    <item>
+      <title>Privacy Policy | Amanda Kaye - Head of PMO</title>
+      <link>https://amandakaye.github.io/privacy/</link>
+      <description>Privacy policy and data protection standards for Amanda Kaye&apos;s portfolio, operating with zero tracking cookies and strict UK GDPR compliance.</description>
+      <guid isPermaLink="true">https://amandakaye.github.io/privacy/</guid>
+      <pubDate></pubDate>
+      <author>Amanda Kaye</author>
+    </item>
+    <item>
+      <title>Terms of Use | Amanda Kaye - Head of PMO</title>
+      <link>https://amandakaye.github.io/terms/</link>
+      <description>Terms of use governing access and intellectual property permissions for Amanda Kaye&apos;s executive PMO portfolio.</description>
+      <guid isPermaLink="true">https://amandakaye.github.io/terms/</guid>
+      <pubDate></pubDate>
+      <author>Amanda Kaye</author>
     </item>
   </channel>
 </rss>
