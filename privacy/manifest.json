@@ -1,0 +1,19 @@
+{
+  "background_color": "#ffffff",
+  "description": "Privacy policy and data protection standards for Amanda Kaye's portfolio, operating with zero tracking cookies and stric",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "",
+      "type": "image/svg+xml"
+    }
+  ],
+  "name": "Amanda Kaye",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "AK",
+  "start_url": ".",
+  "theme_color": null
+}

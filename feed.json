@@ -1,0 +1,129 @@
+{
+  "feed_url": "https://amandakaye.github.io/feed.json",
+  "home_page_url": "https://amandakaye.github.io/",
+  "items": [
+    {
+      "authors": [
+        {
+          "name": "Amanda Kaye"
+        }
+      ],
+      "content_html": "Executive career biography and leadership profile of Amanda Kaye, Head of PMO with 20+ years directing £35M+ enterprise portfolios at KPMG UK LLP and EY.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "https://amandakaye.github.io/about/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "About & Executive Experience | Amanda Kaye - Head of PMO",
+      "url": "https://amandakaye.github.io/about/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Amanda Kaye"
+        }
+      ],
+      "content_html": "Accessibility statement for Amanda Kaye's executive portfolio, adhering to WCAG 2.2 Level AA and AAA standards with high contrast and screen reader support.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "https://amandakaye.github.io/accessibility/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Accessibility Statement | Amanda Kaye - Head of PMO",
+      "url": "https://amandakaye.github.io/accessibility/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Amanda Kaye"
+        }
+      ],
+      "content_html": "Connect with Amanda Kaye for Head of PMO roles, interim transformation advisory, executive board consultation, and speaking engagements.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "https://amandakaye.github.io/contact/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Executive Contact & Advisory | Amanda Kaye - Head of PMO",
+      "url": "https://amandakaye.github.io/contact/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Amanda Kaye"
+        }
+      ],
+      "content_html": "Actionable PMO operating models, Stage-Gate governance principles, AI risk models, and portfolio ROI prioritisation architectures developed by Amanda Kaye.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "https://amandakaye.github.io/frameworks/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "PMO Frameworks & Governance | Amanda Kaye - Head of PMO",
+      "url": "https://amandakaye.github.io/frameworks/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Amanda Kaye"
+        }
+      ],
+      "content_html": "Website created with Static Site Generator (SSG) — engineered for extreme performance, 100/100 Lighthouse metrics, and WCAG AAA compliance.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "https://amandakaye.github.io/made-with-ssg/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Made with SSG | Amanda Kaye - Head of PMO",
+      "url": "https://amandakaye.github.io/made-with-ssg/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Amanda Kaye"
+        }
+      ],
+      "content_html": "Privacy policy and data protection standards for Amanda Kaye's portfolio, operating with zero tracking cookies and strict UK GDPR compliance.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "https://amandakaye.github.io/privacy/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Privacy Policy | Amanda Kaye - Head of PMO",
+      "url": "https://amandakaye.github.io/privacy/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Amanda Kaye"
+        }
+      ],
+      "content_html": "Transformation case studies led by Amanda Kaye: £35M+ technology portfolio, MCA Award-winning 700 government departments banking migration, and PMO builds.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "https://amandakaye.github.io/projects/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Portfolio & Case Studies | Amanda Kaye - Head of PMO",
+      "url": "https://amandakaye.github.io/projects/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Amanda Kaye"
+        }
+      ],
+      "content_html": "Terms of use governing access and intellectual property permissions for Amanda Kaye's executive PMO portfolio.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "https://amandakaye.github.io/terms/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Terms of Use | Amanda Kaye - Head of PMO",
+      "url": "https://amandakaye.github.io/terms/"
+    }
+  ],
+  "language": "en-GB",
+  "title": "Amanda Kaye",
+  "version": "https://jsonfeed.org/version/1.1"
+}

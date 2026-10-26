@@ -1,0 +1,18 @@
+{
+  "api": {
+    "is_user_authenticated": false,
+    "type": "openapi",
+    "url": "https://amandakaye.github.io/openapi.yaml"
+  },
+  "auth": {
+    "type": "none"
+  },
+  "contact_email": "support@amandakaye.github.io",
+  "description_for_human": "Head of PMO & Enterprise Portfolio Leader with 20+ years leading £35M+ digital transformation, AI governance, and strategic delivery in London.",
+  "description_for_model": "Head of PMO & Enterprise Portfolio Leader with 20+ years leading £35M+ digital transformation, AI governance, and strategic delivery in London.",
+  "legal_info_url": "https://amandakaye.github.io/legal",
+  "logo_url": "https://amandakaye.github.io/favicon.ico",
+  "name_for_human": "Amanda Kaye | Head of PMO & Enterprise Portfolio Leader",
+  "name_for_model": "amanda_kaye",
+  "schema_version": "v1"
+}

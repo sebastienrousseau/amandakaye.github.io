@@ -1,0 +1,19 @@
+{
+  "background_color": "#ffffff",
+  "description": "Terms of use governing access and intellectual property permissions for Amanda Kaye's executive PMO portfolio.",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "",
+      "type": "image/svg+xml"
+    }
+  ],
+  "name": "Amanda Kaye",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "AK",
+  "start_url": ".",
+  "theme_color": null
+}

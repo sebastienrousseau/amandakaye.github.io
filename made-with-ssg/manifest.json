@@ -1,0 +1,19 @@
+{
+  "background_color": "#ffffff",
+  "description": "Website created with Static Site Generator (SSG) — engineered for extreme performance, 100/100 Lighthouse metrics, and W",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "",
+      "type": "image/svg+xml"
+    }
+  ],
+  "name": "Amanda Kaye",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "AK",
+  "start_url": ".",
+  "theme_color": null
+}

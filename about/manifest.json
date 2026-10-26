@@ -1,0 +1,19 @@
+{
+  "background_color": "#ffffff",
+  "description": "Executive career biography and leadership profile of Amanda Kaye, Head of PMO with 20+ years directing £35M+ enterprise ",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "",
+      "type": "image/svg+xml"
+    }
+  ],
+  "name": "Amanda Kaye",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "AK",
+  "start_url": ".",
+  "theme_color": null
+}
