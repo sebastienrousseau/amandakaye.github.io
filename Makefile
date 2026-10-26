@@ -1,16 +1,23 @@
-.PHONY: help build serve check clean
+.PHONY: help build docs serve check clean
 
 help:
 	@echo "Amanda Kaye - Executive PMO Website (SSG Build Pipeline)"
 	@echo ""
 	@echo "Commands:"
 	@echo "  make build    Compile the static site into public/"
+	@echo "  make docs     Rebuild docs/ (the GitHub Pages site) with CSP <meta> tags"
 	@echo "  make serve    Build and launch local dev server on http://localhost:8080"
 	@echo "  make check    Run SSG build-time validators"
 	@echo "  make clean    Remove generated build files"
 
 build:
 	@bash build.sh
+
+# ssg writes the per-page CSP only to docs/_headers, which GitHub Pages
+# ignores; pages-postbuild.py copies it into each page as a <meta> tag.
+docs:
+	@ssg build
+	@python3 scripts/pages-postbuild.py docs
 
 serve:
 	@bash build.sh --serve
